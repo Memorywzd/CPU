@@ -66,20 +66,20 @@ begin
 end
 assign A_Neg = (~A_d1)&A_d2; //若A1按钮按下，则将其变为延时1个时钟的脉冲信号
  
-assign check_out = (cpustate==2'b10)?memory_reg[cnt]:8'hzz; //check输出
+assign check_out = (cpustate == 2'b10)?memory_reg[cnt]:8'hzz; //check输出
 
-always @(posedge clk or negedge reset)
+always @(posedge clk or negedge reset)//Memorywzd:修改了赋值语句
 begin
-	if(!reset) cnt=0;
+	if(!reset) cnt <= 0;
 	else 
 	begin
-		if(cpustate == 2'b01 && A_Neg==1)//IN
+		if(cpustate == 2'b01 && A_Neg == 1)//IN
 		begin
-			memory_reg[cnt] = D;
-			cnt = cnt+1024'd1;
+			memory_reg[cnt] <= D;
+			cnt <= cnt + 1024'd1;
 		end	
-		else if(cpustate == 2'b10 && A_Neg==1) cnt = cnt+1024'd1;//CHECK		
-		else cnt = cnt;//保持
+		else if(cpustate == 2'b10 && A_Neg==1) cnt <= cnt + 1024'd1;//CHECK		
+		else cnt <= cnt;//保持
 	end
 end
 

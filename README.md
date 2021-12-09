@@ -8,3 +8,4 @@ Course Design of Principles of Computer Organization
 - 2021/12/6 下发任务、摸鱼
 - 2021/12/7 复习计组课件、Verilog语法、quartus使用
 - 2021/12/8 理清任务要求，确定初步cpu数据通路，创建工程
+- 2021/12/9 完成了寄存器、运算器、控制器的简单指令(MOVAC)、数据通路设计

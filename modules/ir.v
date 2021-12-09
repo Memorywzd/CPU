@@ -12,7 +12,7 @@ reg [7:0] Dout;
 always @ (negedge clk) begin
 	if(!rst)
         Dout <= 0;
-	else if(IRload)
+	else if (IRload)
         Dout <= Din;
 end
 
