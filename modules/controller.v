@@ -12,7 +12,7 @@
      自行设计的各个控制信号
 */
 
-module controller(din,clk,rst,z,cpustate,......, clr);
+module controller(din, clk, rst, z, cpustate,......, clr);
 
 
 endmodule
