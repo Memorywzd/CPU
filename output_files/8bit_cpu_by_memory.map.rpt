@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 8bit_cpu_by_memory
-Fri Dec 10 17:35:16 2021
+Fri Dec 10 18:22:47 2021
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
 
 
@@ -59,7 +59,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Dec 10 17:35:16 2021       ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 10 18:22:47 2021       ;
 ; Quartus II 64-Bit Version          ; 14.0.0 Build 200 06/17/2014 SJ Full Version ;
 ; Revision Name                      ; 8bit_cpu_by_memory                          ;
 ; Top-level Entity Name              ; top                                         ;
@@ -631,10 +631,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                  ;                                ; CPU_dataflow:mcpu|ac:mac|Dout[3], CPU_dataflow:mcpu|ac:mac|Dout[2],                     ;
 ;                                  ;                                ; CPU_dataflow:mcpu|ac:mac|Dout[1], light_show:show|HEX4[6], light_show:show|HEX4[5],     ;
 ;                                  ;                                ; light_show:show|HEX4[4], light_show:show|HEX4[3], light_show:show|HEX4[2],              ;
-;                                  ;                                ; light_show:show|HEX4[1], light_show:show|HEX4[0], light_show:show|HEX5[2],              ;
-;                                  ;                                ; light_show:show|HEX5[1], light_show:show|HEX5[0], light_show:show|HEX5[6],              ;
-;                                  ;                                ; light_show:show|HEX5[5], light_show:show|HEX5[4]                                        ;
-; light_show:show|HEX6[1]          ; Stuck at GND                   ; light_show:show|HEX5[3]                                                                 ;
+;                                  ;                                ; light_show:show|HEX4[1], light_show:show|HEX4[0], light_show:show|HEX5[1],              ;
+;                                  ;                                ; light_show:show|HEX5[6], light_show:show|HEX5[5], light_show:show|HEX5[4]               ;
+; light_show:show|HEX6[6]          ; Stuck at VCC                   ; light_show:show|HEX5[0]                                                                 ;
+;                                  ; due to stuck port data_in      ;                                                                                         ;
+; light_show:show|HEX6[2]          ; Stuck at GND                   ; light_show:show|HEX5[2]                                                                 ;
+;                                  ; due to stuck port data_in      ;                                                                                         ;
+; light_show:show|HEX6[0]          ; Stuck at GND                   ; light_show:show|HEX5[3]                                                                 ;
 ;                                  ; due to stuck port data_in      ;                                                                                         ;
 +----------------------------------+--------------------------------+-----------------------------------------------------------------------------------------+
 
@@ -917,7 +920,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Full Version
-    Info: Processing started: Fri Dec 10 17:35:14 2021
+    Info: Processing started: Fri Dec 10 18:22:45 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 8bit_cpu_by_memory -c 8bit_cpu_by_memory
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file modules/cpu_dataflow.v
@@ -1160,8 +1163,8 @@ Info (21057): Implemented 476 device resources after synthesis - the final resou
     Info (21061): Implemented 318 logic cells
     Info (21064): Implemented 8 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 135 warnings
-    Info: Peak virtual memory: 4803 megabytes
-    Info: Processing ended: Fri Dec 10 17:35:16 2021
+    Info: Peak virtual memory: 4789 megabytes
+    Info: Processing ended: Fri Dec 10 18:22:47 2021
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

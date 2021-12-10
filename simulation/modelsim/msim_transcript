@@ -1,0 +1,150 @@
+# Reading C:/altera/14.0/modelsim_ase/tcl/vsim/pref.tcl 
+# do 8bit_cpu_by_memory_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\14.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\14.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/Principles\ of\ Computer\ Organization/CPU/modules {D:/Principles of Computer Organization/CPU/modules/CPU_dataflow.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module CPU_dataflow
+# 
+# Top level modules:
+# 	CPU_dataflow
+# vlog -vlog01compat -work work +incdir+D:/Principles\ of\ Computer\ Organization/CPU/modules {D:/Principles of Computer Organization/CPU/modules/controller.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# vlog -vlog01compat -work work +incdir+D:/Principles\ of\ Computer\ Organization/CPU/modules {D:/Principles of Computer Organization/CPU/modules/top.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# vlog -vlog01compat -work work +incdir+D:/Principles\ of\ Computer\ Organization/CPU/modules {D:/Principles of Computer Organization/CPU/modules/r.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module r
+# 
+# Top level modules:
+# 	r
+# vlog -vlog01compat -work work +incdir+D:/Principles\ of\ Computer\ Organization/CPU/modules {D:/Principles of Computer Organization/CPU/modules/qtsj.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module qtsj
+# 
+# Top level modules:
+# 	qtsj
+# vlog -vlog01compat -work work +incdir+D:/Principles\ of\ Computer\ Organization/CPU/modules {D:/Principles of Computer Organization/CPU/modules/pc.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module pc
+# 
+# Top level modules:
+# 	pc
+# vlog -vlog01compat -work work +incdir+D:/Principles\ of\ Computer\ Organization/CPU/modules {D:/Principles of Computer Organization/CPU/modules/memory.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# vlog -vlog01compat -work work +incdir+D:/Principles\ of\ Computer\ Organization/CPU/modules {D:/Principles of Computer Organization/CPU/modules/light_show.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module light_show
+# 
+# Top level modules:
+# 	light_show
+# vlog -vlog01compat -work work +incdir+D:/Principles\ of\ Computer\ Organization/CPU/modules {D:/Principles of Computer Organization/CPU/modules/ir.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module ir
+# 
+# Top level modules:
+# 	ir
+# vlog -vlog01compat -work work +incdir+D:/Principles\ of\ Computer\ Organization/CPU/modules {D:/Principles of Computer Organization/CPU/modules/dr.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module dr
+# 
+# Top level modules:
+# 	dr
+# vlog -vlog01compat -work work +incdir+D:/Principles\ of\ Computer\ Organization/CPU/modules {D:/Principles of Computer Organization/CPU/modules/CPU_Controller.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module CPU_Controller
+# 
+# Top level modules:
+# 	CPU_Controller
+# vlog -vlog01compat -work work +incdir+D:/Principles\ of\ Computer\ Organization/CPU/modules {D:/Principles of Computer Organization/CPU/modules/clk_div.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module clk_div
+# 
+# Top level modules:
+# 	clk_div
+# vlog -vlog01compat -work work +incdir+D:/Principles\ of\ Computer\ Organization/CPU/modules {D:/Principles of Computer Organization/CPU/modules/ar.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module ar
+# 
+# Top level modules:
+# 	ar
+# vlog -vlog01compat -work work +incdir+D:/Principles\ of\ Computer\ Organization/CPU/modules {D:/Principles of Computer Organization/CPU/modules/alu.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -vlog01compat -work work +incdir+D:/Principles\ of\ Computer\ Organization/CPU/modules {D:/Principles of Computer Organization/CPU/modules/ac.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module ac
+# 
+# Top level modules:
+# 	ac
+# 
+# vlog -vlog01compat -work work +incdir+D:/Principles\ of\ Computer\ Organization/CPU/simulation/modelsim {D:/Principles of Computer Organization/CPU/simulation/modelsim/top.vt}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module top_vlg_tst
+# 
+# Top level modules:
+# 	top_vlg_tst
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  top_vlg_tst
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps top_vlg_tst 
+# Loading work.top_vlg_tst
+# Loading work.top
+# Loading work.clk_div
+# Loading work.CPU_Controller
+# Loading work.CPU_dataflow
+# Loading work.qtsj
+# Loading work.ar
+# Loading work.pc
+# Loading work.dr
+# Loading work.ir
+# Loading work.r
+# Loading work.ac
+# Loading work.alu
+# Loading work.controller
+# Loading work.memory
+# Loading work.light_show
+# ** Warning: (vsim-3015) D:/Principles of Computer Organization/CPU/modules/CPU_dataflow.v(55): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'alus'. The port definition is at: D:/Principles of Computer Organization/CPU/modules/alu.v(3).
+# 
+#         Region: /top_vlg_tst/i1/mcpu/malu
+# ** Warning: (vsim-3015) D:/Principles of Computer Organization/CPU/modules/CPU_dataflow.v(66): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'alus'. The port definition is at: D:/Principles of Computer Organization/CPU/modules/controller.v(20).
+# 
+#         Region: /top_vlg_tst/i1/mcpu/mcontroller
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $finish    : D:/Principles of Computer Organization/CPU/simulation/modelsim/top.vt(172)
+#    Time: 200 ms  Iteration: 0  Instance: /top_vlg_tst
+# 1
+# Break in Module top_vlg_tst at D:/Principles of Computer Organization/CPU/simulation/modelsim/top.vt line 172
+# Simulation Breakpoint: 1
+# Break in Module top_vlg_tst at D:/Principles of Computer Organization/CPU/simulation/modelsim/top.vt line 172
+# MACRO ./8bit_cpu_by_memory_run_msim_rtl_verilog.do PAUSED at line 31
+# WARNING: No extended dataflow license exists
+# WARNING: No extended dataflow license exists
