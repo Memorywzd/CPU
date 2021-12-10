@@ -25,72 +25,30 @@ input [7:0] instr;    //输入指令
 input clk, rst;
 input [1:0] CPUstate;
 
+output ARload, PCinc, DRload, IRload,
+       Rload,
+       PCbus, 
+       ACbus,
+       mem_read, mem_write,
+       mem2bus, bus2mem;
+output [3:0] alus;
+reg [3:0] alus;
+
 //控制器状态
 wire fetch1,fetch2,fetch3;
 wire MOVAC1;
 
 //译码器的输出,1为该指令有效,0为无效
-reg i_NOP;
-reg i_LDAC;
-reg i_STAC;
-reg i_MOVAC;
-
-reg i_MOVR;
-reg i_JUMP;
-reg i_JMPZ;
-reg i_JPNZ;
-
-reg i_ADD;
-reg i_SUB;
-reg i_INAC;
-reg i_CLAC;
-
-reg i_AND;
-reg i_OR;
-reg i_XOR;
-reg i_NOT;
-
+reg i_NOP, i_LDAC, i_STAC, i_MOVAC;
+reg i_MOVR, i_JUMP, i_JMPZ, i_JPNZ;
+reg i_ADD, i_SUB, i_INAC, i_CLAC;
+reg i_AND, i_OR, i_XOR, i_NOT;
 
 //时钟节拍，8个为一个指令周期
 reg t0, t1, t2, t3, t4, t5, t6, t7; 
 
-always @(posedge clk or negedge reset) begin
-if(!reset) //reset清零
-begin
-	t0<=1;
-	t1<=0;
-	t2<=0;
-	t3<=0;
-	t4<=0;
-	t5<=0;
-	t6<=0;
-	t7<=0;
-end
-else
-begin
-	if(inc) //运行
-	begin
-	t7<=t6;
-	t6<=t5;
-	t5<=t4;
-	t4<=t3;
-	t3<=t2;
-	t2<=t1;
-	t1<=t0;
-	t0<=0;
-	end
-	else if(clr) //清零
-	begin
-	t0<=1;
-	t1<=0;
-	t2<=0;
-	t3<=0;
-	t4<=0;
-	t5<=0;
-	t6<=0;
-	t7<=0;
-	end
-end
+//parameter's define
+wire reset;
 
 // signals for the counter
 wire clr; //清零
@@ -121,16 +79,19 @@ assign Rload = MOVAC1;
 assign PCbus = fetch1;
 assign ACbus = MOVAC1;
 
-//assign alus = 
-
 assign mem_read = fetch2;
 assign mem2bus = fetch2;
+
+//assign alus = 
+always @(MOVAC1) begin
+	alus = 4'bxxxx;
+end
 
 //指令译码    
 always @(posedge clk or negedge reset) begin
        if(!reset)
 	begin//各指令清零，以下已为nop指令清零，请补充其他指令，为其他指令清零
-	       i_NOP <= 1;
+	    i_NOP <= 1;
 		i_LDAC <= 0;
 		i_STAC <= 0;
 		i_MOVAC <= 0;
@@ -154,9 +115,9 @@ else
 begin
 	//alus初始化为x，加上将alus初始化为x的语句，后续根据不同指令为alus赋值
 	
-	if(din[7:4] == 0000)//译码处理过程
+	if(instr[7:4] == 0000)//译码处理过程
 	begin
-		case(din[3:0])
+		case(instr[3:0])
 		0:  begin//指令低4位为0，应该是nop指令，因此这里inop的值是1，而其他指令应该清零，请补充为其他指令清零的语句
 			i_NOP <= 1;
 			i_LDAC <= 0;
@@ -379,8 +340,8 @@ begin
 			i_NOT <= 0;
 			
 		end
-              10:  begin
-                     i_NOP <= 0;
+        10:  begin
+            i_NOP <= 0;
 			i_LDAC <= 0;
 			i_STAC <= 0;
 			i_MOVAC <= 0;
@@ -400,7 +361,7 @@ begin
 			i_XOR <= 0;
 			i_NOT <= 0;
               end
-              11:  begin
+        11:  begin
 			i_NOP <= 0;
 			i_LDAC <= 0;
 			i_STAC <= 0;
@@ -421,7 +382,7 @@ begin
 			i_XOR <= 0;
 			i_NOT <= 0;
               end
-              12:  begin
+        12:  begin
 			i_NOP <= 0;
 			i_LDAC <= 0;
 			i_STAC <= 0;
@@ -442,7 +403,7 @@ begin
 			i_XOR <= 0;
 			i_NOT <= 0;
               end
-              13:  begin
+        13:  begin
 			i_NOP <= 0;
 			i_LDAC <= 0;
 			i_STAC <= 0;
@@ -463,7 +424,7 @@ begin
 			i_XOR <= 0;
 			i_NOT <= 0;
               end
-              14:  begin
+        14:  begin
 			i_NOP <= 0;
 			i_LDAC <= 0;
 			i_STAC <= 0;
@@ -484,7 +445,7 @@ begin
 			i_XOR <= 1;
 			i_NOT <= 0;
               end
-              15:  begin
+        15:  begin
 			i_NOP <= 0;
 			i_LDAC <= 0;
 			i_STAC <= 0;
@@ -507,6 +468,46 @@ begin
               end
 		//如果还有分支，可以继续写，如果没有分支了，写上defuault语句	
 		endcase
+	end
+end
+end
+
+//节拍生成
+always @(posedge clk or negedge reset) begin
+if(!reset) //reset清零
+begin
+	t0<=1;
+	t1<=0;
+	t2<=0;
+	t3<=0;
+	t4<=0;
+	t5<=0;
+	t6<=0;
+	t7<=0;
+end
+else
+begin
+	if(inc) //运行
+	begin
+	t7<=t6;
+	t6<=t5;
+	t5<=t4;
+	t4<=t3;
+	t3<=t2;
+	t2<=t1;
+	t1<=t0;
+	t0<=0;
+	end
+	else if(clr) //清零
+	begin
+	t0<=1;
+	t1<=0;
+	t2<=0;
+	t3<=0;
+	t4<=0;
+	t5<=0;
+	t6<=0;
+	t7<=0;
 	end
 end
 end

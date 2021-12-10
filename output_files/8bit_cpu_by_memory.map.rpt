@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 8bit_cpu_by_memory
-Thu Dec 09 10:07:34 2021
+Fri Dec 10 17:35:16 2021
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
 
 
@@ -10,7 +10,29 @@ Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Registers Added for RAM Pass-Through Logic
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for memory:mram|altsyncram:memory_reg_rtl_0|altsyncram_s9c1:auto_generated
+ 16. Parameter Settings for Inferred Entity Instance: memory:mram|altsyncram:memory_reg_rtl_0
+ 17. altsyncram Parameter Settings by Entity Instance
+ 18. Port Connectivity Checks: "CPU_dataflow:mcpu|controller:mcontroller"
+ 19. Port Connectivity Checks: "CPU_dataflow:mcpu|alu:malu"
+ 20. Port Connectivity Checks: "clk_div:light"
+ 21. Port Connectivity Checks: "clk_div:mem"
+ 22. Port Connectivity Checks: "clk_div:delay"
+ 23. Port Connectivity Checks: "clk_div:slow"
+ 24. Port Connectivity Checks: "clk_div:quick"
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
 
 
 
@@ -37,20 +59,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu Dec 09 10:07:33 2021           ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 10 17:35:16 2021       ;
 ; Quartus II 64-Bit Version          ; 14.0.0 Build 200 06/17/2014 SJ Full Version ;
 ; Revision Name                      ; 8bit_cpu_by_memory                          ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 304                                         ;
+;     Total combinational functions  ; 249                                         ;
+;     Dedicated logic registers      ; 230                                         ;
+; Total registers                    ; 230                                         ;
+; Total pins                         ; 150                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 256                                         ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -146,16 +168,747 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 3           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
+;     Processors 2-3         ; < 0.1%      ;
+;     Processors 4-12        ;   0.0%      ;
 +----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                             ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
+; modules/CPU_dataflow.v           ; yes             ; User Verilog HDL File        ; D:/Principles of Computer Organization/CPU/modules/CPU_dataflow.v    ;         ;
+; modules/controller.v             ; yes             ; User Verilog HDL File        ; D:/Principles of Computer Organization/CPU/modules/controller.v      ;         ;
+; modules/top.v                    ; yes             ; User Verilog HDL File        ; D:/Principles of Computer Organization/CPU/modules/top.v             ;         ;
+; modules/r.v                      ; yes             ; User Verilog HDL File        ; D:/Principles of Computer Organization/CPU/modules/r.v               ;         ;
+; modules/qtsj.v                   ; yes             ; User Verilog HDL File        ; D:/Principles of Computer Organization/CPU/modules/qtsj.v            ;         ;
+; modules/pc.v                     ; yes             ; User Verilog HDL File        ; D:/Principles of Computer Organization/CPU/modules/pc.v              ;         ;
+; modules/memory.v                 ; yes             ; User Verilog HDL File        ; D:/Principles of Computer Organization/CPU/modules/memory.v          ;         ;
+; modules/light_show.v             ; yes             ; User Verilog HDL File        ; D:/Principles of Computer Organization/CPU/modules/light_show.v      ;         ;
+; modules/ir.v                     ; yes             ; User Verilog HDL File        ; D:/Principles of Computer Organization/CPU/modules/ir.v              ;         ;
+; modules/dr.v                     ; yes             ; User Verilog HDL File        ; D:/Principles of Computer Organization/CPU/modules/dr.v              ;         ;
+; modules/CPU_Controller.v         ; yes             ; User Verilog HDL File        ; D:/Principles of Computer Organization/CPU/modules/CPU_Controller.v  ;         ;
+; modules/clk_div.v                ; yes             ; User Verilog HDL File        ; D:/Principles of Computer Organization/CPU/modules/clk_div.v         ;         ;
+; modules/ar.v                     ; yes             ; User Verilog HDL File        ; D:/Principles of Computer Organization/CPU/modules/ar.v              ;         ;
+; modules/alu.v                    ; yes             ; User Verilog HDL File        ; D:/Principles of Computer Organization/CPU/modules/alu.v             ;         ;
+; modules/ac.v                     ; yes             ; User Verilog HDL File        ; D:/Principles of Computer Organization/CPU/modules/ac.v              ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/altera/14.0/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/altera/14.0/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/altera/14.0/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/altera/14.0/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal140.inc                   ; yes             ; Megafunction                 ; c:/altera/14.0/quartus/libraries/megafunctions/aglobal140.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/altera/14.0/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/altera/14.0/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/altera/14.0/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/altera/14.0/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_s9c1.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/Principles of Computer Organization/CPU/db/altsyncram_s9c1.tdf    ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 304       ;
+;                                             ;           ;
+; Total combinational functions               ; 249       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 75        ;
+;     -- 3 input functions                    ; 31        ;
+;     -- <=2 input functions                  ; 143       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 138       ;
+;     -- arithmetic mode                      ; 111       ;
+;                                             ;           ;
+; Total registers                             ; 230       ;
+;     -- Dedicated logic registers            ; 230       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 150       ;
+; Total memory bits                           ; 256       ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 101       ;
+; Total fan-out                               ; 1722      ;
+; Average fan-out                             ; 2.19      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                         ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------+--------------+
+; |top                                      ; 249 (0)           ; 230 (0)      ; 256         ; 0            ; 0       ; 0         ; 150  ; 0            ; |top                                                                        ; work         ;
+;    |CPU_dataflow:mcpu|                    ; 47 (16)           ; 66 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu                                                      ; work         ;
+;       |ar:mar|                            ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|ar:mar                                               ; work         ;
+;       |controller:mcontroller|            ; 10 (10)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|controller:mcontroller                               ; work         ;
+;       |dr:mdr|                            ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|dr:mdr                                               ; work         ;
+;       |ir:mir|                            ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|ir:mir                                               ; work         ;
+;       |pc:mpc|                            ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|pc:mpc                                               ; work         ;
+;       |qtsj:qtdl|                         ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|qtsj:qtdl                                            ; work         ;
+;       |r:mr|                              ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|r:mr                                                 ; work         ;
+;    |clk_div:delay|                        ; 45 (45)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clk_div:delay                                                          ; work         ;
+;    |clk_div:light|                        ; 34 (34)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clk_div:light                                                          ; work         ;
+;    |clk_div:mem|                          ; 11 (11)           ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clk_div:mem                                                            ; work         ;
+;    |clk_div:quick|                        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clk_div:quick                                                          ; work         ;
+;    |clk_div:slow|                         ; 45 (45)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clk_div:slow                                                           ; work         ;
+;    |light_show:show|                      ; 28 (28)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|light_show:show                                                        ; work         ;
+;    |memory:mram|                          ; 38 (38)           ; 35 (35)      ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|memory:mram                                                            ; work         ;
+;       |altsyncram:memory_reg_rtl_0|       ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|memory:mram|altsyncram:memory_reg_rtl_0                                ; work         ;
+;          |altsyncram_s9c1:auto_generated| ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|memory:mram|altsyncram:memory_reg_rtl_0|altsyncram_s9c1:auto_generated ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                      ;
++-----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                              ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++-----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; memory:mram|altsyncram:memory_reg_rtl_0|altsyncram_s9c1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 8            ; 32           ; 8            ; 256  ; None ;
++-----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++------------------------------------------+---------------------------------------------+
+; Register name                            ; Reason for Removal                          ;
++------------------------------------------+---------------------------------------------+
+; light_show:show|HEX6[6]                  ; Stuck at VCC due to stuck port data_in      ;
+; light_show:show|HEX6[0..2]               ; Stuck at GND due to stuck port data_in      ;
+; CPU_dataflow:mcpu|ac:mac|Dout[0..7]      ; Stuck at GND due to stuck port clock_enable ;
+; light_show:show|HEX6[3..5]               ; Stuck at GND due to stuck port data_in      ;
+; light_show:show|HEX4[6]                  ; Stuck at VCC due to stuck port data_in      ;
+; light_show:show|HEX4[0..5]               ; Stuck at GND due to stuck port data_in      ;
+; light_show:show|HEX5[0..3]               ; Stuck at GND due to stuck port data_in      ;
+; light_show:show|HEX5[6]                  ; Stuck at VCC due to stuck port data_in      ;
+; light_show:show|HEX5[4,5]                ; Stuck at GND due to stuck port data_in      ;
+; clk_div:mem|count[31]                    ; Merged with clk_div:light|count[31]         ;
+; clk_div:quick|count[31]                  ; Merged with clk_div:light|count[31]         ;
+; clk_div:mem|count[30]                    ; Merged with clk_div:light|count[30]         ;
+; clk_div:quick|count[30]                  ; Merged with clk_div:light|count[30]         ;
+; clk_div:mem|count[29]                    ; Merged with clk_div:light|count[29]         ;
+; clk_div:quick|count[29]                  ; Merged with clk_div:light|count[29]         ;
+; clk_div:mem|count[28]                    ; Merged with clk_div:light|count[28]         ;
+; clk_div:quick|count[28]                  ; Merged with clk_div:light|count[28]         ;
+; clk_div:mem|count[27]                    ; Merged with clk_div:light|count[27]         ;
+; clk_div:quick|count[27]                  ; Merged with clk_div:light|count[27]         ;
+; clk_div:mem|count[26]                    ; Merged with clk_div:light|count[26]         ;
+; clk_div:quick|count[26]                  ; Merged with clk_div:light|count[26]         ;
+; clk_div:mem|count[25]                    ; Merged with clk_div:light|count[25]         ;
+; clk_div:quick|count[25]                  ; Merged with clk_div:light|count[25]         ;
+; clk_div:mem|count[24]                    ; Merged with clk_div:light|count[24]         ;
+; clk_div:quick|count[24]                  ; Merged with clk_div:light|count[24]         ;
+; clk_div:mem|count[23]                    ; Merged with clk_div:light|count[23]         ;
+; clk_div:quick|count[23]                  ; Merged with clk_div:light|count[23]         ;
+; clk_div:mem|count[22]                    ; Merged with clk_div:light|count[22]         ;
+; clk_div:quick|count[22]                  ; Merged with clk_div:light|count[22]         ;
+; clk_div:mem|count[21]                    ; Merged with clk_div:light|count[21]         ;
+; clk_div:quick|count[21]                  ; Merged with clk_div:light|count[21]         ;
+; clk_div:mem|count[20]                    ; Merged with clk_div:light|count[20]         ;
+; clk_div:quick|count[20]                  ; Merged with clk_div:light|count[20]         ;
+; clk_div:mem|count[19]                    ; Merged with clk_div:light|count[19]         ;
+; clk_div:quick|count[19]                  ; Merged with clk_div:light|count[19]         ;
+; clk_div:mem|count[18]                    ; Merged with clk_div:light|count[18]         ;
+; clk_div:quick|count[18]                  ; Merged with clk_div:light|count[18]         ;
+; clk_div:mem|count[17]                    ; Merged with clk_div:light|count[17]         ;
+; clk_div:quick|count[17]                  ; Merged with clk_div:light|count[17]         ;
+; clk_div:mem|count[16]                    ; Merged with clk_div:light|count[16]         ;
+; clk_div:quick|count[16]                  ; Merged with clk_div:light|count[16]         ;
+; clk_div:mem|count[15]                    ; Merged with clk_div:light|count[15]         ;
+; clk_div:quick|count[15]                  ; Merged with clk_div:light|count[15]         ;
+; clk_div:mem|count[14]                    ; Merged with clk_div:light|count[14]         ;
+; clk_div:quick|count[14]                  ; Merged with clk_div:light|count[14]         ;
+; clk_div:mem|count[13]                    ; Merged with clk_div:light|count[13]         ;
+; clk_div:quick|count[13]                  ; Merged with clk_div:light|count[13]         ;
+; clk_div:mem|count[12]                    ; Merged with clk_div:light|count[12]         ;
+; clk_div:quick|count[12]                  ; Merged with clk_div:light|count[12]         ;
+; clk_div:mem|count[11]                    ; Merged with clk_div:light|count[11]         ;
+; clk_div:quick|count[11]                  ; Merged with clk_div:light|count[11]         ;
+; clk_div:mem|count[10]                    ; Merged with clk_div:light|count[10]         ;
+; clk_div:quick|count[10]                  ; Merged with clk_div:light|count[10]         ;
+; clk_div:mem|count[9]                     ; Merged with clk_div:light|count[9]          ;
+; clk_div:quick|count[9]                   ; Merged with clk_div:light|count[9]          ;
+; clk_div:mem|count[8]                     ; Merged with clk_div:light|count[8]          ;
+; clk_div:quick|count[8]                   ; Merged with clk_div:light|count[8]          ;
+; clk_div:mem|count[7]                     ; Merged with clk_div:light|count[7]          ;
+; clk_div:quick|count[7]                   ; Merged with clk_div:light|count[7]          ;
+; clk_div:mem|count[6]                     ; Merged with clk_div:light|count[6]          ;
+; clk_div:quick|count[6]                   ; Merged with clk_div:light|count[6]          ;
+; clk_div:mem|count[5]                     ; Merged with clk_div:light|count[5]          ;
+; clk_div:quick|count[5]                   ; Merged with clk_div:light|count[5]          ;
+; clk_div:mem|count[4]                     ; Merged with clk_div:light|count[4]          ;
+; clk_div:quick|count[4]                   ; Merged with clk_div:light|count[4]          ;
+; clk_div:mem|count[3]                     ; Merged with clk_div:light|count[3]          ;
+; clk_div:quick|count[3]                   ; Merged with clk_div:light|count[3]          ;
+; clk_div:mem|count[2]                     ; Merged with clk_div:light|count[2]          ;
+; clk_div:quick|count[2]                   ; Merged with clk_div:light|count[2]          ;
+; clk_div:mem|count[1]                     ; Merged with clk_div:light|count[1]          ;
+; clk_div:quick|count[1]                   ; Merged with clk_div:light|count[1]          ;
+; clk_div:mem|count[0]                     ; Merged with clk_div:light|count[0]          ;
+; clk_div:quick|count[0]                   ; Merged with clk_div:light|count[0]          ;
+; memory:mram|cnt[5..1023]                 ; Lost fanout                                 ;
+; Total Number of Removed Registers = 1112 ;                                             ;
++------------------------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                 ;
++----------------------------------+--------------------------------+-----------------------------------------------------------------------------------------+
+; Register name                    ; Reason for Removal             ; Registers Removed due to This Register                                                  ;
++----------------------------------+--------------------------------+-----------------------------------------------------------------------------------------+
+; memory:mram|cnt[1023]            ; Lost Fanouts                   ; memory:mram|cnt[1022], memory:mram|cnt[1021], memory:mram|cnt[1020],                    ;
+;                                  ;                                ; memory:mram|cnt[1019], memory:mram|cnt[1018], memory:mram|cnt[1017],                    ;
+;                                  ;                                ; memory:mram|cnt[1016], memory:mram|cnt[1015], memory:mram|cnt[1014],                    ;
+;                                  ;                                ; memory:mram|cnt[1013], memory:mram|cnt[1012], memory:mram|cnt[1011],                    ;
+;                                  ;                                ; memory:mram|cnt[1010], memory:mram|cnt[1009], memory:mram|cnt[1008],                    ;
+;                                  ;                                ; memory:mram|cnt[1007], memory:mram|cnt[1006], memory:mram|cnt[1005],                    ;
+;                                  ;                                ; memory:mram|cnt[1004], memory:mram|cnt[1003], memory:mram|cnt[1002],                    ;
+;                                  ;                                ; memory:mram|cnt[1001], memory:mram|cnt[1000], memory:mram|cnt[999],                     ;
+;                                  ;                                ; memory:mram|cnt[998], memory:mram|cnt[997], memory:mram|cnt[996], memory:mram|cnt[995], ;
+;                                  ;                                ; memory:mram|cnt[994], memory:mram|cnt[993], memory:mram|cnt[992], memory:mram|cnt[991], ;
+;                                  ;                                ; memory:mram|cnt[990], memory:mram|cnt[989], memory:mram|cnt[988], memory:mram|cnt[987], ;
+;                                  ;                                ; memory:mram|cnt[986], memory:mram|cnt[985], memory:mram|cnt[984], memory:mram|cnt[983], ;
+;                                  ;                                ; memory:mram|cnt[982], memory:mram|cnt[981], memory:mram|cnt[980], memory:mram|cnt[979], ;
+;                                  ;                                ; memory:mram|cnt[978], memory:mram|cnt[977], memory:mram|cnt[976], memory:mram|cnt[975], ;
+;                                  ;                                ; memory:mram|cnt[974], memory:mram|cnt[973], memory:mram|cnt[972], memory:mram|cnt[971], ;
+;                                  ;                                ; memory:mram|cnt[970], memory:mram|cnt[969], memory:mram|cnt[968], memory:mram|cnt[967], ;
+;                                  ;                                ; memory:mram|cnt[966], memory:mram|cnt[965], memory:mram|cnt[964], memory:mram|cnt[963], ;
+;                                  ;                                ; memory:mram|cnt[962], memory:mram|cnt[961], memory:mram|cnt[960], memory:mram|cnt[959], ;
+;                                  ;                                ; memory:mram|cnt[958], memory:mram|cnt[957], memory:mram|cnt[956], memory:mram|cnt[955], ;
+;                                  ;                                ; memory:mram|cnt[954], memory:mram|cnt[953], memory:mram|cnt[952], memory:mram|cnt[951], ;
+;                                  ;                                ; memory:mram|cnt[950], memory:mram|cnt[949], memory:mram|cnt[948], memory:mram|cnt[947], ;
+;                                  ;                                ; memory:mram|cnt[946], memory:mram|cnt[945], memory:mram|cnt[944], memory:mram|cnt[943], ;
+;                                  ;                                ; memory:mram|cnt[942], memory:mram|cnt[941], memory:mram|cnt[940], memory:mram|cnt[939], ;
+;                                  ;                                ; memory:mram|cnt[938], memory:mram|cnt[937], memory:mram|cnt[936], memory:mram|cnt[935], ;
+;                                  ;                                ; memory:mram|cnt[934], memory:mram|cnt[933], memory:mram|cnt[932], memory:mram|cnt[931], ;
+;                                  ;                                ; memory:mram|cnt[930], memory:mram|cnt[929], memory:mram|cnt[928], memory:mram|cnt[927], ;
+;                                  ;                                ; memory:mram|cnt[926], memory:mram|cnt[925], memory:mram|cnt[924], memory:mram|cnt[923], ;
+;                                  ;                                ; memory:mram|cnt[922], memory:mram|cnt[921], memory:mram|cnt[920], memory:mram|cnt[919], ;
+;                                  ;                                ; memory:mram|cnt[918], memory:mram|cnt[917], memory:mram|cnt[916], memory:mram|cnt[915], ;
+;                                  ;                                ; memory:mram|cnt[914], memory:mram|cnt[913], memory:mram|cnt[912], memory:mram|cnt[911], ;
+;                                  ;                                ; memory:mram|cnt[910], memory:mram|cnt[909], memory:mram|cnt[908], memory:mram|cnt[907], ;
+;                                  ;                                ; memory:mram|cnt[906], memory:mram|cnt[905], memory:mram|cnt[904], memory:mram|cnt[903], ;
+;                                  ;                                ; memory:mram|cnt[902], memory:mram|cnt[901], memory:mram|cnt[900], memory:mram|cnt[899], ;
+;                                  ;                                ; memory:mram|cnt[898], memory:mram|cnt[897], memory:mram|cnt[896], memory:mram|cnt[895], ;
+;                                  ;                                ; memory:mram|cnt[894], memory:mram|cnt[893], memory:mram|cnt[892], memory:mram|cnt[891], ;
+;                                  ;                                ; memory:mram|cnt[890], memory:mram|cnt[889], memory:mram|cnt[888], memory:mram|cnt[887], ;
+;                                  ;                                ; memory:mram|cnt[886], memory:mram|cnt[885], memory:mram|cnt[884], memory:mram|cnt[883], ;
+;                                  ;                                ; memory:mram|cnt[882], memory:mram|cnt[881], memory:mram|cnt[880], memory:mram|cnt[879], ;
+;                                  ;                                ; memory:mram|cnt[878], memory:mram|cnt[877], memory:mram|cnt[876], memory:mram|cnt[875], ;
+;                                  ;                                ; memory:mram|cnt[874], memory:mram|cnt[873], memory:mram|cnt[872], memory:mram|cnt[871], ;
+;                                  ;                                ; memory:mram|cnt[870], memory:mram|cnt[869], memory:mram|cnt[868], memory:mram|cnt[867], ;
+;                                  ;                                ; memory:mram|cnt[866], memory:mram|cnt[865], memory:mram|cnt[864], memory:mram|cnt[863], ;
+;                                  ;                                ; memory:mram|cnt[862], memory:mram|cnt[861], memory:mram|cnt[860], memory:mram|cnt[859], ;
+;                                  ;                                ; memory:mram|cnt[858], memory:mram|cnt[857], memory:mram|cnt[856], memory:mram|cnt[855], ;
+;                                  ;                                ; memory:mram|cnt[854], memory:mram|cnt[853], memory:mram|cnt[852], memory:mram|cnt[851], ;
+;                                  ;                                ; memory:mram|cnt[850], memory:mram|cnt[849], memory:mram|cnt[848], memory:mram|cnt[847], ;
+;                                  ;                                ; memory:mram|cnt[846], memory:mram|cnt[845], memory:mram|cnt[844], memory:mram|cnt[843], ;
+;                                  ;                                ; memory:mram|cnt[842], memory:mram|cnt[841], memory:mram|cnt[840], memory:mram|cnt[839], ;
+;                                  ;                                ; memory:mram|cnt[838], memory:mram|cnt[837], memory:mram|cnt[836], memory:mram|cnt[835], ;
+;                                  ;                                ; memory:mram|cnt[834], memory:mram|cnt[833], memory:mram|cnt[832], memory:mram|cnt[831], ;
+;                                  ;                                ; memory:mram|cnt[830], memory:mram|cnt[829], memory:mram|cnt[828], memory:mram|cnt[827], ;
+;                                  ;                                ; memory:mram|cnt[826], memory:mram|cnt[825], memory:mram|cnt[824], memory:mram|cnt[823], ;
+;                                  ;                                ; memory:mram|cnt[822], memory:mram|cnt[821], memory:mram|cnt[820], memory:mram|cnt[819], ;
+;                                  ;                                ; memory:mram|cnt[818], memory:mram|cnt[817], memory:mram|cnt[816], memory:mram|cnt[815], ;
+;                                  ;                                ; memory:mram|cnt[814], memory:mram|cnt[813], memory:mram|cnt[812], memory:mram|cnt[811], ;
+;                                  ;                                ; memory:mram|cnt[810], memory:mram|cnt[809], memory:mram|cnt[808], memory:mram|cnt[807], ;
+;                                  ;                                ; memory:mram|cnt[806], memory:mram|cnt[805], memory:mram|cnt[804], memory:mram|cnt[803], ;
+;                                  ;                                ; memory:mram|cnt[802], memory:mram|cnt[801], memory:mram|cnt[800], memory:mram|cnt[799], ;
+;                                  ;                                ; memory:mram|cnt[798], memory:mram|cnt[797], memory:mram|cnt[796], memory:mram|cnt[795], ;
+;                                  ;                                ; memory:mram|cnt[794], memory:mram|cnt[793], memory:mram|cnt[792], memory:mram|cnt[791], ;
+;                                  ;                                ; memory:mram|cnt[790], memory:mram|cnt[789], memory:mram|cnt[788], memory:mram|cnt[787], ;
+;                                  ;                                ; memory:mram|cnt[786], memory:mram|cnt[785], memory:mram|cnt[784], memory:mram|cnt[783], ;
+;                                  ;                                ; memory:mram|cnt[782], memory:mram|cnt[781], memory:mram|cnt[780], memory:mram|cnt[779], ;
+;                                  ;                                ; memory:mram|cnt[778], memory:mram|cnt[777], memory:mram|cnt[776], memory:mram|cnt[775], ;
+;                                  ;                                ; memory:mram|cnt[774], memory:mram|cnt[773], memory:mram|cnt[772], memory:mram|cnt[771], ;
+;                                  ;                                ; memory:mram|cnt[770], memory:mram|cnt[769], memory:mram|cnt[768], memory:mram|cnt[767], ;
+;                                  ;                                ; memory:mram|cnt[766], memory:mram|cnt[765], memory:mram|cnt[764], memory:mram|cnt[763], ;
+;                                  ;                                ; memory:mram|cnt[762], memory:mram|cnt[761], memory:mram|cnt[760], memory:mram|cnt[759], ;
+;                                  ;                                ; memory:mram|cnt[758], memory:mram|cnt[757], memory:mram|cnt[756], memory:mram|cnt[755], ;
+;                                  ;                                ; memory:mram|cnt[754], memory:mram|cnt[753], memory:mram|cnt[752], memory:mram|cnt[751], ;
+;                                  ;                                ; memory:mram|cnt[750], memory:mram|cnt[749], memory:mram|cnt[748], memory:mram|cnt[747], ;
+;                                  ;                                ; memory:mram|cnt[746], memory:mram|cnt[745], memory:mram|cnt[744], memory:mram|cnt[743], ;
+;                                  ;                                ; memory:mram|cnt[742], memory:mram|cnt[741], memory:mram|cnt[740], memory:mram|cnt[739], ;
+;                                  ;                                ; memory:mram|cnt[738], memory:mram|cnt[737], memory:mram|cnt[736], memory:mram|cnt[735], ;
+;                                  ;                                ; memory:mram|cnt[734], memory:mram|cnt[733], memory:mram|cnt[732], memory:mram|cnt[731], ;
+;                                  ;                                ; memory:mram|cnt[730], memory:mram|cnt[729], memory:mram|cnt[728], memory:mram|cnt[727], ;
+;                                  ;                                ; memory:mram|cnt[726], memory:mram|cnt[725], memory:mram|cnt[724], memory:mram|cnt[723], ;
+;                                  ;                                ; memory:mram|cnt[722], memory:mram|cnt[721], memory:mram|cnt[720], memory:mram|cnt[719], ;
+;                                  ;                                ; memory:mram|cnt[718], memory:mram|cnt[717], memory:mram|cnt[716], memory:mram|cnt[715], ;
+;                                  ;                                ; memory:mram|cnt[714], memory:mram|cnt[713], memory:mram|cnt[712], memory:mram|cnt[711], ;
+;                                  ;                                ; memory:mram|cnt[710], memory:mram|cnt[709], memory:mram|cnt[708], memory:mram|cnt[707], ;
+;                                  ;                                ; memory:mram|cnt[706], memory:mram|cnt[705], memory:mram|cnt[704], memory:mram|cnt[703], ;
+;                                  ;                                ; memory:mram|cnt[702], memory:mram|cnt[701], memory:mram|cnt[700], memory:mram|cnt[699], ;
+;                                  ;                                ; memory:mram|cnt[698], memory:mram|cnt[697], memory:mram|cnt[696], memory:mram|cnt[695], ;
+;                                  ;                                ; memory:mram|cnt[694], memory:mram|cnt[693], memory:mram|cnt[692], memory:mram|cnt[691], ;
+;                                  ;                                ; memory:mram|cnt[690], memory:mram|cnt[689], memory:mram|cnt[688], memory:mram|cnt[687], ;
+;                                  ;                                ; memory:mram|cnt[686], memory:mram|cnt[685], memory:mram|cnt[684], memory:mram|cnt[683], ;
+;                                  ;                                ; memory:mram|cnt[682], memory:mram|cnt[681], memory:mram|cnt[680], memory:mram|cnt[679], ;
+;                                  ;                                ; memory:mram|cnt[678], memory:mram|cnt[677], memory:mram|cnt[676], memory:mram|cnt[675], ;
+;                                  ;                                ; memory:mram|cnt[674], memory:mram|cnt[673], memory:mram|cnt[672], memory:mram|cnt[671], ;
+;                                  ;                                ; memory:mram|cnt[670], memory:mram|cnt[669], memory:mram|cnt[668], memory:mram|cnt[667], ;
+;                                  ;                                ; memory:mram|cnt[666], memory:mram|cnt[665], memory:mram|cnt[664], memory:mram|cnt[663], ;
+;                                  ;                                ; memory:mram|cnt[662], memory:mram|cnt[661], memory:mram|cnt[660], memory:mram|cnt[659], ;
+;                                  ;                                ; memory:mram|cnt[658], memory:mram|cnt[657], memory:mram|cnt[656], memory:mram|cnt[655], ;
+;                                  ;                                ; memory:mram|cnt[654], memory:mram|cnt[653], memory:mram|cnt[652], memory:mram|cnt[651], ;
+;                                  ;                                ; memory:mram|cnt[650], memory:mram|cnt[649], memory:mram|cnt[648], memory:mram|cnt[647], ;
+;                                  ;                                ; memory:mram|cnt[646], memory:mram|cnt[645], memory:mram|cnt[644], memory:mram|cnt[643], ;
+;                                  ;                                ; memory:mram|cnt[642], memory:mram|cnt[641], memory:mram|cnt[640], memory:mram|cnt[639], ;
+;                                  ;                                ; memory:mram|cnt[638], memory:mram|cnt[637], memory:mram|cnt[636], memory:mram|cnt[635], ;
+;                                  ;                                ; memory:mram|cnt[634], memory:mram|cnt[633], memory:mram|cnt[632], memory:mram|cnt[631], ;
+;                                  ;                                ; memory:mram|cnt[630], memory:mram|cnt[629], memory:mram|cnt[628], memory:mram|cnt[627], ;
+;                                  ;                                ; memory:mram|cnt[626], memory:mram|cnt[625], memory:mram|cnt[624], memory:mram|cnt[623], ;
+;                                  ;                                ; memory:mram|cnt[622], memory:mram|cnt[621], memory:mram|cnt[620], memory:mram|cnt[619], ;
+;                                  ;                                ; memory:mram|cnt[618], memory:mram|cnt[617], memory:mram|cnt[616], memory:mram|cnt[615], ;
+;                                  ;                                ; memory:mram|cnt[614], memory:mram|cnt[613], memory:mram|cnt[612], memory:mram|cnt[611], ;
+;                                  ;                                ; memory:mram|cnt[610], memory:mram|cnt[609], memory:mram|cnt[608], memory:mram|cnt[607], ;
+;                                  ;                                ; memory:mram|cnt[606], memory:mram|cnt[605], memory:mram|cnt[604], memory:mram|cnt[603], ;
+;                                  ;                                ; memory:mram|cnt[602], memory:mram|cnt[601], memory:mram|cnt[600], memory:mram|cnt[599], ;
+;                                  ;                                ; memory:mram|cnt[598], memory:mram|cnt[597], memory:mram|cnt[596], memory:mram|cnt[595], ;
+;                                  ;                                ; memory:mram|cnt[594], memory:mram|cnt[593], memory:mram|cnt[592], memory:mram|cnt[591], ;
+;                                  ;                                ; memory:mram|cnt[590], memory:mram|cnt[589], memory:mram|cnt[588], memory:mram|cnt[587], ;
+;                                  ;                                ; memory:mram|cnt[586], memory:mram|cnt[585], memory:mram|cnt[584], memory:mram|cnt[583], ;
+;                                  ;                                ; memory:mram|cnt[582], memory:mram|cnt[581], memory:mram|cnt[580], memory:mram|cnt[579], ;
+;                                  ;                                ; memory:mram|cnt[578], memory:mram|cnt[577], memory:mram|cnt[576], memory:mram|cnt[575], ;
+;                                  ;                                ; memory:mram|cnt[574], memory:mram|cnt[573], memory:mram|cnt[572], memory:mram|cnt[571], ;
+;                                  ;                                ; memory:mram|cnt[570], memory:mram|cnt[569], memory:mram|cnt[568], memory:mram|cnt[567], ;
+;                                  ;                                ; memory:mram|cnt[566], memory:mram|cnt[565], memory:mram|cnt[564], memory:mram|cnt[563], ;
+;                                  ;                                ; memory:mram|cnt[562], memory:mram|cnt[561], memory:mram|cnt[560], memory:mram|cnt[559], ;
+;                                  ;                                ; memory:mram|cnt[558], memory:mram|cnt[557], memory:mram|cnt[556], memory:mram|cnt[555], ;
+;                                  ;                                ; memory:mram|cnt[554], memory:mram|cnt[553], memory:mram|cnt[552], memory:mram|cnt[551], ;
+;                                  ;                                ; memory:mram|cnt[550], memory:mram|cnt[549], memory:mram|cnt[548], memory:mram|cnt[547], ;
+;                                  ;                                ; memory:mram|cnt[546], memory:mram|cnt[545], memory:mram|cnt[544], memory:mram|cnt[543], ;
+;                                  ;                                ; memory:mram|cnt[542], memory:mram|cnt[541], memory:mram|cnt[540], memory:mram|cnt[539], ;
+;                                  ;                                ; memory:mram|cnt[538], memory:mram|cnt[537], memory:mram|cnt[536], memory:mram|cnt[535], ;
+;                                  ;                                ; memory:mram|cnt[534], memory:mram|cnt[533], memory:mram|cnt[532], memory:mram|cnt[531], ;
+;                                  ;                                ; memory:mram|cnt[530], memory:mram|cnt[529], memory:mram|cnt[528], memory:mram|cnt[527], ;
+;                                  ;                                ; memory:mram|cnt[526], memory:mram|cnt[525], memory:mram|cnt[524], memory:mram|cnt[523], ;
+;                                  ;                                ; memory:mram|cnt[522], memory:mram|cnt[521], memory:mram|cnt[520], memory:mram|cnt[519], ;
+;                                  ;                                ; memory:mram|cnt[518], memory:mram|cnt[517], memory:mram|cnt[516], memory:mram|cnt[515], ;
+;                                  ;                                ; memory:mram|cnt[514], memory:mram|cnt[513], memory:mram|cnt[512], memory:mram|cnt[511], ;
+;                                  ;                                ; memory:mram|cnt[510], memory:mram|cnt[509], memory:mram|cnt[508], memory:mram|cnt[507], ;
+;                                  ;                                ; memory:mram|cnt[506], memory:mram|cnt[505], memory:mram|cnt[504], memory:mram|cnt[503], ;
+;                                  ;                                ; memory:mram|cnt[502], memory:mram|cnt[501], memory:mram|cnt[500], memory:mram|cnt[499], ;
+;                                  ;                                ; memory:mram|cnt[498], memory:mram|cnt[497], memory:mram|cnt[496], memory:mram|cnt[495], ;
+;                                  ;                                ; memory:mram|cnt[494], memory:mram|cnt[493], memory:mram|cnt[492], memory:mram|cnt[491], ;
+;                                  ;                                ; memory:mram|cnt[490], memory:mram|cnt[489], memory:mram|cnt[488], memory:mram|cnt[487], ;
+;                                  ;                                ; memory:mram|cnt[486], memory:mram|cnt[485], memory:mram|cnt[484], memory:mram|cnt[483], ;
+;                                  ;                                ; memory:mram|cnt[482], memory:mram|cnt[481], memory:mram|cnt[480], memory:mram|cnt[479], ;
+;                                  ;                                ; memory:mram|cnt[478], memory:mram|cnt[477], memory:mram|cnt[476], memory:mram|cnt[475], ;
+;                                  ;                                ; memory:mram|cnt[474], memory:mram|cnt[473], memory:mram|cnt[472], memory:mram|cnt[471], ;
+;                                  ;                                ; memory:mram|cnt[470], memory:mram|cnt[469], memory:mram|cnt[468], memory:mram|cnt[467], ;
+;                                  ;                                ; memory:mram|cnt[466], memory:mram|cnt[465], memory:mram|cnt[464], memory:mram|cnt[463], ;
+;                                  ;                                ; memory:mram|cnt[462], memory:mram|cnt[461], memory:mram|cnt[460], memory:mram|cnt[459], ;
+;                                  ;                                ; memory:mram|cnt[458], memory:mram|cnt[457], memory:mram|cnt[456], memory:mram|cnt[455], ;
+;                                  ;                                ; memory:mram|cnt[454], memory:mram|cnt[453], memory:mram|cnt[452], memory:mram|cnt[451], ;
+;                                  ;                                ; memory:mram|cnt[450], memory:mram|cnt[449], memory:mram|cnt[448], memory:mram|cnt[447], ;
+;                                  ;                                ; memory:mram|cnt[446], memory:mram|cnt[445], memory:mram|cnt[444], memory:mram|cnt[443], ;
+;                                  ;                                ; memory:mram|cnt[442], memory:mram|cnt[441], memory:mram|cnt[440], memory:mram|cnt[439], ;
+;                                  ;                                ; memory:mram|cnt[438], memory:mram|cnt[437], memory:mram|cnt[436], memory:mram|cnt[435], ;
+;                                  ;                                ; memory:mram|cnt[434], memory:mram|cnt[433], memory:mram|cnt[432], memory:mram|cnt[431], ;
+;                                  ;                                ; memory:mram|cnt[430], memory:mram|cnt[429], memory:mram|cnt[428], memory:mram|cnt[427], ;
+;                                  ;                                ; memory:mram|cnt[426], memory:mram|cnt[425], memory:mram|cnt[424], memory:mram|cnt[423], ;
+;                                  ;                                ; memory:mram|cnt[422], memory:mram|cnt[421], memory:mram|cnt[420], memory:mram|cnt[419], ;
+;                                  ;                                ; memory:mram|cnt[418], memory:mram|cnt[417], memory:mram|cnt[416], memory:mram|cnt[415], ;
+;                                  ;                                ; memory:mram|cnt[414], memory:mram|cnt[413], memory:mram|cnt[412], memory:mram|cnt[411], ;
+;                                  ;                                ; memory:mram|cnt[410], memory:mram|cnt[409], memory:mram|cnt[408], memory:mram|cnt[407], ;
+;                                  ;                                ; memory:mram|cnt[406], memory:mram|cnt[405], memory:mram|cnt[404], memory:mram|cnt[403], ;
+;                                  ;                                ; memory:mram|cnt[402], memory:mram|cnt[401], memory:mram|cnt[400], memory:mram|cnt[399], ;
+;                                  ;                                ; memory:mram|cnt[398], memory:mram|cnt[397], memory:mram|cnt[396], memory:mram|cnt[395], ;
+;                                  ;                                ; memory:mram|cnt[394], memory:mram|cnt[393], memory:mram|cnt[392], memory:mram|cnt[391], ;
+;                                  ;                                ; memory:mram|cnt[390], memory:mram|cnt[389], memory:mram|cnt[388], memory:mram|cnt[387], ;
+;                                  ;                                ; memory:mram|cnt[386], memory:mram|cnt[385], memory:mram|cnt[384], memory:mram|cnt[383], ;
+;                                  ;                                ; memory:mram|cnt[382], memory:mram|cnt[381], memory:mram|cnt[380], memory:mram|cnt[379], ;
+;                                  ;                                ; memory:mram|cnt[378], memory:mram|cnt[377], memory:mram|cnt[376], memory:mram|cnt[375], ;
+;                                  ;                                ; memory:mram|cnt[374], memory:mram|cnt[373], memory:mram|cnt[372], memory:mram|cnt[371], ;
+;                                  ;                                ; memory:mram|cnt[370], memory:mram|cnt[369], memory:mram|cnt[368], memory:mram|cnt[367], ;
+;                                  ;                                ; memory:mram|cnt[366], memory:mram|cnt[365], memory:mram|cnt[364], memory:mram|cnt[363], ;
+;                                  ;                                ; memory:mram|cnt[362], memory:mram|cnt[361], memory:mram|cnt[360], memory:mram|cnt[359], ;
+;                                  ;                                ; memory:mram|cnt[358], memory:mram|cnt[357], memory:mram|cnt[356], memory:mram|cnt[355], ;
+;                                  ;                                ; memory:mram|cnt[354], memory:mram|cnt[353], memory:mram|cnt[352], memory:mram|cnt[351], ;
+;                                  ;                                ; memory:mram|cnt[350], memory:mram|cnt[349], memory:mram|cnt[348], memory:mram|cnt[347], ;
+;                                  ;                                ; memory:mram|cnt[346], memory:mram|cnt[345], memory:mram|cnt[344], memory:mram|cnt[343], ;
+;                                  ;                                ; memory:mram|cnt[342], memory:mram|cnt[341], memory:mram|cnt[340], memory:mram|cnt[339], ;
+;                                  ;                                ; memory:mram|cnt[338], memory:mram|cnt[337], memory:mram|cnt[336], memory:mram|cnt[335], ;
+;                                  ;                                ; memory:mram|cnt[334], memory:mram|cnt[333], memory:mram|cnt[332], memory:mram|cnt[331], ;
+;                                  ;                                ; memory:mram|cnt[330], memory:mram|cnt[329], memory:mram|cnt[328], memory:mram|cnt[327], ;
+;                                  ;                                ; memory:mram|cnt[326], memory:mram|cnt[325], memory:mram|cnt[324], memory:mram|cnt[323], ;
+;                                  ;                                ; memory:mram|cnt[322], memory:mram|cnt[321], memory:mram|cnt[320], memory:mram|cnt[319], ;
+;                                  ;                                ; memory:mram|cnt[318], memory:mram|cnt[317], memory:mram|cnt[316], memory:mram|cnt[315], ;
+;                                  ;                                ; memory:mram|cnt[314], memory:mram|cnt[313], memory:mram|cnt[312], memory:mram|cnt[311], ;
+;                                  ;                                ; memory:mram|cnt[310], memory:mram|cnt[309], memory:mram|cnt[308], memory:mram|cnt[307], ;
+;                                  ;                                ; memory:mram|cnt[306], memory:mram|cnt[305], memory:mram|cnt[304], memory:mram|cnt[303], ;
+;                                  ;                                ; memory:mram|cnt[302], memory:mram|cnt[301], memory:mram|cnt[300], memory:mram|cnt[299], ;
+;                                  ;                                ; memory:mram|cnt[298], memory:mram|cnt[297], memory:mram|cnt[296], memory:mram|cnt[295], ;
+;                                  ;                                ; memory:mram|cnt[294], memory:mram|cnt[293], memory:mram|cnt[292], memory:mram|cnt[291], ;
+;                                  ;                                ; memory:mram|cnt[290], memory:mram|cnt[289], memory:mram|cnt[288], memory:mram|cnt[287], ;
+;                                  ;                                ; memory:mram|cnt[286], memory:mram|cnt[285], memory:mram|cnt[284], memory:mram|cnt[283], ;
+;                                  ;                                ; memory:mram|cnt[282], memory:mram|cnt[281], memory:mram|cnt[280], memory:mram|cnt[279], ;
+;                                  ;                                ; memory:mram|cnt[278], memory:mram|cnt[277], memory:mram|cnt[276], memory:mram|cnt[275], ;
+;                                  ;                                ; memory:mram|cnt[274], memory:mram|cnt[273], memory:mram|cnt[272], memory:mram|cnt[271], ;
+;                                  ;                                ; memory:mram|cnt[270], memory:mram|cnt[269], memory:mram|cnt[268], memory:mram|cnt[267], ;
+;                                  ;                                ; memory:mram|cnt[266], memory:mram|cnt[265], memory:mram|cnt[264], memory:mram|cnt[263], ;
+;                                  ;                                ; memory:mram|cnt[262], memory:mram|cnt[261], memory:mram|cnt[260], memory:mram|cnt[259], ;
+;                                  ;                                ; memory:mram|cnt[258], memory:mram|cnt[257], memory:mram|cnt[256], memory:mram|cnt[255], ;
+;                                  ;                                ; memory:mram|cnt[254], memory:mram|cnt[253], memory:mram|cnt[252], memory:mram|cnt[251], ;
+;                                  ;                                ; memory:mram|cnt[250], memory:mram|cnt[249], memory:mram|cnt[248], memory:mram|cnt[247], ;
+;                                  ;                                ; memory:mram|cnt[246], memory:mram|cnt[245], memory:mram|cnt[244], memory:mram|cnt[243], ;
+;                                  ;                                ; memory:mram|cnt[242], memory:mram|cnt[241], memory:mram|cnt[240], memory:mram|cnt[239], ;
+;                                  ;                                ; memory:mram|cnt[238], memory:mram|cnt[237], memory:mram|cnt[236], memory:mram|cnt[235], ;
+;                                  ;                                ; memory:mram|cnt[234], memory:mram|cnt[233], memory:mram|cnt[232], memory:mram|cnt[231], ;
+;                                  ;                                ; memory:mram|cnt[230], memory:mram|cnt[229], memory:mram|cnt[228], memory:mram|cnt[227], ;
+;                                  ;                                ; memory:mram|cnt[226], memory:mram|cnt[225], memory:mram|cnt[224], memory:mram|cnt[223], ;
+;                                  ;                                ; memory:mram|cnt[222], memory:mram|cnt[221], memory:mram|cnt[220], memory:mram|cnt[219], ;
+;                                  ;                                ; memory:mram|cnt[218], memory:mram|cnt[217], memory:mram|cnt[216], memory:mram|cnt[215], ;
+;                                  ;                                ; memory:mram|cnt[214], memory:mram|cnt[213], memory:mram|cnt[212], memory:mram|cnt[211], ;
+;                                  ;                                ; memory:mram|cnt[210], memory:mram|cnt[209], memory:mram|cnt[208], memory:mram|cnt[207], ;
+;                                  ;                                ; memory:mram|cnt[206], memory:mram|cnt[205], memory:mram|cnt[204], memory:mram|cnt[203], ;
+;                                  ;                                ; memory:mram|cnt[202], memory:mram|cnt[201], memory:mram|cnt[200], memory:mram|cnt[199], ;
+;                                  ;                                ; memory:mram|cnt[198], memory:mram|cnt[197], memory:mram|cnt[196], memory:mram|cnt[195], ;
+;                                  ;                                ; memory:mram|cnt[194], memory:mram|cnt[193], memory:mram|cnt[192], memory:mram|cnt[191], ;
+;                                  ;                                ; memory:mram|cnt[190], memory:mram|cnt[189], memory:mram|cnt[188], memory:mram|cnt[187], ;
+;                                  ;                                ; memory:mram|cnt[186], memory:mram|cnt[185], memory:mram|cnt[184], memory:mram|cnt[183], ;
+;                                  ;                                ; memory:mram|cnt[182], memory:mram|cnt[181], memory:mram|cnt[180], memory:mram|cnt[179], ;
+;                                  ;                                ; memory:mram|cnt[178], memory:mram|cnt[177], memory:mram|cnt[176], memory:mram|cnt[175], ;
+;                                  ;                                ; memory:mram|cnt[174], memory:mram|cnt[173], memory:mram|cnt[172], memory:mram|cnt[171], ;
+;                                  ;                                ; memory:mram|cnt[170], memory:mram|cnt[169], memory:mram|cnt[168], memory:mram|cnt[167], ;
+;                                  ;                                ; memory:mram|cnt[166], memory:mram|cnt[165], memory:mram|cnt[164], memory:mram|cnt[163], ;
+;                                  ;                                ; memory:mram|cnt[162], memory:mram|cnt[161], memory:mram|cnt[160], memory:mram|cnt[159], ;
+;                                  ;                                ; memory:mram|cnt[158], memory:mram|cnt[157], memory:mram|cnt[156], memory:mram|cnt[155], ;
+;                                  ;                                ; memory:mram|cnt[154], memory:mram|cnt[153], memory:mram|cnt[152], memory:mram|cnt[151], ;
+;                                  ;                                ; memory:mram|cnt[150], memory:mram|cnt[149], memory:mram|cnt[148], memory:mram|cnt[147], ;
+;                                  ;                                ; memory:mram|cnt[146], memory:mram|cnt[145], memory:mram|cnt[144], memory:mram|cnt[143], ;
+;                                  ;                                ; memory:mram|cnt[142], memory:mram|cnt[141], memory:mram|cnt[140], memory:mram|cnt[139], ;
+;                                  ;                                ; memory:mram|cnt[138], memory:mram|cnt[137], memory:mram|cnt[136], memory:mram|cnt[135], ;
+;                                  ;                                ; memory:mram|cnt[134], memory:mram|cnt[133], memory:mram|cnt[132], memory:mram|cnt[131], ;
+;                                  ;                                ; memory:mram|cnt[130], memory:mram|cnt[129], memory:mram|cnt[128], memory:mram|cnt[127], ;
+;                                  ;                                ; memory:mram|cnt[126], memory:mram|cnt[125], memory:mram|cnt[124], memory:mram|cnt[123], ;
+;                                  ;                                ; memory:mram|cnt[122], memory:mram|cnt[121], memory:mram|cnt[120], memory:mram|cnt[119], ;
+;                                  ;                                ; memory:mram|cnt[118], memory:mram|cnt[117], memory:mram|cnt[116], memory:mram|cnt[115], ;
+;                                  ;                                ; memory:mram|cnt[114], memory:mram|cnt[113], memory:mram|cnt[112], memory:mram|cnt[111], ;
+;                                  ;                                ; memory:mram|cnt[110], memory:mram|cnt[109], memory:mram|cnt[108], memory:mram|cnt[107], ;
+;                                  ;                                ; memory:mram|cnt[106], memory:mram|cnt[105], memory:mram|cnt[104], memory:mram|cnt[103], ;
+;                                  ;                                ; memory:mram|cnt[102], memory:mram|cnt[101], memory:mram|cnt[100], memory:mram|cnt[99],  ;
+;                                  ;                                ; memory:mram|cnt[98], memory:mram|cnt[97], memory:mram|cnt[96], memory:mram|cnt[95],     ;
+;                                  ;                                ; memory:mram|cnt[94], memory:mram|cnt[93], memory:mram|cnt[92], memory:mram|cnt[91],     ;
+;                                  ;                                ; memory:mram|cnt[90], memory:mram|cnt[89], memory:mram|cnt[88], memory:mram|cnt[87],     ;
+;                                  ;                                ; memory:mram|cnt[86], memory:mram|cnt[85], memory:mram|cnt[84], memory:mram|cnt[83],     ;
+;                                  ;                                ; memory:mram|cnt[82], memory:mram|cnt[81], memory:mram|cnt[80], memory:mram|cnt[79],     ;
+;                                  ;                                ; memory:mram|cnt[78], memory:mram|cnt[77], memory:mram|cnt[76], memory:mram|cnt[75],     ;
+;                                  ;                                ; memory:mram|cnt[74], memory:mram|cnt[73], memory:mram|cnt[72], memory:mram|cnt[71],     ;
+;                                  ;                                ; memory:mram|cnt[70], memory:mram|cnt[69], memory:mram|cnt[68], memory:mram|cnt[67],     ;
+;                                  ;                                ; memory:mram|cnt[66], memory:mram|cnt[65], memory:mram|cnt[64], memory:mram|cnt[63],     ;
+;                                  ;                                ; memory:mram|cnt[62], memory:mram|cnt[61], memory:mram|cnt[60], memory:mram|cnt[59],     ;
+;                                  ;                                ; memory:mram|cnt[58], memory:mram|cnt[57], memory:mram|cnt[56], memory:mram|cnt[55],     ;
+;                                  ;                                ; memory:mram|cnt[54], memory:mram|cnt[53], memory:mram|cnt[52], memory:mram|cnt[51],     ;
+;                                  ;                                ; memory:mram|cnt[50], memory:mram|cnt[49], memory:mram|cnt[48], memory:mram|cnt[47],     ;
+;                                  ;                                ; memory:mram|cnt[46], memory:mram|cnt[45], memory:mram|cnt[44], memory:mram|cnt[43],     ;
+;                                  ;                                ; memory:mram|cnt[42], memory:mram|cnt[41], memory:mram|cnt[40], memory:mram|cnt[39],     ;
+;                                  ;                                ; memory:mram|cnt[38], memory:mram|cnt[37], memory:mram|cnt[36], memory:mram|cnt[35],     ;
+;                                  ;                                ; memory:mram|cnt[34], memory:mram|cnt[33], memory:mram|cnt[32], memory:mram|cnt[31],     ;
+;                                  ;                                ; memory:mram|cnt[30], memory:mram|cnt[29], memory:mram|cnt[28], memory:mram|cnt[27],     ;
+;                                  ;                                ; memory:mram|cnt[26], memory:mram|cnt[25], memory:mram|cnt[24], memory:mram|cnt[23],     ;
+;                                  ;                                ; memory:mram|cnt[22], memory:mram|cnt[21], memory:mram|cnt[20], memory:mram|cnt[19],     ;
+;                                  ;                                ; memory:mram|cnt[18], memory:mram|cnt[17], memory:mram|cnt[16], memory:mram|cnt[15],     ;
+;                                  ;                                ; memory:mram|cnt[14], memory:mram|cnt[13], memory:mram|cnt[12], memory:mram|cnt[11],     ;
+;                                  ;                                ; memory:mram|cnt[10], memory:mram|cnt[9], memory:mram|cnt[8], memory:mram|cnt[7],        ;
+;                                  ;                                ; memory:mram|cnt[6], memory:mram|cnt[5]                                                  ;
+; CPU_dataflow:mcpu|ac:mac|Dout[0] ; Stuck at GND                   ; CPU_dataflow:mcpu|ac:mac|Dout[7], CPU_dataflow:mcpu|ac:mac|Dout[6],                     ;
+;                                  ; due to stuck port clock_enable ; CPU_dataflow:mcpu|ac:mac|Dout[5], CPU_dataflow:mcpu|ac:mac|Dout[4],                     ;
+;                                  ;                                ; CPU_dataflow:mcpu|ac:mac|Dout[3], CPU_dataflow:mcpu|ac:mac|Dout[2],                     ;
+;                                  ;                                ; CPU_dataflow:mcpu|ac:mac|Dout[1], light_show:show|HEX4[6], light_show:show|HEX4[5],     ;
+;                                  ;                                ; light_show:show|HEX4[4], light_show:show|HEX4[3], light_show:show|HEX4[2],              ;
+;                                  ;                                ; light_show:show|HEX4[1], light_show:show|HEX4[0], light_show:show|HEX5[2],              ;
+;                                  ;                                ; light_show:show|HEX5[1], light_show:show|HEX5[0], light_show:show|HEX5[6],              ;
+;                                  ;                                ; light_show:show|HEX5[5], light_show:show|HEX5[4]                                        ;
+; light_show:show|HEX6[1]          ; Stuck at GND                   ; light_show:show|HEX5[3]                                                                 ;
+;                                  ; due to stuck port data_in      ;                                                                                         ;
++----------------------------------+--------------------------------+-----------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 230   ;
+; Number of registers using Synchronous Clear  ; 96    ;
+; Number of registers using Synchronous Load   ; 2     ;
+; Number of registers using Asynchronous Clear ; 79    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 67    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------+
+; Inverted Register Statistics                          ;
++---------------------------------------------+---------+
+; Inverted Register                           ; Fan out ;
++---------------------------------------------+---------+
+; CPU_dataflow:mcpu|controller:mcontroller|t0 ; 19      ;
+; memory:mram|A_d1                            ; 3       ;
+; memory:mram|A_d2                            ; 2       ;
+; CPU_dataflow:mcpu|qtsj:qtdl|clr_d1          ; 2       ;
+; CPU_dataflow:mcpu|qtsj:qtdl|clr_d2          ; 1       ;
+; CPU_dataflow:mcpu|qtsj:qtdl|A_d1            ; 2       ;
+; CPU_dataflow:mcpu|qtsj:qtdl|A_d2            ; 1       ;
+; Total number of inverted registers = 7      ;         ;
++---------------------------------------------+---------+
+
+
++------------------------------------------------------------------------+
+; Registers Added for RAM Pass-Through Logic                             ;
++-----------------------------------------+------------------------------+
+; Register Name                           ; RAM Name                     ;
++-----------------------------------------+------------------------------+
+; memory:mram|memory_reg_rtl_0_bypass[0]  ; memory:mram|memory_reg_rtl_0 ;
+; memory:mram|memory_reg_rtl_0_bypass[1]  ; memory:mram|memory_reg_rtl_0 ;
+; memory:mram|memory_reg_rtl_0_bypass[2]  ; memory:mram|memory_reg_rtl_0 ;
+; memory:mram|memory_reg_rtl_0_bypass[3]  ; memory:mram|memory_reg_rtl_0 ;
+; memory:mram|memory_reg_rtl_0_bypass[4]  ; memory:mram|memory_reg_rtl_0 ;
+; memory:mram|memory_reg_rtl_0_bypass[5]  ; memory:mram|memory_reg_rtl_0 ;
+; memory:mram|memory_reg_rtl_0_bypass[6]  ; memory:mram|memory_reg_rtl_0 ;
+; memory:mram|memory_reg_rtl_0_bypass[7]  ; memory:mram|memory_reg_rtl_0 ;
+; memory:mram|memory_reg_rtl_0_bypass[8]  ; memory:mram|memory_reg_rtl_0 ;
+; memory:mram|memory_reg_rtl_0_bypass[9]  ; memory:mram|memory_reg_rtl_0 ;
+; memory:mram|memory_reg_rtl_0_bypass[10] ; memory:mram|memory_reg_rtl_0 ;
+; memory:mram|memory_reg_rtl_0_bypass[11] ; memory:mram|memory_reg_rtl_0 ;
+; memory:mram|memory_reg_rtl_0_bypass[12] ; memory:mram|memory_reg_rtl_0 ;
+; memory:mram|memory_reg_rtl_0_bypass[13] ; memory:mram|memory_reg_rtl_0 ;
+; memory:mram|memory_reg_rtl_0_bypass[14] ; memory:mram|memory_reg_rtl_0 ;
+; memory:mram|memory_reg_rtl_0_bypass[15] ; memory:mram|memory_reg_rtl_0 ;
+; memory:mram|memory_reg_rtl_0_bypass[16] ; memory:mram|memory_reg_rtl_0 ;
+; memory:mram|memory_reg_rtl_0_bypass[17] ; memory:mram|memory_reg_rtl_0 ;
+; memory:mram|memory_reg_rtl_0_bypass[18] ; memory:mram|memory_reg_rtl_0 ;
++-----------------------------------------+------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|clk_div:slow|count[9]   ;
+; 3:1                ; 1019 bits ; 2038 LEs      ; 0 LEs                ; 2038 LEs               ; Yes        ; |top|memory:mram|cnt[958]    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|clk_div:light|div_clk   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|clk_div:light|count[31] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|clk_div:delay|count[3]  ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |top|memory:mram|cnt         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |top|memory:mram|memory_reg  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Source assignments for memory:mram|altsyncram:memory_reg_rtl_0|altsyncram_s9c1:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------+
+; Assignment                      ; Value              ; From ; To                              ;
++---------------------------------+--------------------+------+---------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                               ;
++---------------------------------+--------------------+------+---------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: memory:mram|altsyncram:memory_reg_rtl_0 ;
++------------------------------------+----------------------+------------------------------+
+; Parameter Name                     ; Value                ; Type                         ;
++------------------------------------+----------------------+------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                      ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                   ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                 ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                 ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE               ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                      ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                      ;
+; WIDTH_A                            ; 8                    ; Untyped                      ;
+; WIDTHAD_A                          ; 5                    ; Untyped                      ;
+; NUMWORDS_A                         ; 32                   ; Untyped                      ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                      ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                      ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                      ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                      ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                      ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                      ;
+; WIDTH_B                            ; 8                    ; Untyped                      ;
+; WIDTHAD_B                          ; 5                    ; Untyped                      ;
+; NUMWORDS_B                         ; 32                   ; Untyped                      ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                      ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                      ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                      ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                      ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                      ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                      ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                      ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                      ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                      ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                      ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                      ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                      ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                      ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                      ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                      ;
+; BYTE_SIZE                          ; 8                    ; Untyped                      ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                      ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                      ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                      ;
+; INIT_FILE                          ; UNUSED               ; Untyped                      ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                      ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                      ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                      ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                      ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                      ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                      ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                      ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                      ;
+; CBXI_PARAMETER                     ; altsyncram_s9c1      ; Untyped                      ;
++------------------------------------+----------------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                    ;
++-------------------------------------------+-----------------------------------------+
+; Name                                      ; Value                                   ;
++-------------------------------------------+-----------------------------------------+
+; Number of entity instances                ; 1                                       ;
+; Entity Instance                           ; memory:mram|altsyncram:memory_reg_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                               ;
+;     -- WIDTH_A                            ; 8                                       ;
+;     -- NUMWORDS_A                         ; 32                                      ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                            ;
+;     -- WIDTH_B                            ; 8                                       ;
+;     -- NUMWORDS_B                         ; 32                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                               ;
++-------------------------------------------+-----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CPU_dataflow:mcpu|controller:mcontroller"                                                                                                                             ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; alus ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (5 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CPU_dataflow:mcpu|alu:malu"                                                                                                                                                     ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; alus ; Input ; Warning  ; Input port expression (5 bits) is wider than the input port (4 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "clk_div:light"       ;
++---------------+-------+----------+--------------+
+; Port          ; Type  ; Severity ; Details      ;
++---------------+-------+----------+--------------+
+; symbol[1..0]  ; Input ; Info     ; Stuck at VCC ;
+; symbol[31..2] ; Input ; Info     ; Stuck at GND ;
++---------------+-------+----------+--------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "clk_div:mem"         ;
++---------------+-------+----------+--------------+
+; Port          ; Type  ; Severity ; Details      ;
++---------------+-------+----------+--------------+
+; symbol[1..0]  ; Input ; Info     ; Stuck at VCC ;
+; symbol[31..2] ; Input ; Info     ; Stuck at GND ;
++---------------+-------+----------+--------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "clk_div:delay"       ;
++---------------+-------+----------+--------------+
+; Port          ; Type  ; Severity ; Details      ;
++---------------+-------+----------+--------------+
+; symbol[31..1] ; Input ; Info     ; Stuck at GND ;
+; symbol[0]     ; Input ; Info     ; Stuck at VCC ;
++---------------+-------+----------+--------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "clk_div:slow"        ;
++---------------+-------+----------+--------------+
+; Port          ; Type  ; Severity ; Details      ;
++---------------+-------+----------+--------------+
+; symbol[2..1]  ; Input ; Info     ; Stuck at VCC ;
+; symbol[31..3] ; Input ; Info     ; Stuck at GND ;
+; symbol[0]     ; Input ; Info     ; Stuck at GND ;
++---------------+-------+----------+--------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "clk_div:quick"       ;
++---------------+-------+----------+--------------+
+; Port          ; Type  ; Severity ; Details      ;
++---------------+-------+----------+--------------+
+; symbol[1..0]  ; Input ; Info     ; Stuck at VCC ;
+; symbol[31..2] ; Input ; Info     ; Stuck at GND ;
++---------------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 150                         ;
+; cycloneiii_ff         ; 230                         ;
+;     CLR               ; 23                          ;
+;     ENA               ; 11                          ;
+;     ENA CLR           ; 56                          ;
+;     SCLR              ; 96                          ;
+;     SLD               ; 2                           ;
+;     plain             ; 42                          ;
+; cycloneiii_io_obuf    ; 24                          ;
+; cycloneiii_lcell_comb ; 252                         ;
+;     arith             ; 111                         ;
+;         2 data inputs ; 110                         ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 141                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 24                          ;
+;         3 data inputs ; 30                          ;
+;         4 data inputs ; 75                          ;
+; cycloneiii_ram_block  ; 8                           ;
+;                       ;                             ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 2.37                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -164,12 +917,13 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Full Version
-    Info: Processing started: Thu Dec 09 10:07:33 2021
+    Info: Processing started: Fri Dec 10 17:35:14 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 8bit_cpu_by_memory -c 8bit_cpu_by_memory
-Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
-Error (10170): Verilog HDL syntax error at controller.v(15) near text ".";  expecting an identifier File: D:/jizukeshe/CPU/modules/controller.v Line: 15
-Error (10112): Ignored design unit "controller" at controller.v(15) due to previous errors File: D:/jizukeshe/CPU/modules/controller.v Line: 15
-Info (12021): Found 0 design units, including 0 entities, in source file modules/controller.v
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file modules/cpu_dataflow.v
+    Info (12023): Found entity 1: CPU_dataflow
+Info (12021): Found 1 design units, including 1 entities, in source file modules/controller.v
+    Info (12023): Found entity 1: controller
 Info (12021): Found 1 design units, including 1 entities, in source file modules/z.v
     Info (12023): Found entity 1: z
 Info (12021): Found 1 design units, including 1 entities, in source file modules/tr.v
@@ -190,9 +944,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file modules
     Info (12023): Found entity 1: ir
 Info (12021): Found 1 design units, including 1 entities, in source file modules/dr.v
     Info (12023): Found entity 1: dr
-Error (10170): Verilog HDL syntax error at CPU_obj.v(3) near text ".";  expecting an identifier File: D:/jizukeshe/CPU/modules/CPU_obj.v Line: 3
-Error (10112): Ignored design unit "cpu_obj" at CPU_obj.v(3) due to previous errors File: D:/jizukeshe/CPU/modules/CPU_obj.v Line: 3
-Info (12021): Found 0 design units, including 0 entities, in source file modules/cpu_obj.v
 Info (12021): Found 1 design units, including 1 entities, in source file modules/cpu_controller.v
     Info (12023): Found entity 1: CPU_Controller
 Info (12021): Found 1 design units, including 1 entities, in source file modules/clk_div.v
@@ -203,10 +954,215 @@ Info (12021): Found 1 design units, including 1 entities, in source file modules
     Info (12023): Found entity 1: alu
 Info (12021): Found 1 design units, including 1 entities, in source file modules/ac.v
     Info (12023): Found entity 1: ac
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 4 errors, 0 warnings
-    Error: Peak virtual memory: 4657 megabytes
-    Error: Processing ended: Thu Dec 09 10:07:34 2021
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:00
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Warning (10034): Output port "trload_led" at top.v(30) has no driver
+Warning (10034): Output port "zload_led" at top.v(30) has no driver
+Warning (10034): Output port "trbus_led" at top.v(30) has no driver
+Warning (10034): Output port "rbus_led" at top.v(30) has no driver
+Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:quick"
+Info (12128): Elaborating entity "CPU_Controller" for hierarchy "CPU_Controller:controller"
+Info (12128): Elaborating entity "CPU_dataflow" for hierarchy "CPU_dataflow:mcpu"
+Warning (10030): Net "drhbus" at CPU_dataflow.v(23) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "drlbus" at CPU_dataflow.v(23) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "qtsj" for hierarchy "CPU_dataflow:mcpu|qtsj:qtdl"
+Info (12128): Elaborating entity "ar" for hierarchy "CPU_dataflow:mcpu|ar:mar"
+Warning (10230): Verilog HDL assignment warning at ar.v(21): truncated value with size 32 to match size of target (16)
+Info (12128): Elaborating entity "pc" for hierarchy "CPU_dataflow:mcpu|pc:mpc"
+Warning (10230): Verilog HDL assignment warning at pc.v(20): truncated value with size 32 to match size of target (16)
+Info (12128): Elaborating entity "dr" for hierarchy "CPU_dataflow:mcpu|dr:mdr"
+Info (12128): Elaborating entity "ir" for hierarchy "CPU_dataflow:mcpu|ir:mir"
+Info (12128): Elaborating entity "r" for hierarchy "CPU_dataflow:mcpu|r:mr"
+Info (12128): Elaborating entity "ac" for hierarchy "CPU_dataflow:mcpu|ac:mac"
+Info (12128): Elaborating entity "alu" for hierarchy "CPU_dataflow:mcpu|alu:malu"
+Info (12128): Elaborating entity "controller" for hierarchy "CPU_dataflow:mcpu|controller:mcontroller"
+Warning (10036): Verilog HDL or VHDL warning at controller.v(42): object "i_NOP" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at controller.v(42): object "i_LDAC" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at controller.v(42): object "i_STAC" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at controller.v(43): object "i_MOVR" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at controller.v(43): object "i_JUMP" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at controller.v(43): object "i_JMPZ" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at controller.v(43): object "i_JPNZ" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at controller.v(44): object "i_ADD" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at controller.v(44): object "i_SUB" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at controller.v(44): object "i_INAC" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at controller.v(44): object "i_CLAC" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at controller.v(45): object "i_AND" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at controller.v(45): object "i_OR" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at controller.v(45): object "i_XOR" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at controller.v(45): object "i_NOT" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at controller.v(48): object "t7" assigned a value but never read
+Warning (10034): Output port "mem_write" at controller.v(32) has no driver
+Warning (10034): Output port "bus2mem" at controller.v(33) has no driver
+Info (12128): Elaborating entity "memory" for hierarchy "memory:mram"
+Warning (10235): Verilog HDL Always Construct warning at memory.v(47): variable "addr2" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10240): Verilog HDL Always Construct warning at memory.v(49): inferring latch(es) for variable "data_rom", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "data_rom[0]" at memory.v(51)
+Info (10041): Inferred latch for "data_rom[1]" at memory.v(51)
+Info (10041): Inferred latch for "data_rom[2]" at memory.v(51)
+Info (10041): Inferred latch for "data_rom[3]" at memory.v(51)
+Info (10041): Inferred latch for "data_rom[4]" at memory.v(51)
+Info (10041): Inferred latch for "data_rom[5]" at memory.v(51)
+Info (10041): Inferred latch for "data_rom[6]" at memory.v(51)
+Info (10041): Inferred latch for "data_rom[7]" at memory.v(51)
+Info (12128): Elaborating entity "light_show" for hierarchy "light_show:show"
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "CPU_dataflow:mcpu|alus[4]" is missing source, defaulting to GND
+Warning (14025): LATCH primitive "memory:mram|data_rom[1]" is permanently disabled
+Warning (14025): LATCH primitive "memory:mram|data_rom[2]" is permanently disabled
+Warning (14025): LATCH primitive "memory:mram|data_rom[3]" is permanently disabled
+Warning (14025): LATCH primitive "memory:mram|data_rom[4]" is permanently disabled
+Warning (14025): LATCH primitive "memory:mram|data_rom[5]" is permanently disabled
+Warning (14025): LATCH primitive "memory:mram|data_rom[6]" is permanently disabled
+Warning (14025): LATCH primitive "memory:mram|data_rom[7]" is permanently disabled
+Warning (14025): LATCH primitive "memory:mram|data_rom[0]" is permanently disabled
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer CPU_dataflow:mcpu|qtsj:qtdl|clk_choose
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "memory:mram|data_ram[0]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "memory:mram|data_ram[1]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "memory:mram|data_ram[2]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "memory:mram|data_ram[3]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "memory:mram|data_ram[4]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "memory:mram|data_ram[5]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "memory:mram|data_ram[6]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "memory:mram|data_ram[7]" feeding internal logic into a wire
+    Warning (13048): Converted tri-state node "CPU_dataflow:mcpu|dbus[15]" into a selector
+    Warning (13048): Converted tri-state node "CPU_dataflow:mcpu|dbus[14]" into a selector
+    Warning (13048): Converted tri-state node "CPU_dataflow:mcpu|dbus[13]" into a selector
+    Warning (13048): Converted tri-state node "CPU_dataflow:mcpu|dbus[12]" into a selector
+    Warning (13048): Converted tri-state node "CPU_dataflow:mcpu|dbus[11]" into a selector
+    Warning (13048): Converted tri-state node "CPU_dataflow:mcpu|dbus[10]" into a selector
+    Warning (13048): Converted tri-state node "CPU_dataflow:mcpu|dbus[9]" into a selector
+    Warning (13048): Converted tri-state node "CPU_dataflow:mcpu|dbus[8]" into a selector
+Warning (276020): Inferred RAM node "memory:mram|memory_reg_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "memory:mram|memory_reg" is uninferred due to asynchronous read logic
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "memory:mram|memory_reg_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+Info (12130): Elaborated megafunction instantiation "memory:mram|altsyncram:memory_reg_rtl_0"
+Info (12133): Instantiated megafunction "memory:mram|altsyncram:memory_reg_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTHAD_A" = "5"
+    Info (12134): Parameter "NUMWORDS_A" = "32"
+    Info (12134): Parameter "WIDTH_B" = "8"
+    Info (12134): Parameter "WIDTHAD_B" = "5"
+    Info (12134): Parameter "NUMWORDS_B" = "32"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_s9c1.tdf
+    Info (12023): Found entity 1: altsyncram_s9c1
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13027): Removed fan-outs from the following always-disabled I/O buffers
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "CPU_dataflow:mcpu|dbus[0]" to the node "CPU_dataflow:mcpu|data_out[0]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "CPU_dataflow:mcpu|dbus[1]" to the node "CPU_dataflow:mcpu|data_out[1]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "CPU_dataflow:mcpu|dbus[2]" to the node "CPU_dataflow:mcpu|data_out[2]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "CPU_dataflow:mcpu|dbus[3]" to the node "CPU_dataflow:mcpu|data_out[3]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "CPU_dataflow:mcpu|dbus[4]" to the node "CPU_dataflow:mcpu|data_out[4]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "CPU_dataflow:mcpu|dbus[5]" to the node "CPU_dataflow:mcpu|data_out[5]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "CPU_dataflow:mcpu|dbus[6]" to the node "CPU_dataflow:mcpu|data_out[6]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "CPU_dataflow:mcpu|dbus[7]" to the node "CPU_dataflow:mcpu|data_out[7]"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU_dataflow:mcpu|dbus[0]" to the node "CPU_dataflow:mcpu|ar:mar|Dout[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU_dataflow:mcpu|dbus[1]" to the node "CPU_dataflow:mcpu|ar:mar|Dout[1]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU_dataflow:mcpu|dbus[2]" to the node "CPU_dataflow:mcpu|ar:mar|Dout[2]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU_dataflow:mcpu|dbus[3]" to the node "CPU_dataflow:mcpu|ar:mar|Dout[3]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU_dataflow:mcpu|dbus[4]" to the node "CPU_dataflow:mcpu|ar:mar|Dout[4]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU_dataflow:mcpu|dbus[5]" to the node "CPU_dataflow:mcpu|ar:mar|Dout[5]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU_dataflow:mcpu|dbus[6]" to the node "CPU_dataflow:mcpu|ar:mar|Dout[6]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU_dataflow:mcpu|dbus[7]" to the node "CPU_dataflow:mcpu|ar:mar|Dout[7]" into an OR gate
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13008): TRI or OPNDRN buffers permanently disabled
+    Warning (13010): Node "CPU_dataflow:mcpu|data_out[0]"
+    Warning (13010): Node "CPU_dataflow:mcpu|data_out[1]"
+    Warning (13010): Node "CPU_dataflow:mcpu|data_out[2]"
+    Warning (13010): Node "CPU_dataflow:mcpu|data_out[3]"
+    Warning (13010): Node "CPU_dataflow:mcpu|data_out[4]"
+    Warning (13010): Node "CPU_dataflow:mcpu|data_out[5]"
+    Warning (13010): Node "CPU_dataflow:mcpu|data_out[6]"
+    Warning (13010): Node "CPU_dataflow:mcpu|data_out[7]"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX4[0]" is stuck at GND
+    Warning (13410): Pin "HEX4[1]" is stuck at GND
+    Warning (13410): Pin "HEX4[2]" is stuck at GND
+    Warning (13410): Pin "HEX4[3]" is stuck at GND
+    Warning (13410): Pin "HEX4[4]" is stuck at GND
+    Warning (13410): Pin "HEX4[5]" is stuck at GND
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC
+    Warning (13410): Pin "HEX5[0]" is stuck at GND
+    Warning (13410): Pin "HEX5[1]" is stuck at GND
+    Warning (13410): Pin "HEX5[2]" is stuck at GND
+    Warning (13410): Pin "HEX5[3]" is stuck at GND
+    Warning (13410): Pin "HEX5[4]" is stuck at GND
+    Warning (13410): Pin "HEX5[5]" is stuck at GND
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC
+    Warning (13410): Pin "HEX6[0]" is stuck at GND
+    Warning (13410): Pin "HEX6[1]" is stuck at GND
+    Warning (13410): Pin "HEX6[2]" is stuck at GND
+    Warning (13410): Pin "HEX6[3]" is stuck at GND
+    Warning (13410): Pin "HEX6[4]" is stuck at GND
+    Warning (13410): Pin "HEX6[5]" is stuck at GND
+    Warning (13410): Pin "HEX6[6]" is stuck at VCC
+    Warning (13410): Pin "HEX7[0]" is stuck at VCC
+    Warning (13410): Pin "HEX7[1]" is stuck at VCC
+    Warning (13410): Pin "HEX7[2]" is stuck at VCC
+    Warning (13410): Pin "HEX7[3]" is stuck at VCC
+    Warning (13410): Pin "HEX7[4]" is stuck at VCC
+    Warning (13410): Pin "HEX7[5]" is stuck at VCC
+    Warning (13410): Pin "HEX7[6]" is stuck at GND
+    Warning (13410): Pin "acdbus[0]" is stuck at GND
+    Warning (13410): Pin "acdbus[1]" is stuck at GND
+    Warning (13410): Pin "acdbus[2]" is stuck at GND
+    Warning (13410): Pin "acdbus[3]" is stuck at GND
+    Warning (13410): Pin "acdbus[4]" is stuck at GND
+    Warning (13410): Pin "acdbus[5]" is stuck at GND
+    Warning (13410): Pin "acdbus[6]" is stuck at GND
+    Warning (13410): Pin "acdbus[7]" is stuck at GND
+    Warning (13410): Pin "write_led" is stuck at GND
+    Warning (13410): Pin "arinc_led" is stuck at GND
+    Warning (13410): Pin "pcload_led" is stuck at GND
+    Warning (13410): Pin "trload_led" is stuck at GND
+    Warning (13410): Pin "acload_led" is stuck at GND
+    Warning (13410): Pin "zload_led" is stuck at GND
+    Warning (13410): Pin "drhbus_led" is stuck at GND
+    Warning (13410): Pin "drlbus_led" is stuck at GND
+    Warning (13410): Pin "trbus_led" is stuck at GND
+    Warning (13410): Pin "rbus_led" is stuck at GND
+    Warning (13410): Pin "busmem_led" is stuck at GND
+    Warning (13410): Pin "clr_led" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1019 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 476 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 136 output pins
+    Info (21061): Implemented 318 logic cells
+    Info (21064): Implemented 8 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 135 warnings
+    Info: Peak virtual memory: 4803 megabytes
+    Info: Processing ended: Fri Dec 10 17:35:16 2021
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

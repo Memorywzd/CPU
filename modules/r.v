@@ -8,7 +8,7 @@ input clk, rst, Rload;
 output [7:0] Dout;
 reg [7:0] Dout;
 
-always @(posedge clk) begin
+always @(posedge clk or negedge rst) begin
     if (!rst)
         Dout <= 0;
     else if (Rload)

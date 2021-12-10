@@ -3,8 +3,8 @@
 module alu(alus, ac_n, bus_n, Dout);
 
 input [3:0] alus;  //4位alu功能选择信号 来自控制器
-input [7:0] ac_n,  //8位来自AC的操作数
-      [7:0] bus_n; //8位来自总线的操作数
+input [7:0] ac_n;  //8位来自AC的操作数
+input [7:0] bus_n; //8位来自总线的操作数
 
 output [7:0] Dout; //8位运算输出 送往AC
 reg [7:0] Dout;
@@ -47,6 +47,8 @@ always @(ac_n or bus_n or alus) begin
         begin
             Dout = bus_n;//ldac
         end
+        default:
+            Dout = 8'bxxxxxxxx;
     endcase
 end
 

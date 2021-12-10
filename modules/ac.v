@@ -10,7 +10,7 @@ input clk,       //1位时钟信号，进行时序控制 来自qtsj.v的输出cl
 output [7:0] Dout;
 reg [7:0] Dout;
 
-always @(posedge clk) begin
+always @(posedge clk or negedge rst) begin
     if (!rst)
         Dout <= 0;
     else if (ACload)

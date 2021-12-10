@@ -3,7 +3,11 @@
 module CPU_dataflow(data_in,
                     clk_quick, clk_slow, clk_delay,
                     rst, SW_choose, A1, CPUstate,
-                    memaddr, data_out, acdbus, rdbus, clr);
+                    memaddr, data_out, acdbus, rdbus, clr,
+                    arload, arinc, pcload, pcinc, drload,
+                    irload, rload, acload,
+                    pcbus, acbus, drhbus, drlbus,
+                    read, write, membus, busmem);
 
 input [7:0] data_in;
 input clk_quick, clk_slow, clk_delay;
@@ -16,12 +20,16 @@ output [7:0] acdbus;//AC寄存器的输出
 output [7:0] rdbus;//R寄存器的输出
 output clr;
 output arload, arinc, pcload, pcinc, drload, irload, rload, acload;
+output pcbus, acbus, drhbus, drlbus;
+output read, write;
+output membus, busmem;
 //补充自行设计的控制信号的端口说明，都是output
 
 //定义一些需要的内部信号
 wire [4:0] alus;
 wire clk_choose, clk_run;
-wire [15:0] dbus, pcdbus;
+wire [15:0] dbus;
+wire [15:0] pcdbus;
 wire [7:0] drdbus, trdbus, rdbus, acdbus, aludbus;
 wire [7:0] instr;
 
@@ -36,20 +44,42 @@ pc mpc(.Din(dbus),.clk(clk_choose),.rst(rst),.PCload(pcload),.PCinc(pcinc),.Dout
 //DR数据寄存器
 dr mdr(.Din(dbus[7:0]),.clk(clk_choose),.rst(rst),.DRload(drload),.Dout(drdbus));
 //IR指令寄存器
-ir mir(.Din(drdbus),.clk(clk_choose),.rst(rst),IRload(irload),.Dout(instr));
+ir mir(.Din(drdbus),.clk(clk_choose),.rst(rst),.IRload(irload),.Dout(instr));
 //TR临时寄存器
 
 //R通用寄存器
-r mr(.Din(dbus[7:0]),.clk(clk_choose),.rst(rst),Rload(rload),.Dout(rdbus));
+r mr(.Din(dbus[7:0]),.clk(clk_choose),.rst(rst),.Rload(rload),.Dout(rdbus));
 //AC累加寄存器
-ac mac(.Din(aludbus),.clk(clk_choose),.rst(rst),ACload(acload),.Dout(acdbus));
+ac mac(.Din(aludbus),.clk(clk_choose),.rst(rst),.ACload(acload),.Dout(acdbus));
 //ALU
-alu malu(.alus(alus),.ac_n(acdbus),.bus_n(dbus[7:0]),.Dout(aludbus))
+alu malu(.alus(alus),.ac_n(acdbus),.bus_n(dbus[7:0]),.Dout(aludbus));
 //Z状态字寄存器
 
 //controller控制器
-
+controller mcontroller(
+    .instr(instr),.clk(clk_run),.rst(rst),.CPUstate(CPUstate),
+    .ARload(arload),.PCinc(pcinc),.DRload(drload),.IRload(irload),
+    .Rload(rload),
+    .PCbus(pcbus),.ACbus(acbus),.alus(alus),
+    .mem_read(read),.mem_write(write),
+    .mem2bus(membus),.bus2mem(busmem)
+);
 //allocate dbus
+
+// always @(*) begin
+//     if(pcbus)
+//         assign dbus[15:0] = pcdbus[15:0];
+//     if(membus)
+//         assign dbus[7:0] = data_in[7:0];
+//     if(acbus)
+//         assign dbus[7:0] = acdbus[7:0];
+// end
+assign dbus[15:0]=(pcbus)?pcdbus[15:0]:16'bzzzzzzzzzzzzzzzz;
+assign dbus[15:8]=(drhbus)?drdbus[7:0]:8'bzzzzzzzz;
+assign dbus[7:0]=(drlbus)?drdbus[7:0]:8'bzzzzzzzz;
+assign dbus[7:0]=(membus)?data_in[7:0]:8'bzzzzzzzz;
+assign data_out=(busmem)?dbus[7:0]:8'bzzzzzzzz;
+/*
 assign dbus[15:0]=(pcbus)?pcdbus[15:0]:16'bzzzzzzzzzzzzzzzz;
 assign dbus[15:8]=(drhbus)?drdbus[7:0]:8'bzzzzzzzz;
 assign dbus[7:0]=(drlbus)?drdbus[7:0]:8'bzzzzzzzz;
@@ -64,5 +94,6 @@ assign dbus[7:0]=(acbus)?((alus==7'd1)?8'b00000010:acdbus[7:0]):8'bzzzzzzzz;
 
 assign dbus[7:0]=(membus)?data_in[7:0]:8'bzzzzzzzz;
 assign data_out=(busmem)?dbus[7:0]:8'bzzzzzzzz;
+*/
 
 endmodule

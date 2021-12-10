@@ -9,7 +9,7 @@ input clk, rst, IRload;
 output [7:0] Dout;
 reg [7:0] Dout;
 
-always @ (negedge clk) begin
+always @ (negedge clk or negedge rst) begin
 	if(!rst)
         Dout <= 0;
 	else if (IRload)
