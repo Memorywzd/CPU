@@ -160,10 +160,10 @@
 # 
 #           File in use by: Memory  Hostname: LAPTOP-QNQT0OO9  ProcessID: 4476
 # 
-#           Attempting to use alternate WLF file "./wlft46ze5x".
+#           Attempting to use alternate WLF file "./wlftvvsftg".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft46ze5x
+#           Using alternate file: ./wlftvvsftg
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
@@ -171,9 +171,30 @@
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # ** Note: $finish    : D:/Principles of Computer Organization/CPU/simulation/modelsim/top.vt(417)
-#    Time: 3940 ms  Iteration: 0  Instance: /top_vlg_tst
+#    Time: 3795 ms  Iteration: 0  Instance: /top_vlg_tst
 # 1
 # Break in Module top_vlg_tst at D:/Principles of Computer Organization/CPU/simulation/modelsim/top.vt line 417
 # Simulation Breakpoint: 1
 # Break in Module top_vlg_tst at D:/Principles of Computer Organization/CPU/simulation/modelsim/top.vt line 417
 # MACRO ./8bit_cpu_by_memory_run_msim_rtl_verilog.do PAUSED at line 33
+add wave -position insertpoint sim:/top_vlg_tst/i1/mcpu/*
+restart
+# ** Warning: (vsim-3017) D:/Principles of Computer Organization/CPU/modules/top.v(67): [TFMPC] - Too few port connections. Expected 35, found 34.
+# 
+#         Region: /top_vlg_tst/i1/mcpu
+# ** Warning: (vsim-3722) D:/Principles of Computer Organization/CPU/modules/top.v(67): [TFMPC] - Missing connection for port 'acloadr'.
+# 
+# ** Warning: (vsim-3015) D:/Principles of Computer Organization/CPU/modules/CPU_dataflow.v(56): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'alus'. The port definition is at: D:/Principles of Computer Organization/CPU/modules/alu.v(3).
+# 
+#         Region: /top_vlg_tst/i1/mcpu/malu
+# ** Warning: (vsim-3015) D:/Principles of Computer Organization/CPU/modules/CPU_dataflow.v(58): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'Dout'. The port definition is at: D:/Principles of Computer Organization/CPU/modules/z.v(3).
+# 
+#         Region: /top_vlg_tst/i1/mcpu/mz
+# ** Warning: (vsim-3015) D:/Principles of Computer Organization/CPU/modules/CPU_dataflow.v(68): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'alus'. The port definition is at: D:/Principles of Computer Organization/CPU/modules/controller.v(20).
+# 
+#         Region: /top_vlg_tst/i1/mcpu/mcontroller
+run -all
+# ** Note: $finish    : D:/Principles of Computer Organization/CPU/simulation/modelsim/top.vt(417)
+#    Time: 3795 ms  Iteration: 0  Instance: /top_vlg_tst
+# 1
+# Break in Module top_vlg_tst at D:/Principles of Computer Organization/CPU/simulation/modelsim/top.vt line 417
