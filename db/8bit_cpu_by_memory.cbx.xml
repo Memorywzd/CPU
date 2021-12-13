@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="8bit_cpu_by_memory">
-		<CBX_INST_ENTRY INSTANCE_NAME="|top|memory:mram|altsyncram:memory_reg_rtl_0" CBX_FILE_NAME="altsyncram_s9c1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top|memory:mram|altsyncram:memory_reg_rtl_0" CBX_FILE_NAME="altsyncram_qsc1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top|memory:mram|altsyncram:memory_reg_rtl_1" CBX_FILE_NAME="altsyncram_s9c1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

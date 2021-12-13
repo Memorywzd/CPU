@@ -63,7 +63,7 @@ CPU_dataflow mcpu(
     .irload(irload_led),.acload(acload_led),.trload(trload_led),
     .rload(rload_led),.zload(zload_led),
     .pcbus(pcbus_led),.acbus(acbus_led),.drhbus(drhbus_led),.drlbus(drlbus_led),.rbus(rbus_led),.trbus(trbus_led),
-    .read(read_led),.write(write_led),.membus(membus_led),.busmem(busmem_led)
+    .read(read),.write(write),.membus(membus_led),.busmem(busmem_led)
 );
 
 //ram(clk,data_in,addr,A1,reset,read,write,cpustate,D,data_out,check_out);ram实例化

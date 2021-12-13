@@ -5,7 +5,7 @@ module CPU_dataflow(data_in,
                     rst, SW_choose, A1, CPUstate, zout,
                     memaddr, data_out, acdbus, rdbus, clr,
                     arload, arinc, pcload, pcinc, drload,
-                    irload, acload, trload,
+                    irload, acload, trload, acloadr,
                     rload, zload, 
                     pcbus, acbus, drhbus, drlbus, rbus, trbus,
                     read, write, membus, busmem);
@@ -51,7 +51,7 @@ tr mtr(.Din(drdbus),.clk(clk_choose),.rst(rst),.TRload(trload),.Dout(trdbus));
 //R通用寄存器
 r mr(.Din(dbus[7:0]),.clk(clk_choose),.rst(rst),.Rload(rload),.Dout(rdbus));
 //AC累加寄存器
-ac mac(.Din(aludbus),.clk(clk_choose),.rst(rst),.ACload(acload),.Dout(acdbus));
+ac mac(.Din(aludbus),.Rin(dbus[7:0]),.clk(clk_choose),.rst(rst),.ACload(acload),.ACloadR(acloadr),.Dout(acdbus));
 //ALU
 alu malu(.alus(alus),.ac_n(acdbus),.bus_n(dbus[7:0]),.Dout(aludbus));
 //Z状态字寄存器
@@ -60,7 +60,7 @@ z mz(.Din(aludbus),.clk(clk_choose),.rst(rst),.Zload(zload),.Dout(zout));
 controller mcontroller(
     .instr(instr),.clk(clk_run),.rst(rst),.CPUstate(CPUstate),.Z(zout),
     .ARload(arload),.ARinc(arinc),.PCload(pcload),.PCinc(pcinc),.DRload(drload),.IRload(irload),.TRload(trload),
-    .Rload(rload),.ACload(acload),.Zload(zload),
+    .Rload(rload),.ACload(acload),.Zload(zload),.ACloadR(acloadr),
     .PCbus(pcbus),.DRlbus(drlbus),.DRhbus(drhbus),.TRbus(trbus),
     .Rbus(rbus),.ACbus(acbus),.alus(alus),
     .mem_read(read),.mem_write(write),
@@ -87,7 +87,7 @@ assign dbus[15:8]=(drhbus)?drdbus[7:0]:8'bzzzzzzzz;
 assign dbus[7:0]=(rbus)?rdbus[7:0]:8'bzzzzzzzz;
 
 assign dbus[7:0]=(acbus)?acdbus[7:0]:8'bzzzzzzzz;
-
+assign dbus[7:0]=(trbus)?trdbus[7:0]:8'bzzzzzzzz;
 
 /*
 assign dbus[15:0]=(pcbus)?pcdbus[15:0]:16'bzzzzzzzzzzzzzzzz;
