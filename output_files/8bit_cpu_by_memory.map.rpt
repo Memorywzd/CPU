@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 8bit_cpu_by_memory
-Mon Dec 13 13:10:21 2021
+Mon Dec 13 17:07:01 2021
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
 
 
@@ -29,7 +29,7 @@ Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
  21. Port Connectivity Checks: "CPU_dataflow:mcpu|controller:mcontroller"
  22. Port Connectivity Checks: "CPU_dataflow:mcpu|z:mz"
  23. Port Connectivity Checks: "CPU_dataflow:mcpu|alu:malu"
- 24. Port Connectivity Checks: "CPU_dataflow:mcpu|tr:mtr"
+ 24. Port Connectivity Checks: "CPU_dataflow:mcpu"
  25. Port Connectivity Checks: "clk_div:light"
  26. Port Connectivity Checks: "clk_div:mem"
  27. Port Connectivity Checks: "clk_div:delay"
@@ -64,15 +64,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Dec 13 13:10:21 2021       ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec 13 17:07:01 2021       ;
 ; Quartus II 64-Bit Version          ; 14.0.0 Build 200 06/17/2014 SJ Full Version ;
 ; Revision Name                      ; 8bit_cpu_by_memory                          ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 15,313                                      ;
-;     Total combinational functions  ; 15,253                                      ;
-;     Dedicated logic registers      ; 285                                         ;
-; Total registers                    ; 285                                         ;
+; Total logic elements               ; 15,312                                      ;
+;     Total combinational functions  ; 15,245                                      ;
+;     Dedicated logic registers      ; 293                                         ;
+; Total registers                    ; 293                                         ;
 ; Total pins                         ; 150                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 512                                         ;
@@ -227,28 +227,28 @@ agreement for further details.
 +---------------------------------------------+----------------------------------+
 ; Resource                                    ; Usage                            ;
 +---------------------------------------------+----------------------------------+
-; Estimated Total logic elements              ; 15,313                           ;
+; Estimated Total logic elements              ; 15,312                           ;
 ;                                             ;                                  ;
-; Total combinational functions               ; 15253                            ;
+; Total combinational functions               ; 15245                            ;
 ; Logic element usage by number of LUT inputs ;                                  ;
-;     -- 4 input functions                    ; 5743                             ;
-;     -- 3 input functions                    ; 8566                             ;
-;     -- <=2 input functions                  ; 944                              ;
+;     -- 4 input functions                    ; 5731                             ;
+;     -- 3 input functions                    ; 8572                             ;
+;     -- <=2 input functions                  ; 942                              ;
 ;                                             ;                                  ;
 ; Logic elements by mode                      ;                                  ;
-;     -- normal mode                          ; 15118                            ;
+;     -- normal mode                          ; 15110                            ;
 ;     -- arithmetic mode                      ; 135                              ;
 ;                                             ;                                  ;
-; Total registers                             ; 285                              ;
-;     -- Dedicated logic registers            ; 285                              ;
+; Total registers                             ; 293                              ;
+;     -- Dedicated logic registers            ; 293                              ;
 ;     -- I/O registers                        ; 0                                ;
 ;                                             ;                                  ;
 ; I/O pins                                    ; 150                              ;
 ; Total memory bits                           ; 512                              ;
 ; Embedded Multiplier 9-bit elements          ; 0                                ;
 ; Maximum fan-out node                        ; CPU_dataflow:mcpu|ar:mar|Dout[7] ;
-; Maximum fan-out                             ; 1054                             ;
-; Total fan-out                               ; 51954                            ;
+; Maximum fan-out                             ; 1051                             ;
+; Total fan-out                               ; 51968                            ;
 ; Average fan-out                             ; 3.28                             ;
 +---------------------------------------------+----------------------------------+
 
@@ -258,25 +258,26 @@ agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                         ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------+--------------+
-; |top                                      ; 15253 (1073)      ; 285 (0)      ; 512         ; 0            ; 0       ; 0         ; 150  ; 0            ; |top                                                                        ; work         ;
-;    |CPU_dataflow:mcpu|                    ; 254 (61)          ; 94 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu                                                      ; work         ;
-;       |ac:mac|                            ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|ac:mac                                               ; work         ;
-;       |alu:malu|                          ; 49 (49)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|alu:malu                                             ; work         ;
+; |top                                      ; 15245 (1073)      ; 293 (0)      ; 512         ; 0            ; 0       ; 0         ; 150  ; 0            ; |top                                                                        ; work         ;
+;    |CPU_dataflow:mcpu|                    ; 247 (62)          ; 102 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu                                                      ; work         ;
+;       |ac:mac|                            ; 16 (16)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|ac:mac                                               ; work         ;
+;       |alu:malu|                          ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|alu:malu                                             ; work         ;
 ;       |ar:mar|                            ; 38 (38)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|ar:mar                                               ; work         ;
 ;       |controller:mcontroller|            ; 63 (63)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|controller:mcontroller                               ; work         ;
 ;       |dr:mdr|                            ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|dr:mdr                                               ; work         ;
 ;       |ir:mir|                            ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|ir:mir                                               ; work         ;
 ;       |pc:mpc|                            ; 33 (33)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|pc:mpc                                               ; work         ;
-;       |qtsj:qtdl|                         ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|qtsj:qtdl                                            ; work         ;
+;       |qtsj:qtdl|                         ; 6 (6)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|qtsj:qtdl                                            ; work         ;
 ;       |r:mr|                              ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|r:mr                                                 ; work         ;
+;       |tr:mtr|                            ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|tr:mtr                                               ; work         ;
 ;       |z:mz|                              ; 5 (5)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|CPU_dataflow:mcpu|z:mz                                                 ; work         ;
 ;    |clk_div:delay|                        ; 45 (45)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clk_div:delay                                                          ; work         ;
-;    |clk_div:light|                        ; 33 (33)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clk_div:light                                                          ; work         ;
+;    |clk_div:light|                        ; 34 (34)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clk_div:light                                                          ; work         ;
 ;    |clk_div:mem|                          ; 11 (11)           ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clk_div:mem                                                            ; work         ;
-;    |clk_div:quick|                        ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clk_div:quick                                                          ; work         ;
+;    |clk_div:quick|                        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clk_div:quick                                                          ; work         ;
 ;    |clk_div:slow|                         ; 45 (45)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clk_div:slow                                                           ; work         ;
 ;    |light_show:show|                      ; 42 (42)           ; 46 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|light_show:show                                                        ; work         ;
-;    |memory:mram|                          ; 13748 (13748)     ; 44 (44)      ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|memory:mram                                                            ; work         ;
+;    |memory:mram|                          ; 13747 (13747)     ; 44 (44)      ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|memory:mram                                                            ; work         ;
 ;       |altsyncram:memory_reg_rtl_0|       ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|memory:mram|altsyncram:memory_reg_rtl_0                                ; work         ;
 ;          |altsyncram_qsc1:auto_generated| ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|memory:mram|altsyncram:memory_reg_rtl_0|altsyncram_qsc1:auto_generated ; work         ;
 ;       |altsyncram:memory_reg_rtl_1|       ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|memory:mram|altsyncram:memory_reg_rtl_1                                ; work         ;
@@ -751,12 +752,12 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 285   ;
+; Total registers                              ; 293   ;
 ; Number of registers using Synchronous Clear  ; 96    ;
-; Number of registers using Synchronous Load   ; 18    ;
-; Number of registers using Asynchronous Clear ; 108   ;
+; Number of registers using Synchronous Load   ; 26    ;
+; Number of registers using Asynchronous Clear ; 116   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 86    ;
+; Number of registers using Clock Enable       ; 94    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -767,7 +768,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; Inverted Register                              ; Fan out ;
 +------------------------------------------------+---------+
 ; CPU_dataflow:mcpu|controller:mcontroller|t0    ; 3       ;
-; CPU_dataflow:mcpu|controller:mcontroller|i_NOP ; 1       ;
+; CPU_dataflow:mcpu|controller:mcontroller|i_NOP ; 2       ;
 ; memory:mram|A_d1                               ; 3       ;
 ; memory:mram|A_d2                               ; 2       ;
 ; CPU_dataflow:mcpu|qtsj:qtdl|clr_d1             ; 2       ;
@@ -813,15 +814,16 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |top|CPU_dataflow:mcpu|ar:mar|Dout[7]                 ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|CPU_dataflow:mcpu|pc:mpc|Dout[11]                ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|clk_div:slow|count[16]                           ;
-; 3:1                ; 1019 bits ; 2038 LEs      ; 0 LEs                ; 2038 LEs               ; Yes        ; |top|memory:mram|cnt[1017]                            ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|clk_div:quick|div_clk                            ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|clk_div:light|count[2]                           ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|clk_div:delay|count[10]                          ;
+; 3:1                ; 1019 bits ; 2038 LEs      ; 0 LEs                ; 2038 LEs               ; Yes        ; |top|memory:mram|cnt[1016]                            ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|clk_div:light|div_clk                            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|clk_div:light|count[27]                          ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|clk_div:delay|count[27]                          ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|CPU_dataflow:mcpu|pc:mpc|Dout[4]                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|CPU_dataflow:mcpu|ac:mac|Dout[4]                 ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |top|CPU_dataflow:mcpu|ar:mar|Dout                    ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |top|memory:mram|cnt                                  ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |top|memory:mram|memory_reg                           ;
-; 9:1                ; 8 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |top|CPU_dataflow:mcpu|alu:malu|Mux2                  ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |top|CPU_dataflow:mcpu|alu:malu|Mux7                  ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; No         ; |top|CPU_dataflow:mcpu|alu:malu|Add0                  ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |top|CPU_dataflow:mcpu|alu:malu|Add0                  ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top|CPU_dataflow:mcpu|controller:mcontroller|alus[1] ;
@@ -1027,13 +1029,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CPU_dataflow:mcpu|tr:mtr"                                                           ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Dout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CPU_dataflow:mcpu"                                                                                          ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                  ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; acloadr ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------+
@@ -1093,30 +1095,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 150                         ;
-; cycloneiii_ff         ; 285                         ;
+; cycloneiii_ff         ; 293                         ;
 ;     CLR               ; 33                          ;
 ;     CLR SLD           ; 8                           ;
 ;     ENA               ; 19                          ;
 ;     ENA CLR           ; 59                          ;
-;     ENA CLR SLD       ; 8                           ;
+;     ENA CLR SLD       ; 16                          ;
 ;     SCLR              ; 96                          ;
 ;     SLD               ; 2                           ;
 ;     plain             ; 60                          ;
 ; cycloneiii_io_obuf    ; 24                          ;
-; cycloneiii_lcell_comb ; 15256                       ;
+; cycloneiii_lcell_comb ; 15248                       ;
 ;     arith             ; 135                         ;
 ;         2 data inputs ; 127                         ;
 ;         3 data inputs ; 8                           ;
-;     normal            ; 15121                       ;
+;     normal            ; 15113                       ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 9                           ;
-;         2 data inputs ; 809                         ;
-;         3 data inputs ; 8558                        ;
-;         4 data inputs ; 5743                        ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 805                         ;
+;         3 data inputs ; 8564                        ;
+;         4 data inputs ; 5731                        ;
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 17.00                       ;
-; Average LUT depth     ; 7.76                        ;
+; Average LUT depth     ; 8.04                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1135,7 +1137,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Full Version
-    Info: Processing started: Mon Dec 13 13:10:06 2021
+    Info: Processing started: Mon Dec 13 17:06:47 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 8bit_cpu_by_memory -c 8bit_cpu_by_memory
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file modules/cpu_dataflow.v
@@ -1176,7 +1178,7 @@ Info (12127): Elaborating entity "top" for the top level hierarchy
 Warning (10034): Output port "read_led" at top.v(30) has no driver
 Warning (10034): Output port "write_led" at top.v(30) has no driver
 Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:quick"
-Info (12128): Elaborating entity "CPU_Controller" for hierarchy "CPU_Controller:controller"
+Info (12128): Elaborating entity "CPU_Controller" for hierarchy "CPU_Controller:mccontroller"
 Info (12128): Elaborating entity "CPU_dataflow" for hierarchy "CPU_dataflow:mcpu"
 Info (12128): Elaborating entity "qtsj" for hierarchy "CPU_dataflow:mcpu|qtsj:qtdl"
 Info (12128): Elaborating entity "ar" for hierarchy "CPU_dataflow:mcpu|ar:mar"
@@ -1305,7 +1307,7 @@ Info (12133): Instantiated megafunction "memory:mram|altsyncram:memory_reg_rtl_1
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_s9c1.tdf
     Info (12023): Found entity 1: altsyncram_s9c1
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "memory:mram|data_out" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "memory:mram|data_out" and its non-tri-state driver.
@@ -17741,19 +17743,18 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX7[6]" is stuck at GND
     Warning (13410): Pin "read_led" is stuck at GND
     Warning (13410): Pin "write_led" is stuck at GND
-    Warning (13410): Pin "clr_led" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1019 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 15512 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 15513 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 136 output pins
-    Info (21061): Implemented 15346 logic cells
+    Info (21061): Implemented 15347 logic cells
     Info (21064): Implemented 16 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 16476 warnings
-    Info: Peak virtual memory: 4851 megabytes
-    Info: Processing ended: Mon Dec 13 13:10:21 2021
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 16475 warnings
+    Info: Peak virtual memory: 4849 megabytes
+    Info: Processing ended: Mon Dec 13 17:07:02 2021
     Info: Elapsed time: 00:00:15
     Info: Total CPU time (on all processors): 00:00:15
 

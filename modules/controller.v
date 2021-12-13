@@ -17,7 +17,7 @@ module controller(instr, clk, rst, CPUstate, Z,
       			  Rload, ACload, Zload, ACloadR,
     			  PCbus, DRlbus, DRhbus, TRbus,
        			  Rbus, ACbus,
-                  alus,
+                  alus, clr,
                   mem_read, mem_write,
                   mem2bus, bus2mem);
 
@@ -26,10 +26,10 @@ input clk, rst, Z;
 input [1:0] CPUstate;
 
 output ARload, ARinc, PCload, PCinc, DRload, IRload, TRload,
-       Rload, ACload, Zload,
+       Rload, ACload, Zload, ACloadR,
        PCbus, DRlbus, DRhbus, TRbus,
        Rbus, ACbus,
-       mem_read, mem_write,
+       mem_read, mem_write, clr,
        mem2bus, bus2mem;
 output [3:0] alus;
 reg [3:0] alus;

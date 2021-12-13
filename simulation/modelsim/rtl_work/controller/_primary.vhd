@@ -17,6 +17,7 @@ entity controller is
         Rload           : out    vl_logic;
         ACload          : out    vl_logic;
         Zload           : out    vl_logic;
+        ACloadR         : out    vl_logic;
         PCbus           : out    vl_logic;
         DRlbus          : out    vl_logic;
         DRhbus          : out    vl_logic;
@@ -24,6 +25,7 @@ entity controller is
         Rbus            : out    vl_logic;
         ACbus           : out    vl_logic;
         alus            : out    vl_logic_vector(3 downto 0);
+        clr             : out    vl_logic;
         mem_read        : out    vl_logic;
         mem_write       : out    vl_logic;
         mem2bus         : out    vl_logic;

@@ -24,6 +24,7 @@ entity CPU_dataflow is
         irload          : out    vl_logic;
         acload          : out    vl_logic;
         trload          : out    vl_logic;
+        acloadr         : out    vl_logic;
         rload           : out    vl_logic;
         zload           : out    vl_logic;
         pcbus           : out    vl_logic;

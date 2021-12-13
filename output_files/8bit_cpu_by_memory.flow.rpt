@@ -1,5 +1,5 @@
 Flow report for 8bit_cpu_by_memory
-Mon Dec 13 13:10:21 2021
+Mon Dec 13 17:07:01 2021
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
 
 
@@ -41,17 +41,17 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Dec 13 13:10:21 2021       ;
+; Flow Status                        ; Successful - Mon Dec 13 17:07:01 2021       ;
 ; Quartus II 64-Bit Version          ; 14.0.0 Build 200 06/17/2014 SJ Full Version ;
 ; Revision Name                      ; 8bit_cpu_by_memory                          ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE40F23C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 15,313                                      ;
-;     Total combinational functions  ; 15,253                                      ;
-;     Dedicated logic registers      ; 285                                         ;
-; Total registers                    ; 285                                         ;
+; Total logic elements               ; 15,312                                      ;
+;     Total combinational functions  ; 15,245                                      ;
+;     Dedicated logic registers      ; 293                                         ;
+; Total registers                    ; 293                                         ;
 ; Total pins                         ; 150                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 512                                         ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/13/2021 13:10:07 ;
+; Start date & time ; 12/13/2021 17:06:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; 8bit_cpu_by_memory  ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +--------------------------------------+---------------------------------------+--------------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value      ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+--------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 79516042948429.163937220712012        ; --                 ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 79516042948429.163938640708160        ; --                 ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --                 ; --          ; top_vlg_tst    ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; top_vlg_tst                           ; --                 ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --                 ; --          ; eda_simulation ;
@@ -104,8 +104,8 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4851 MB             ; 00:00:14                           ;
-; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:14                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4849 MB             ; 00:00:14                           ;
+; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:14                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

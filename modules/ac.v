@@ -6,7 +6,8 @@ input [7:0] Din; //8位操作数 来自ALU
 input [7:0] Rin;
 input clk,       //1位时钟信号，进行时序控制 来自qtsj.v的输出clk_choose
       rst,       //1位复位信号，该位为1时系统正常工作、为0时系统复位 来自控制器
-      ACload;    //1位载入信号，其有效且clk有上升沿来临时将输入din直接由dout输出 来自控制器
+      ACload,    //1位载入信号，其有效且clk有上升沿来临时将输入din直接由dout输出 来自控制器
+      ACloadR;
 
 output [7:0] Dout;
 reg [7:0] Dout;

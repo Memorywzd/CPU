@@ -51,7 +51,7 @@ clk_div light(.clk(clk),.reset(rst),.symbol(32'd3),.div_clk(clk_light));
 /*-------------------------------*/
 
 //CPU_Controller(SW1,SW2,CPU_state);CPU_Controller实例化
-CPU_Controller controller(.SW1(SW1),.SW2(SW2),.CPU_state(cpustate));
+CPU_Controller mccontroller(.SW1(SW1),.SW2(SW2),.CPU_state(cpustate));
 
 //补充cpu实例化的语句
 CPU_dataflow mcpu(

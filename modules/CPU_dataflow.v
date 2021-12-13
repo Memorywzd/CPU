@@ -20,7 +20,7 @@ output [7:0] data_out;
 output [7:0] acdbus;//AC寄存器的输出
 output [7:0] rdbus;//R寄存器的输出
 output clr, zout;
-output arload, arinc, pcload, pcinc, drload, irload, acload, trload, rload, zload;
+output arload, arinc, pcload, pcinc, drload, irload, acload, trload, acloadr, rload, zload;
 output pcbus, acbus, drhbus, drlbus, rbus, trbus;
 output read, write;
 output membus, busmem;
@@ -62,7 +62,7 @@ controller mcontroller(
     .ARload(arload),.ARinc(arinc),.PCload(pcload),.PCinc(pcinc),.DRload(drload),.IRload(irload),.TRload(trload),
     .Rload(rload),.ACload(acload),.Zload(zload),.ACloadR(acloadr),
     .PCbus(pcbus),.DRlbus(drlbus),.DRhbus(drhbus),.TRbus(trbus),
-    .Rbus(rbus),.ACbus(acbus),.alus(alus),
+    .Rbus(rbus),.ACbus(acbus),.alus(alus),.clr(clr),
     .mem_read(read),.mem_write(write),
     .mem2bus(membus),.bus2mem(busmem)
 );
