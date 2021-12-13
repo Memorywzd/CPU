@@ -129,10 +129,10 @@ assign IRload = fetch3;
 assign TRload = LDAC2||STAC2||JUMP2||(Z&&JMPZ2)||(!Z&&JPNZ2);
 
 assign Rload = MOVAC1;
-assign ACload = ADD1||SUB1||AND1||OR1||XOR1||INAC1||CLAC1||NOT1||LDAC5;
+assign ACload = ADD1||SUB1||AND1||OR1||XOR1||INAC1||CLAC1||NOT1;
 assign Zload = ADD1||SUB1||AND1||OR1||XOR1||INAC1||CLAC1||NOT1;
 
-assign ACloadR = MOVR1;
+assign ACloadR = MOVR1||LDAC5;
 
 assign PCbus = fetch1||fetch3;
 assign DRlbus = LDAC5||STAC5;
