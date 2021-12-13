@@ -48,7 +48,7 @@ always @(ac_n or bus_n or alus) begin
             Dout = bus_n;//ldac
         end
         default:
-            Dout = 8'bxxxxxxxx;
+            Dout = 8'bzzzzzzzz;
     endcase
 end
 

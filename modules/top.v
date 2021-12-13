@@ -33,8 +33,6 @@ wire read,write,arload,arinc,pcinc,pcload,drload,trload,irload,rload,acload,zloa
 
 wire clk_quick,clk_slow,clk_delay,clk_mem,clk_light;
 wire [1:0] cpustate;
-//调试
-//output [15:0]pcdbus,dbus;
 
 
 /*----------分频程序---------------*/
@@ -59,11 +57,12 @@ CPU_Controller controller(.SW1(SW1),.SW2(SW2),.CPU_state(cpustate));
 CPU_dataflow mcpu(
     .data_in(rambus),
     .clk_quick(clk_quick),.clk_slow(clk_slow),.clk_delay(clk_delay),
-    .rst(rst),.SW_choose(SW_choose),.A1(A1),.CPUstate(cpustate),
+    .rst(rst),.SW_choose(SW_choose),.A1(A1),.CPUstate(cpustate),.zout(Z),
     .memaddr(addr),.data_out(data),.acdbus(acdbus),.rdbus(rdbus),.clr(clr_led),
     .arload(arload_led),.arinc(arinc_led),.pcload(pcload_led),.pcinc(pcinc_led),.drload(drload_led),
-    .irload(irload_led),.rload(rload_led),.acload(acload_led),
-    .pcbus(pcbus_led),.acbus(acbus_led),.drhbus(drhbus_led),.drlbus(drlbus_led),
+    .irload(irload_led),.acload(acload_led),.trload(trload_led),
+    .rload(rload_led),.zload(zload_led),
+    .pcbus(pcbus_led),.acbus(acbus_led),.drhbus(drhbus_led),.drlbus(drlbus_led),.rbus(rbus_led),.trbus(trbus_led),
     .read(read_led),.write(write_led),.membus(membus_led),.busmem(busmem_led)
 );
 

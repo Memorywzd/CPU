@@ -27,6 +27,7 @@ entity CPU_dataflow is
         acbus           : out    vl_logic;
         drhbus          : out    vl_logic;
         drlbus          : out    vl_logic;
+        rbus            : out    vl_logic;
         read            : out    vl_logic;
         write           : out    vl_logic;
         membus          : out    vl_logic;

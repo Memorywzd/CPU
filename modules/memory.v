@@ -37,6 +37,9 @@ wire [10:0] addr2;
 wire [7:0] data_ram;
 reg [7:0] ram [1023:0];
 /*********/
+always @(*) begin
+	data_rom = 8'bzzzzzzzz;
+end
 
 assign addr1 = addr[4:0];
 assign addr2 = addr[15:5];

@@ -1,5 +1,5 @@
 Flow report for 8bit_cpu_by_memory
-Fri Dec 10 18:22:47 2021
+Mon Dec 13 10:04:53 2021
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
 
 
@@ -41,17 +41,17 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Dec 10 18:22:47 2021       ;
+; Flow Status                        ; Successful - Mon Dec 13 10:04:53 2021       ;
 ; Quartus II 64-Bit Version          ; 14.0.0 Build 200 06/17/2014 SJ Full Version ;
 ; Revision Name                      ; 8bit_cpu_by_memory                          ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE40F23C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 304                                         ;
-;     Total combinational functions  ; 249                                         ;
-;     Dedicated logic registers      ; 230                                         ;
-; Total registers                    ; 230                                         ;
+; Total logic elements               ; 460                                         ;
+;     Total combinational functions  ; 409                                         ;
+;     Dedicated logic registers      ; 276                                         ;
+; Total registers                    ; 276                                         ;
 ; Total pins                         ; 150                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 256                                         ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/10/2021 18:22:45 ;
+; Start date & time ; 12/13/2021 10:04:49 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; 8bit_cpu_by_memory  ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +--------------------------------------+---------------------------------------+--------------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value      ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+--------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 79516042948429.163913176516716        ; --                 ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 268992146549940.163936108903808       ; --                 ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --                 ; --          ; top_vlg_tst    ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; top_vlg_tst                           ; --                 ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --                 ; --          ; eda_simulation ;
@@ -104,8 +104,8 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 4789 MB             ; 00:00:02                           ;
-; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:03     ; 1.0                     ; 4735 MB             ; 00:00:03                           ;
+; Total                ; 00:00:03     ; --                      ; --                  ; 00:00:03                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -114,7 +114,7 @@ agreement for further details.
 +----------------------+------------------+-----------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +----------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-AB8SOQE  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis ; LAPTOP-QNQT0OO9  ; Windows 7 ; 6.2        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 

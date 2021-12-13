@@ -12,7 +12,11 @@ always @(posedge clk or negedge rst) begin
     if (!rst)
         Dout <= 0;
     else if (Zload)
-        Dout <= Din;
+    begin
+        if(Din == 8'b00000000)
+            Dout <= 1;
+        else Dout <= 0;
+    end
 end
 
 endmodule

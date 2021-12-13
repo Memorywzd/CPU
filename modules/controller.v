@@ -12,23 +12,23 @@
       自行设计的各个控制信号
 */
 
-module controller(instr, clk, rst, CPUstate, 
-                  ARload, PCinc, DRload, IRload,
-                  Rload,
-                  PCbus, 
-                  ACbus,
+module controller(instr, clk, rst, CPUstate, Z, 
+                  ARload, ARinc, PCload, PCinc, DRload, IRload, TRload,
+      			  Rload, ACload, Zload,
+    			  PCbus, DRlbus, DRhbus, TRbus,
+       			  Rbus, ACbus,
                   alus,
                   mem_read, mem_write,
                   mem2bus, bus2mem);
 
 input [7:0] instr;    //输入指令
-input clk, rst;
+input clk, rst, Z;
 input [1:0] CPUstate;
 
-output ARload, PCinc, DRload, IRload,
-       Rload,
-       PCbus, 
-       ACbus,
+output ARload, ARinc, PCload, PCinc, DRload, IRload, TRload,
+       Rload, ACload, Zload,
+       PCbus, DRlbus, DRhbus, TRbus,
+       Rbus, ACbus,
        mem_read, mem_write,
        mem2bus, bus2mem;
 output [3:0] alus;
@@ -36,7 +36,11 @@ reg [3:0] alus;
 
 //控制器状态
 wire fetch1,fetch2,fetch3;
-wire MOVAC1;
+wire NOP1,LDAC1,LDAC2,LDAC3,LDAC4,LDAC5;
+wire STAC1,STAC2,STAC3,STAC4,STAC5;
+wire MOVAC1,MOVR1,JUMP1,JUMP2,JUMP3;
+wire JMPZ1,JMPZ2,JMPZ3,JPNZ1,JPNZ2,JPNZ3;
+wire ADD1,SUB1,INAC1,CLAC1,AND1,OR1,XOR1,NOT1;
 
 //译码器的输出,1为该指令有效,0为无效
 reg i_NOP, i_LDAC, i_STAC, i_MOVAC;
@@ -57,7 +61,9 @@ wire inc; //自增
 assign reset = rst & (CPUstate == 2'b11);
 
 //clr信号是每条指令执行完毕后必做的清零
-assign clr = MOVAC1;//或上其他的末尾周期
+assign clr = NOP1||LDAC5||STAC5||MOVAC1||MOVR1
+			 ||JUMP3||JMPZ3||JPNZ3||ADD1||SUB1
+			 ||INAC1||CLAC1||AND1||OR1||XOR1||NOT1;
 assign inc = ~clr;
 
 //生成指令信号
@@ -66,25 +72,90 @@ assign fetch1=t0;
 assign fetch2=t1;
 assign fetch3=t2;
 
+assign NOP1 = i_NOP && t3;
+
+assign LDAC1 = i_LDAC && t3;
+assign LDAC2 = i_LDAC && t4;
+assign LDAC3 = i_LDAC && t5;
+assign LDAC4 = i_LDAC && t6;
+assign LDAC5 = i_LDAC && t7;
+
+assign STAC1 = i_STAC && t3;
+assign STAC2 = i_STAC && t4;
+assign STAC3 = i_STAC && t5;
+assign STAC4 = i_STAC && t6;
+assign STAC5 = i_STAC && t7;
+
 assign MOVAC1 = i_MOVAC && t3;
 
+assign MOVR1 = i_MOVR && t3;
+
+assign JUMP1 = i_JUMP && t3;
+assign JUMP2 = i_JUMP && t4;
+assign JUMP3 = i_JUMP && t5;
+
+assign JMPZ1 = i_JMPZ && t3;
+assign JMPZ2 = i_JMPZ && t4;
+assign JMPZ3 = i_JMPZ && t5;
+
+assign JPNZ1 = i_JPNZ && t3;
+assign JPNZ2 = i_JPNZ && t4;
+assign JPNZ3 = i_JPNZ && t5;
+
+assign ADD1 = i_ADD && t3;
+
+assign SUB1 = i_SUB && t3;
+
+assign INAC1 = i_INAC && t3;
+
+assign CLAC1 = i_CLAC && t3;
+
+assign AND1 = i_AND && t3;
+
+assign OR1 = i_OR && t3;
+
+assign XOR1 = i_XOR && t3;
+
+assign NOT1 = i_NOT && t3;
+
+
 //生成控制信号
-assign ARload = fetch1 ||fetch3;
+assign ARload = fetch1||fetch3||LDAC3||STAC3;
+assign ARinc = LDAC1||STAC1||JUMP1||(Z&&JMPZ1)||(!Z&&JPNZ1);
+assign PCload = JUMP3||(Z&&JMPZ3)||(!Z&&JPNZ3);
 assign PCinc = fetch2;
 assign DRload = fetch2;
 assign IRload = fetch3;
+assign TRload = LDAC2||STAC2||JUMP2||(Z&&JMPZ2)||(!Z&&JPNZ2);
 
 assign Rload = MOVAC1;
+assign ACload = ADD1||SUB1||AND1||OR1||XOR1||INAC1||CLAC1||NOT1||MOVR1||LDAC5;
+assign Zload = ADD1||SUB1||AND1||OR1||XOR1||INAC1||CLAC1||NOT1;
 
-assign PCbus = fetch1;
-assign ACbus = MOVAC1;
+assign PCbus = fetch1||fetch3;
+assign DRlbus = LDAC5||STAC5;
+assign DRhbus = LDAC3||STAC3||JUMP3||(Z&&JMPZ3)||(!Z&&JPNZ3);
+assign TRbus = LDAC3||STAC3||JUMP3||(Z&&JMPZ3)||(!Z&&JPNZ3);
+assign Rbus = ADD1||SUB1||AND1||OR1||XOR1||MOVR1;
+assign ACbus = MOVAC1||STAC4;
 
-assign mem_read = fetch2;
-assign mem2bus = fetch2;
+assign mem_read = fetch2||LDAC1||STAC1||LDAC2||STAC2||LDAC4||JUMP1||(Z&&JMPZ1)||(!Z&&JPNZ1)||JUMP2||(Z&&JMPZ2)||(!Z&&JPNZ2);
+assign mem_write = STAC5;
+assign mem2bus = fetch2||LDAC1||STAC1||LDAC2||STAC2||LDAC4||JUMP1||(Z&&JMPZ1)||(!Z&&JPNZ1)||JUMP2||(Z&&JMPZ2)||(!Z&&JPNZ2);
+assign bus2mem = STAC5;
 
 //assign alus = 
-always @(MOVAC1) begin
-	alus = 4'bxxxx;
+always @(*) begin
+	if(CLAC1)alus = 4'b0000;
+	else if(ADD1)alus = 4'b0001;
+	else if(SUB1)alus =  4'b0010;
+	else if(INAC1)alus = 4'b0011;
+	else if(AND1)alus = 4'b0100;
+	else if(OR1)alus = 4'b0101;
+	else if(NOT1)alus = 4'b0110;
+	else if(XOR1)alus = 4'b0111;
+	else if(LDAC1)alus = 4'b1000;
+	else alus = 4'bzzzz;
 end
 
 //指令译码    
