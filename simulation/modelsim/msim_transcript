@@ -22,6 +22,18 @@
 # 
 # Top level modules:
 # 	controller
+# vlog -vlog01compat -work work +incdir+D:/cpu/CPU/modules {D:/cpu/CPU/modules/z.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module z
+# 
+# Top level modules:
+# 	z
+# vlog -vlog01compat -work work +incdir+D:/cpu/CPU/modules {D:/cpu/CPU/modules/tr.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module tr
+# 
+# Top level modules:
+# 	tr
 # vlog -vlog01compat -work work +incdir+D:/cpu/CPU/modules {D:/cpu/CPU/modules/top.v}
 # Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
 # -- Compiling module top
@@ -120,16 +132,21 @@
 # Loading work.pc
 # Loading work.dr
 # Loading work.ir
+# Loading work.tr
 # Loading work.r
 # Loading work.ac
 # Loading work.alu
+# Loading work.z
 # Loading work.controller
 # Loading work.memory
 # Loading work.light_show
-# ** Warning: (vsim-3015) D:/cpu/CPU/modules/CPU_dataflow.v(55): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'alus'. The port definition is at: D:/cpu/CPU/modules/alu.v(3).
+# ** Warning: (vsim-3015) D:/cpu/CPU/modules/CPU_dataflow.v(56): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'alus'. The port definition is at: D:/cpu/CPU/modules/alu.v(3).
 # 
 #         Region: /top_vlg_tst/i1/mcpu/malu
-# ** Warning: (vsim-3015) D:/cpu/CPU/modules/CPU_dataflow.v(66): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'alus'. The port definition is at: D:/cpu/CPU/modules/controller.v(20).
+# ** Warning: (vsim-3015) D:/cpu/CPU/modules/CPU_dataflow.v(58): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'Dout'. The port definition is at: D:/cpu/CPU/modules/z.v(3).
+# 
+#         Region: /top_vlg_tst/i1/mcpu/mz
+# ** Warning: (vsim-3015) D:/cpu/CPU/modules/CPU_dataflow.v(68): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'alus'. The port definition is at: D:/cpu/CPU/modules/controller.v(20).
 # 
 #         Region: /top_vlg_tst/i1/mcpu/mcontroller
 # 
@@ -139,10 +156,26 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: $finish    : D:/cpu/CPU/simulation/modelsim/top.vt(172)
-#    Time: 200 ms  Iteration: 0  Instance: /top_vlg_tst
+# ** Note: $finish    : D:/cpu/CPU/simulation/modelsim/top.vt(280)
+#    Time: 2230 ms  Iteration: 0  Instance: /top_vlg_tst
 # 1
-# Break in Module top_vlg_tst at D:/cpu/CPU/simulation/modelsim/top.vt line 172
+# Break in Module top_vlg_tst at D:/cpu/CPU/simulation/modelsim/top.vt line 280
 # Simulation Breakpoint: 1
-# Break in Module top_vlg_tst at D:/cpu/CPU/simulation/modelsim/top.vt line 172
-# MACRO ./8bit_cpu_by_memory_run_msim_rtl_verilog.do PAUSED at line 31
+# Break in Module top_vlg_tst at D:/cpu/CPU/simulation/modelsim/top.vt line 280
+# MACRO ./8bit_cpu_by_memory_run_msim_rtl_verilog.do PAUSED at line 33
+add wave -position insertpoint sim:/top_vlg_tst/i1/mcpu/*
+restart
+# ** Warning: (vsim-3015) D:/cpu/CPU/modules/CPU_dataflow.v(56): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'alus'. The port definition is at: D:/cpu/CPU/modules/alu.v(3).
+# 
+#         Region: /top_vlg_tst/i1/mcpu/malu
+# ** Warning: (vsim-3015) D:/cpu/CPU/modules/CPU_dataflow.v(58): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'Dout'. The port definition is at: D:/cpu/CPU/modules/z.v(3).
+# 
+#         Region: /top_vlg_tst/i1/mcpu/mz
+# ** Warning: (vsim-3015) D:/cpu/CPU/modules/CPU_dataflow.v(68): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'alus'. The port definition is at: D:/cpu/CPU/modules/controller.v(20).
+# 
+#         Region: /top_vlg_tst/i1/mcpu/mcontroller
+run -all
+# ** Note: $finish    : D:/cpu/CPU/simulation/modelsim/top.vt(280)
+#    Time: 2230 ms  Iteration: 0  Instance: /top_vlg_tst
+# 1
+# Break in Module top_vlg_tst at D:/cpu/CPU/simulation/modelsim/top.vt line 280

@@ -123,8 +123,8 @@ assign NOT1 = i_NOT && t3;
 assign ARload = fetch1||fetch3||LDAC3||STAC3;
 assign ARinc = LDAC1||STAC1||JUMP1||(Z&&JMPZ1)||(!Z&&JPNZ1);
 assign PCload = JUMP3||(Z&&JMPZ3)||(!Z&&JPNZ3);
-assign PCinc = fetch2;
-assign DRload = fetch2;
+assign PCinc = fetch2||LDAC1||STAC1||LDAC2||STAC2||(!Z&&JMPZ2)||(!Z&&JMPZ3)||(Z&&JPNZ2)||(Z&&JPNZ3);
+assign DRload = fetch2||LDAC1||STAC1||LDAC2||STAC2||LDAC4||STAC4||JUMP1||(Z&&JMPZ1)||(!Z&&JPNZ1)||JUMP2||(Z&&JMPZ2)||(!Z&&JPNZ2);
 assign IRload = fetch3;
 assign TRload = LDAC2||STAC2||JUMP2||(Z&&JMPZ2)||(!Z&&JPNZ2);
 
@@ -368,7 +368,7 @@ begin
 			
 		end
 		8:  begin
-			i_NOP <= 1;
+			i_NOP <= 0;
 			i_LDAC <= 0;
 			i_STAC <= 0;
 			i_MOVAC <= 0;
@@ -390,7 +390,7 @@ begin
 			
 		end
 		9:  begin
-			i_NOP <= 1;
+			i_NOP <= 0;
 			i_LDAC <= 0;
 			i_STAC <= 0;
 			i_MOVAC <= 0;

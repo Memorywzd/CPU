@@ -18,5 +18,5 @@ Sim dir               :  simulation\modelsim
 
 Info: Starting NativeLink simulation with ModelSim-Altera software
 Sourced NativeLink script d:/altera/quartus/common/tcl/internal/nativelink/modelsim.tcl
-Warning: File 8bit_cpu_by_memory_run_msim_rtl_verilog.do already exists - backing up current file as 8bit_cpu_by_memory_run_msim_rtl_verilog.do.bak1
+Warning: File 8bit_cpu_by_memory_run_msim_rtl_verilog.do already exists - backing up current file as 8bit_cpu_by_memory_run_msim_rtl_verilog.do.bak10
 Info: Spawning ModelSim-Altera Simulation software 
