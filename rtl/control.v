@@ -37,7 +37,7 @@ reg [3:0] alus;
 //控制器状态
 wire fetch1,fetch2,fetch3;
 wire NOP1,LDAC1,LDAC2,LDAC3,LDAC4,LDAC5;
-wire STAC1,STAC2,STAC3,STAC4,STAC5,STAC6;
+wire STAC1,STAC2,STAC3,STAC4,STAC5;
 wire MOVAC1,MOVR1,JUMP1,JUMP2,JUMP3;
 wire JMPZ1,JMPZ2,JMPZ3,JPNZ1,JPNZ2,JPNZ3;
 wire ADD1,SUB1,INAC1,CLAC1,AND1,OR1,XOR1,NOT1;
@@ -49,7 +49,7 @@ reg i_ADD, i_SUB, i_INAC, i_CLAC;
 reg i_AND, i_OR, i_XOR, i_NOT;
 
 //时钟节拍，8个为一个指令周期
-reg t0, t1, t2, t3, t4, t5, t6, t7, t8;
+reg t0, t1, t2, t3, t4, t5, t6, t7;
 
 //parameter's define
 wire reset;
@@ -61,7 +61,7 @@ wire inc; //自增
 assign reset = rst & (CPUstate == 2'b11);
 
 //clr信号是每条指令执行完毕后必做的清零
-assign clr = NOP1||LDAC5||STAC6||MOVAC1||MOVR1
+assign clr = NOP1||LDAC5||STAC5||MOVAC1||MOVR1
 			 ||JUMP3||JMPZ3||JPNZ3||ADD1||SUB1
 			 ||INAC1||CLAC1||AND1||OR1||XOR1||NOT1;
 assign inc = ~clr;
@@ -85,7 +85,6 @@ assign STAC2 = i_STAC && t4;
 assign STAC3 = i_STAC && t5;
 assign STAC4 = i_STAC && t6;
 assign STAC5 = i_STAC && t7;
-assign STAC6 = i_STAC && t8;
 
 assign MOVAC1 = i_MOVAC && t3;
 
@@ -136,7 +135,7 @@ assign Zload = ADD1||SUB1||AND1||OR1||XOR1||INAC1||CLAC1||NOT1;
 assign ACloadR = MOVR1||LDAC5;
 
 assign PCbus = fetch1||fetch3;
-assign DRlbus = LDAC5||STAC5||STAC6;
+assign DRlbus = LDAC5||STAC5;
 assign DRhbus = LDAC3||STAC3||JUMP3||(Z&&JMPZ3)||(!Z&&JPNZ3);
 assign TRbus = LDAC3||STAC3||JUMP3||(Z&&JMPZ3)||(!Z&&JPNZ3);
 assign Rbus = ADD1||SUB1||AND1||OR1||XOR1||MOVR1;
@@ -145,7 +144,7 @@ assign ACbus = MOVAC1||STAC4;
 assign mem_read = fetch2||LDAC1||STAC1||LDAC2||STAC2||LDAC4||JUMP1||(Z&&JMPZ1)||(!Z&&JPNZ1)||JUMP2||(Z&&JMPZ2)||(!Z&&JPNZ2);
 assign mem_write = STAC5;
 assign mem2bus = fetch2||LDAC1||STAC1||LDAC2||STAC2||LDAC4||JUMP1||(Z&&JMPZ1)||(!Z&&JPNZ1)||JUMP2||(Z&&JMPZ2)||(!Z&&JPNZ2);
-assign bus2mem = STAC5||STAC6;
+assign bus2mem = STAC5;
 
 //assign alus = 
 /* always @(*) begin
@@ -576,13 +575,11 @@ begin
 	t5<=0;
 	t6<=0;
 	t7<=0;
-	t8<=0;
 end
 else
 begin
 	if(inc) //运行
 	begin
-	t8<=t7;
 	t7<=t6;
 	t6<=t5;
 	t5<=t4;
@@ -602,7 +599,6 @@ begin
 	t5<=0;
 	t6<=0;
 	t7<=0;
-	t8<=0;
 	end
 end
 end
