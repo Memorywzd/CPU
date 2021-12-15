@@ -46,11 +46,11 @@ assign addr2 = addr[15:5];
 assign data_ram=(read)? ram[addr2]:8'bzzzzzzzz;
 assign data_out=(cpustate != 2'b11)?8'hzz:((|addr[15:5])?data_ram:data_rom);
 
-always @(posedge clk) begin
+always @(negedge clk) begin
 	if (write)
 		ram[addr2] <= data_in;
 end
-always @(posedge clk)
+always @(negedge clk)
 begin
 	if(read)
 		data_rom <= memory[addr1];

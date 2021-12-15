@@ -37,17 +37,17 @@ wire [1:0] cpustate;
 
 /*----------分频程序---------------*/
 //综合用
-clk_div quick(.clk(clk),.reset(rst),.symbol(32'd16384000),.div_clk(clk_quick));
+/* clk_div quick(.clk(clk),.reset(rst),.symbol(32'd16384000),.div_clk(clk_quick));
 clk_div slow(.clk(clk),.reset(rst),.symbol(32'd49152000),.div_clk(clk_slow));
 clk_div delay(.clk(clk),.reset(rst),.symbol(32'd2048000),.div_clk(clk_delay));
 clk_div mem(.clk(clk),.reset(rst),.symbol(32'd2048000),.div_clk(clk_mem));
-clk_div light(.clk(clk),.reset(rst),.symbol(32'd2048000),.div_clk(clk_light));
+clk_div light(.clk(clk),.reset(rst),.symbol(32'd2048000),.div_clk(clk_light)); */
 //仿真用
-/* clk_div quick(.clk(clk),.reset(rst),.symbol(32'd3),.div_clk(clk_quick));
+clk_div quick(.clk(clk),.reset(rst),.symbol(32'd3),.div_clk(clk_quick));
 clk_div slow(.clk(clk),.reset(rst),.symbol(32'd6),.div_clk(clk_slow));
 clk_div delay(.clk(clk),.reset(rst),.symbol(32'd1),.div_clk(clk_delay));
 clk_div mem(.clk(clk),.reset(rst),.symbol(32'd3),.div_clk(clk_mem));
-clk_div light(.clk(clk),.reset(rst),.symbol(32'd3),.div_clk(clk_light)); */
+clk_div light(.clk(clk),.reset(rst),.symbol(32'd3),.div_clk(clk_light));
 /*-------------------------------*/
 
 //CPU_Controller(SW1,SW2,CPU_state);CPU_Controller实例化
