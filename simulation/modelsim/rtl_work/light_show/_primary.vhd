@@ -6,6 +6,10 @@ entity light_show is
         SW_choose       : in     vl_logic;
         check_in        : in     vl_logic_vector(7 downto 0);
         State           : in     vl_logic_vector(1 downto 0);
+        read_led        : out    vl_logic;
+        write_led       : out    vl_logic;
+        read            : in     vl_logic;
+        write           : in     vl_logic;
         MAR             : in     vl_logic_vector(7 downto 0);
         AC              : in     vl_logic_vector(7 downto 0);
         R               : in     vl_logic_vector(7 downto 0);

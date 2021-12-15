@@ -2,366 +2,365 @@ m255
 K3
 13
 cModel Technology
-Z0 dD:\Principles of Computer Organization\CPU\simulation\modelsim
+Z0 dD:\Principles of Computer Organization\PCO_complex_stu\simulation\modelsim
 vac
-Z1 I<iTeLb4aM>G5S8Q9S[Qo@3
+Z1 I:b<3eQYiEZAUbnaAWc>Cm3
 Z2 V5kh6LBB<0AgX9MK@YXVQU3
-Z3 dD:\Principles of Computer Organization\CPU\simulation\modelsim
-Z4 w1639377676
-Z5 8D:/Principles of Computer Organization/CPU/modules/ac.v
-Z6 FD:/Principles of Computer Organization/CPU/modules/ac.v
+Z3 dD:\Principles of Computer Organization\PCO_complex_stu\simulation\modelsim
+Z4 w1639574621
+Z5 8D:/Principles of Computer Organization/PCO_complex_stu/rtl/ac.v
+Z6 FD:/Principles of Computer Organization/PCO_complex_stu/rtl/ac.v
 L0 3
 Z7 OV;L;10.1e;51
 r1
 31
 Z8 o-vlog01compat -work work -O0
-Z9 !s92 -vlog01compat -work work {+incdir+D:/Principles of Computer Organization/CPU/modules} -O0
+Z9 !s92 -vlog01compat -work work {+incdir+D:/Principles of Computer Organization/PCO_complex_stu/rtl} -O0
+Z10 !s100 jDNMXNPC>;USlZHVBhULP2
+Z11 !s108 1639585377.518000
+Z12 !s107 D:/Principles of Computer Organization/PCO_complex_stu/rtl/ac.v|
+Z13 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/PCO_complex_stu/rtl|D:/Principles of Computer Organization/PCO_complex_stu/rtl/ac.v|
 !i10b 1
-Z10 !s100 bf@D<j1MPdaNO;b2>hmI22
 !s85 0
-Z11 !s108 1639410205.461000
-Z12 !s107 D:/Principles of Computer Organization/CPU/modules/ac.v|
-Z13 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/modules|D:/Principles of Computer Organization/CPU/modules/ac.v|
 !s101 -O0
 valu
-Z14 I60`?cMgFCe7g_JR5aUeKf3
+Z14 IX7kg6V`34ZjKkm967`S4a3
 Z15 VPRb6YB_][@ccX0@1YWn8D3
 R3
-Z16 w1639368224
-Z17 8D:/Principles of Computer Organization/CPU/modules/alu.v
-Z18 FD:/Principles of Computer Organization/CPU/modules/alu.v
+Z16 w1639584395
+Z17 8D:/Principles of Computer Organization/PCO_complex_stu/rtl/alu.v
+Z18 FD:/Principles of Computer Organization/PCO_complex_stu/rtl/alu.v
 L0 3
 R7
 r1
 31
 R8
 R9
-Z19 !s100 XVenaclNV1iEe6N0C<?7o3
-Z20 !s108 1639410205.427000
-Z21 !s107 D:/Principles of Computer Organization/CPU/modules/alu.v|
-Z22 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/modules|D:/Principles of Computer Organization/CPU/modules/alu.v|
+Z19 !s100 L1U6U22Tk7o_OlQA`:l0k3
+Z20 !s108 1639585377.484000
+Z21 !s107 D:/Principles of Computer Organization/PCO_complex_stu/rtl/alu.v|
+Z22 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/PCO_complex_stu/rtl|D:/Principles of Computer Organization/PCO_complex_stu/rtl/alu.v|
 !i10b 1
 !s85 0
 !s101 -O0
 var
-Z23 I4f:YhL1PkJGhczB]i3b@f2
+Z23 I5fMVXDN?WfW>HAaoW:Ue[0
 Z24 VMdRO5oj_;H1O3Hf89MizI0
 R3
-Z25 w1639108816
-Z26 8D:/Principles of Computer Organization/CPU/modules/ar.v
-Z27 FD:/Principles of Computer Organization/CPU/modules/ar.v
+Z25 w1639574642
+Z26 8D:/Principles of Computer Organization/PCO_complex_stu/rtl/ar.v
+Z27 FD:/Principles of Computer Organization/PCO_complex_stu/rtl/ar.v
 L0 3
 R7
 r1
 31
 R8
 R9
-Z28 !s100 =GhHIB>ZE?n[HT3iZ8<L=2
-Z29 !s108 1639410205.393000
-Z30 !s107 D:/Principles of Computer Organization/CPU/modules/ar.v|
-Z31 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/modules|D:/Principles of Computer Organization/CPU/modules/ar.v|
+Z28 !s100 mDiG=ig8AOQY1:dOLlDno2
+Z29 !s108 1639585377.450000
+Z30 !s107 D:/Principles of Computer Organization/PCO_complex_stu/rtl/ar.v|
+Z31 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/PCO_complex_stu/rtl|D:/Principles of Computer Organization/PCO_complex_stu/rtl/ar.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vclk_div
-Z32 Izj;=^]@1DAjkSP;R[Gi2P0
+Z32 I5MiA@>nQE817jL7?fn9ik0
 Z33 VBL^JGUH?:P=jZGFZ1=d1L0
 R3
-Z34 w1638950625
-Z35 8D:/Principles of Computer Organization/CPU/modules/clk_div.v
-Z36 FD:/Principles of Computer Organization/CPU/modules/clk_div.v
+Z34 w1638671278
+Z35 8D:/Principles of Computer Organization/PCO_complex_stu/rtl/clk_div.v
+Z36 FD:/Principles of Computer Organization/PCO_complex_stu/rtl/clk_div.v
 L0 3
 R7
 r1
 31
 R8
 R9
-Z37 !s100 diefeRImKjWcG3B]:`6a`3
-Z38 !s108 1639410205.360000
-Z39 !s107 D:/Principles of Computer Organization/CPU/modules/clk_div.v|
-Z40 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/modules|D:/Principles of Computer Organization/CPU/modules/clk_div.v|
+Z37 !s100 V_H4HA^BAGm4mQ=Xj?chn0
+Z38 !s108 1639585377.587000
+Z39 !s107 D:/Principles of Computer Organization/PCO_complex_stu/rtl/clk_div.v|
+Z40 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/PCO_complex_stu/rtl|D:/Principles of Computer Organization/PCO_complex_stu/rtl/clk_div.v|
 !i10b 1
 !s85 0
 !s101 -O0
-vcontroller
-Z41 I05bMLmHMiB36:EmM0M4IO3
-Z42 VogX4DIB>BojVT;gEk4Cgc2
+vcontrol
+Z41 IW:B56gUadT=VePOY8CA8Z2
+Z42 VF]CZzFL:doD`@^aADV9kV2
 R3
-Z43 w1639408345
-Z44 8D:/Principles of Computer Organization/CPU/modules/controller.v
-Z45 FD:/Principles of Computer Organization/CPU/modules/controller.v
+Z43 w1639581523
+Z44 8D:/Principles of Computer Organization/PCO_complex_stu/rtl/control.v
+Z45 FD:/Principles of Computer Organization/PCO_complex_stu/rtl/control.v
 L0 15
 R7
 r1
 31
 R8
 R9
-Z46 !s100 Y;D]2iYM[HGhSf8INRe<U3
-Z47 !s108 1639410204.939000
-Z48 !s107 D:/Principles of Computer Organization/CPU/modules/controller.v|
-Z49 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/modules|D:/Principles of Computer Organization/CPU/modules/controller.v|
+Z46 !s100 jlUZGEJn1fKXY4]_Hn0nf2
+Z47 !s108 1639585377.412000
+Z48 !s107 D:/Principles of Computer Organization/PCO_complex_stu/rtl/control.v|
+Z49 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/PCO_complex_stu/rtl|D:/Principles of Computer Organization/PCO_complex_stu/rtl/control.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vcpu
+Z50 IFDZbD`Qn33HPJ6Bn1]BfO3
+Z51 VEXKXodDb@TJXMX83Y0F_;2
+R3
+Z52 w1639579125
+Z53 8D:/Principles of Computer Organization/PCO_complex_stu/rtl/cpu.v
+Z54 FD:/Principles of Computer Organization/PCO_complex_stu/rtl/cpu.v
+L0 3
+R7
+r1
+31
+R8
+R9
+Z55 !s100 1nMJ`Z1;1;^PLRl>MmGg@3
+Z56 !s108 1639585377.379000
+Z57 !s107 D:/Principles of Computer Organization/PCO_complex_stu/rtl/cpu.v|
+Z58 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/PCO_complex_stu/rtl|D:/Principles of Computer Organization/PCO_complex_stu/rtl/cpu.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vCPU_Controller
-Z50 Ib>F5z]T8AN;a5OM8eRX7^1
-Z51 VgJP;oog[KFk?ZRZKj5F3P2
+Z59 I=`11FO`05OX;nPGzLhbPG3
+Z60 VgJP;oog[KFk?ZRZKj5F3P2
 R3
-Z52 w1639035763
-Z53 8D:/Principles of Computer Organization/CPU/modules/CPU_Controller.v
-Z54 FD:/Principles of Computer Organization/CPU/modules/CPU_Controller.v
-L0 12
+Z61 w1638672404
+Z62 8D:/Principles of Computer Organization/PCO_complex_stu/rtl/CPU_Controller.v
+Z63 FD:/Principles of Computer Organization/PCO_complex_stu/rtl/CPU_Controller.v
+L0 7
 R7
 r1
 31
 R8
 R9
-Z55 n@c@p@u_@controller
-Z56 !s100 B>G<VMY8l[Y3ecl`2F[1H3
-Z57 !s108 1639410205.326000
-Z58 !s107 D:/Principles of Computer Organization/CPU/modules/CPU_Controller.v|
-Z59 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/modules|D:/Principles of Computer Organization/CPU/modules/CPU_Controller.v|
-!i10b 1
-!s85 0
-!s101 -O0
-vCPU_dataflow
-Z60 IS<^=Oa3fCTf[W;N9J0oh62
-Z61 VHX6aI?IXGEh149Rggk19o0
-R3
-Z62 w1639405609
-Z63 8D:/Principles of Computer Organization/CPU/modules/CPU_dataflow.v
-Z64 FD:/Principles of Computer Organization/CPU/modules/CPU_dataflow.v
-L0 3
-R7
-r1
-31
-R8
-Z65 n@c@p@u_dataflow
-Z66 !s100 KZmcg7@0mF^ADoE_kPGmH2
-Z67 !s108 1639410204.905000
-Z68 !s107 D:/Principles of Computer Organization/CPU/modules/CPU_dataflow.v|
-Z69 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/modules|D:/Principles of Computer Organization/CPU/modules/CPU_dataflow.v|
-R9
+Z64 n@c@p@u_@controller
+Z65 !s100 ^W?8aAXlRB9L:RHllD]h01
+Z66 !s108 1639585377.621000
+Z67 !s107 D:/Principles of Computer Organization/PCO_complex_stu/rtl/CPU_Controller.v|
+Z68 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/PCO_complex_stu/rtl|D:/Principles of Computer Organization/PCO_complex_stu/rtl/CPU_Controller.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vdr
-Z70 I5Do^YHP5Kbm8_=ej6QY`91
-Z71 VP[gcG9l17j<;>oozeBPIj1
+Z69 ID7h9z`_d7cmjfK6^hBTMl2
+Z70 VP[gcG9l17j<;>oozeBPIj1
 R3
-R25
-Z72 8D:/Principles of Computer Organization/CPU/modules/dr.v
-Z73 FD:/Principles of Computer Organization/CPU/modules/dr.v
+Z71 w1639574673
+Z72 8D:/Principles of Computer Organization/PCO_complex_stu/rtl/dr.v
+Z73 FD:/Principles of Computer Organization/PCO_complex_stu/rtl/dr.v
 L0 3
 R7
 r1
 31
 R8
 R9
-Z74 !s100 an>K61IKm[l@Pk5995T:M0
-Z75 !s108 1639410205.291000
-Z76 !s107 D:/Principles of Computer Organization/CPU/modules/dr.v|
-Z77 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/modules|D:/Principles of Computer Organization/CPU/modules/dr.v|
+Z74 !s100 SJJWlAd6U?2`Hjij;]cAN1
+Z75 !s108 1639585377.347000
+Z76 !s107 D:/Principles of Computer Organization/PCO_complex_stu/rtl/dr.v|
+Z77 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/PCO_complex_stu/rtl|D:/Principles of Computer Organization/PCO_complex_stu/rtl/dr.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vir
-Z78 I];nl2W;fEDl2GMznff0W43
+Z78 I8[dZz^1fJPU`4=]IlP;Qo3
 Z79 VCn`]?GSk;?2n;bg2zDCUP1
 R3
-Z80 w1639123339
-Z81 8D:/Principles of Computer Organization/CPU/modules/ir.v
-Z82 FD:/Principles of Computer Organization/CPU/modules/ir.v
+Z80 w1639574678
+Z81 8D:/Principles of Computer Organization/PCO_complex_stu/rtl/ir.v
+Z82 FD:/Principles of Computer Organization/PCO_complex_stu/rtl/ir.v
 L0 4
 R7
 r1
 31
 R8
 R9
-Z83 !s100 :_LOhA3V5E^H5O6H:IEUm2
-Z84 !s108 1639410205.259000
-Z85 !s107 D:/Principles of Computer Organization/CPU/modules/ir.v|
-Z86 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/modules|D:/Principles of Computer Organization/CPU/modules/ir.v|
+Z83 !s100 U_9;^<8ZW@>CiR=XmSJok0
+Z84 !s108 1639585377.314000
+Z85 !s107 D:/Principles of Computer Organization/PCO_complex_stu/rtl/ir.v|
+Z86 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/PCO_complex_stu/rtl|D:/Principles of Computer Organization/PCO_complex_stu/rtl/ir.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vlight_show
-Z87 I=OO[bZYJjNDHbHj^jCT6<0
-Z88 VQB1IS9?Gz4dBbNZX6GV2^3
+Z87 IBFKLM;C>fO3ZAK_Qz_X1>0
+Z88 VEI=]jFhzRZznn5F[nJ?OT0
 R3
-Z89 w1638672550
-Z90 8D:/Principles of Computer Organization/CPU/modules/light_show.v
-Z91 FD:/Principles of Computer Organization/CPU/modules/light_show.v
+Z89 w1639584992
+Z90 8D:/Principles of Computer Organization/PCO_complex_stu/rtl/light_show.v
+Z91 FD:/Principles of Computer Organization/PCO_complex_stu/rtl/light_show.v
 L0 13
 R7
 r1
 31
 R8
 R9
-Z92 !s100 VTcOL:>gd4D3RT>jggzP[1
-Z93 !s108 1639410205.226000
-Z94 !s107 D:/Principles of Computer Organization/CPU/modules/light_show.v|
-Z95 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/modules|D:/Principles of Computer Organization/CPU/modules/light_show.v|
-!i10b 1
-!s85 0
-!s101 -O0
-vmemory
-Z96 ISkljY?8E<PWkm^PIa[eZQ0
-Z97 VnnB4UO]nK6D[IO]P[k=Q:3
-R3
-Z98 w1639380461
-Z99 8D:/Principles of Computer Organization/CPU/modules/memory.v
-Z100 FD:/Principles of Computer Organization/CPU/modules/memory.v
-L0 16
-R7
-r1
-31
-R8
-R9
-Z101 !s100 SCB^<6dW]h?JcI3=ZQ_k92
-Z102 !s108 1639410205.192000
-Z103 !s107 D:/Principles of Computer Organization/CPU/modules/memory.v|
-Z104 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/modules|D:/Principles of Computer Organization/CPU/modules/memory.v|
+Z92 !s100 3VciZLn_J7?h9ngnV72k91
+Z93 !s108 1639585377.552000
+Z94 !s107 D:/Principles of Computer Organization/PCO_complex_stu/rtl/light_show.v|
+Z95 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/PCO_complex_stu/rtl|D:/Principles of Computer Organization/PCO_complex_stu/rtl/light_show.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vpc
-Z105 IcD`D]b9PY2IYl4FUB=znz1
-Z106 VB5LIHdIFg<6Cf60MYfg:i1
+Z96 IQDlE;dFkI4BTAz9QNB;Co3
+Z97 VB5LIHdIFg<6Cf60MYfg:i1
 R3
-R25
-Z107 8D:/Principles of Computer Organization/CPU/modules/pc.v
-Z108 FD:/Principles of Computer Organization/CPU/modules/pc.v
+Z98 w1639574691
+Z99 8D:/Principles of Computer Organization/PCO_complex_stu/rtl/pc.v
+Z100 FD:/Principles of Computer Organization/PCO_complex_stu/rtl/pc.v
 L0 3
 R7
 r1
 31
 R8
 R9
-Z109 !s100 cI^gMo;i@TK>`MAdJP=S?2
-Z110 !s108 1639410205.158000
-Z111 !s107 D:/Principles of Computer Organization/CPU/modules/pc.v|
-Z112 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/modules|D:/Principles of Computer Organization/CPU/modules/pc.v|
+Z101 !s100 H`=WGWb[K1HlWdZobE:ej2
+Z102 !s108 1639585377.259000
+Z103 !s107 D:/Principles of Computer Organization/PCO_complex_stu/rtl/pc.v|
+Z104 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/PCO_complex_stu/rtl|D:/Principles of Computer Organization/PCO_complex_stu/rtl/pc.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vqtsj
-Z113 Imd`<U4Mf3]95IhW3cS<dc0
-Z114 VL__P<B;7Mo?8K9;LcUd[61
+Z105 I_U15Kl[IVInFS8[BIBA:;1
+Z106 VL__P<B;7Mo?8K9;LcUd[61
 R3
-Z115 w1639384737
-Z116 8D:/Principles of Computer Organization/CPU/modules/qtsj.v
-Z117 FD:/Principles of Computer Organization/CPU/modules/qtsj.v
+Z107 w1638672642
+Z108 8D:/Principles of Computer Organization/PCO_complex_stu/rtl/qtsj.v
+Z109 FD:/Principles of Computer Organization/PCO_complex_stu/rtl/qtsj.v
 L0 13
 R7
 r1
 31
 R8
 R9
-Z118 !s100 0Q6[HAIF]21cGTL4Gb4k10
-Z119 !s108 1639410205.124000
-Z120 !s107 D:/Principles of Computer Organization/CPU/modules/qtsj.v|
-Z121 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/modules|D:/Principles of Computer Organization/CPU/modules/qtsj.v|
 !i10b 1
+Z110 !s100 5BQBzT;URY7AJ[P<^DTX91
 !s85 0
+Z111 !s108 1639585377.654000
+Z112 !s107 D:/Principles of Computer Organization/PCO_complex_stu/rtl/qtsj.v|
+Z113 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/PCO_complex_stu/rtl|D:/Principles of Computer Organization/PCO_complex_stu/rtl/qtsj.v|
 !s101 -O0
 vr
-Z122 IZ9E9jiIA7_>]h`j8CUnE]0
-Z123 V1Ke<fnGOfUVH6>L^ZbX>31
+Z114 IQVecN@0^?mRMVPOE1_loR3
+Z115 V1Ke<fnGOfUVH6>L^ZbX>31
 R3
-Z124 w1639123349
-Z125 8D:/Principles of Computer Organization/CPU/modules/r.v
-Z126 FD:/Principles of Computer Organization/CPU/modules/r.v
+Z116 w1639574724
+Z117 8D:/Principles of Computer Organization/PCO_complex_stu/rtl/r.v
+Z118 FD:/Principles of Computer Organization/PCO_complex_stu/rtl/r.v
 L0 3
 R7
 r1
 31
 R8
 R9
-Z127 !s100 17:nnIEG7EHi?I3Y]UKCz0
-Z128 !s108 1639410205.078000
-Z129 !s107 D:/Principles of Computer Organization/CPU/modules/r.v|
-Z130 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/modules|D:/Principles of Computer Organization/CPU/modules/r.v|
+Z119 !s100 m9Q@Xad]:P95LRaE[Q4J>1
+Z120 !s108 1639585377.226000
+Z121 !s107 D:/Principles of Computer Organization/PCO_complex_stu/rtl/r.v|
+Z122 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/PCO_complex_stu/rtl|D:/Principles of Computer Organization/PCO_complex_stu/rtl/r.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vram
+Z123 IIERA]X298P>T5g^enlgY50
+Z124 VJBb5h44ne>;`:Z8@MUeVS3
+R3
+Z125 w1639585297
+Z126 8D:/Principles of Computer Organization/PCO_complex_stu/rtl/ram.v
+Z127 FD:/Principles of Computer Organization/PCO_complex_stu/rtl/ram.v
+L0 14
+R7
+r1
+31
+R8
+Z128 !s100 <1M8gW?9YRFzDNzFWPf^`3
+Z129 !s108 1639585377.091000
+Z130 !s107 D:/Principles of Computer Organization/PCO_complex_stu/rtl/ram.v|
+Z131 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/PCO_complex_stu/rtl|D:/Principles of Computer Organization/PCO_complex_stu/rtl/ram.v|
+R9
 !i10b 1
 !s85 0
 !s101 -O0
 vtop
-Z131 IMkne6lZ9>ol<eg^P7cTUo3
-Z132 V=l9b[Yo3mT0=b=Lm]VE>>0
+Z132 I3KL6a2JnhFF7iL?LWH1A[0
+Z133 V=l9b[Yo3mT0=b=Lm]VE>>0
 R3
-Z133 w1639382681
-Z134 8D:/Principles of Computer Organization/CPU/modules/top.v
-Z135 FD:/Principles of Computer Organization/CPU/modules/top.v
+Z134 w1639584890
+Z135 8D:/Principles of Computer Organization/PCO_complex_stu/rtl/top.v
+Z136 FD:/Principles of Computer Organization/PCO_complex_stu/rtl/top.v
 L0 3
 R7
 r1
 31
 R8
 R9
-Z136 !s100 nNkEjN0d4TcW:aMK4L:7C0
-Z137 !s108 1639410205.042000
-Z138 !s107 D:/Principles of Computer Organization/CPU/modules/top.v|
-Z139 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/modules|D:/Principles of Computer Organization/CPU/modules/top.v|
+Z137 !s100 GQ`hZ>QMR0456WEM0^iS11
+Z138 !s108 1639585377.190000
+Z139 !s107 D:/Principles of Computer Organization/PCO_complex_stu/rtl/top.v|
+Z140 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/PCO_complex_stu/rtl|D:/Principles of Computer Organization/PCO_complex_stu/rtl/top.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vtop_vlg_tst
 !i10b 1
-!s100 eTHi71d7dR4NBFc_0SW`D0
-IL>1[12B26Y?VP]T0RLcjo1
+!s100 AVFV9`V@8C[SH`KHk4@RT1
+IET?jTBQm>?CEh^U5;lZgS0
 VWH`X8iAJ@;Z6_Z>8HHbjI2
 R3
-w1639410090
-8D:/Principles of Computer Organization/CPU/simulation/modelsim/top.vt
-FD:/Principles of Computer Organization/CPU/simulation/modelsim/top.vt
+w1639584315
+8D:/Principles of Computer Organization/PCO_complex_stu/top.vt
+FD:/Principles of Computer Organization/PCO_complex_stu/top.vt
 L0 32
 R7
 r1
 !s85 0
 31
-!s108 1639410205.497000
-!s107 D:/Principles of Computer Organization/CPU/simulation/modelsim/top.vt|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/simulation/modelsim|D:/Principles of Computer Organization/CPU/simulation/modelsim/top.vt|
+!s108 1639585377.687000
+!s107 D:/Principles of Computer Organization/PCO_complex_stu/top.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/PCO_complex_stu|D:/Principles of Computer Organization/PCO_complex_stu/top.vt|
 !s101 -O0
 R8
-!s92 -vlog01compat -work work {+incdir+D:/Principles of Computer Organization/CPU/simulation/modelsim} -O0
+!s92 -vlog01compat -work work {+incdir+D:/Principles of Computer Organization/PCO_complex_stu} -O0
 vtr
-Z140 I5gXj_hA3fdonl?MLUVOZZ2
-Z141 V5Fl:SQz=aI<OzShULLj6F2
+Z141 ILD;f>_hQm2VY2PQGeC[]00
+Z142 V5Fl:SQz=aI<OzShULLj6F2
 R3
-Z142 w1639123357
-Z143 8D:/Principles of Computer Organization/CPU/modules/tr.v
-Z144 FD:/Principles of Computer Organization/CPU/modules/tr.v
+Z143 w1639574952
+Z144 8D:/Principles of Computer Organization/PCO_complex_stu/rtl/tr.v
+Z145 FD:/Principles of Computer Organization/PCO_complex_stu/rtl/tr.v
 L0 3
 R7
 r1
 31
 R8
 R9
-Z145 !s100 ?=o`6Z1QN9bIZJdDSHDRa1
-Z146 !s108 1639410205.010000
-Z147 !s107 D:/Principles of Computer Organization/CPU/modules/tr.v|
-Z148 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/modules|D:/Principles of Computer Organization/CPU/modules/tr.v|
+Z146 !s100 6MdSjW9W`KC>Z5MT52<nm3
+Z147 !s108 1639585377.157000
+Z148 !s107 D:/Principles of Computer Organization/PCO_complex_stu/rtl/tr.v|
+Z149 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/PCO_complex_stu/rtl|D:/Principles of Computer Organization/PCO_complex_stu/rtl/tr.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vz
-Z149 IL_;H2`<QenYbgo=YB;WP70
-Z150 VjP]U>lKAZD][]^Z3B6lNo0
+Z150 IfG@6M1Fl[3ekcQ=`G;l_R3
+Z151 VjP]U>lKAZD][]^Z3B6lNo0
 R3
-R16
-Z151 8D:/Principles of Computer Organization/CPU/modules/z.v
-Z152 FD:/Principles of Computer Organization/CPU/modules/z.v
+Z152 w1639574957
+Z153 8D:/Principles of Computer Organization/PCO_complex_stu/rtl/z.v
+Z154 FD:/Principles of Computer Organization/PCO_complex_stu/rtl/z.v
 L0 3
 R7
 r1
 31
 R8
 R9
-Z153 !s100 jR^7IgB1<4cFGBCfeegR22
-Z154 !s108 1639410204.976000
-Z155 !s107 D:/Principles of Computer Organization/CPU/modules/z.v|
-Z156 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/modules|D:/Principles of Computer Organization/CPU/modules/z.v|
+Z155 !s100 CWb4lQg_`7j[MATJHo3Q71
+Z156 !s108 1639585377.125000
+Z157 !s107 D:/Principles of Computer Organization/PCO_complex_stu/rtl/z.v|
+Z158 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/PCO_complex_stu/rtl|D:/Principles of Computer Organization/PCO_complex_stu/rtl/z.v|
 !i10b 1
 !s85 0
 !s101 -O0
