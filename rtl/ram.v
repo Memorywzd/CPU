@@ -46,14 +46,24 @@ assign addr2 = addr[15:5];
 assign data_ram=(read)? ram[addr2]:8'bzzzzzzzz;
 assign data_out=(cpustate != 2'b11)?8'hzz:((|addr[15:5])?data_ram:data_rom);
 
-always @(write or data_in)
+always @(posedge clk) begin
+	if (write)
+		ram[addr2] <= data_in;
+end
+always @(posedge clk)
+begin
+	if(read)
+		data_rom <= memory[addr1];
+end
+
+/* always @(write or data_in)
 	if(write) ram[addr2] = data_in;
 
 always @(read or addr1)
 begin
 	if(read)
 		data_rom = memory[addr1];
-end
+end */
 
 /*-------------IN模式下的指令存储和CHECK模式下的指令检查--------------*/
 
