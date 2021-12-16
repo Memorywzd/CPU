@@ -12,7 +12,10 @@ Course Design of Principles of Computer Organization
 - 2021/12/8 理清任务要求，确定初步cpu数据通路，创建工程
 - 2021/12/9 完成了寄存器、运算器、控制器的简单指令(MOVAC)、数据通路设计
 - 2021/12/13 完成全部指令设计
-  
+- 2021/12/14 烧板测试，debug
+- 2021/12/15 排除给出代码的错误
+- 2021/12/16 更换总线架构，使用双总线设计
+
   
 ## 说明
 - 示例机的数据通路
@@ -20,3 +23,5 @@ Course Design of Principles of Computer Organization
 - 改进的数据通路  
 引入一根从总线到Address Register的8位数据线，由ACloadR信号控制，
 从而实现不经过alu直接将数据传入AC。
+2021.12.16：换用双总线架构，如图所示
+![alt 改进后的数据通路](./数据通路改进.jpg)
