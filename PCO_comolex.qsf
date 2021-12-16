@@ -143,26 +143,17 @@ set_location_assignment PIN_C22 -to quick_low_led
 set_location_assignment PIN_C17 -to rst
 set_location_assignment PIN_E22 -to cpustate_led[1]
 set_location_assignment PIN_D22 -to cpustate_led[0]
-set_location_assignment PIN_E1 -to clr_led
 set_location_assignment PIN_A5 -to zload_led
 set_location_assignment PIN_A18 -to read_led
 set_location_assignment PIN_A7 -to rload_led
-set_location_assignment PIN_B1 -to trbus_led
 set_location_assignment PIN_A9 -to trload_led
 set_location_assignment PIN_A17 -to write_led
-set_location_assignment PIN_B2 -to rbus_led
 set_location_assignment PIN_A13 -to pcload_led
-set_location_assignment PIN_B3 -to drhbus_led
-set_location_assignment PIN_A3 -to drlbus_led
 set_location_assignment PIN_A10 -to drload_led
 set_location_assignment PIN_A8 -to irload_led
-set_location_assignment PIN_C2 -to membus_led
-set_location_assignment PIN_A4 -to pcbus_led
 set_location_assignment PIN_A14 -to pcinc_led
 set_location_assignment PIN_A15 -to arinc_led
 set_location_assignment PIN_A16 -to arload_led
-set_location_assignment PIN_D2 -to busmem_led
-set_location_assignment PIN_C1 -to acbus_led
 set_location_assignment PIN_A6 -to acload_led
 set_global_assignment -name EDA_TEST_BENCH_NAME top_vlg_tst1 -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id top_vlg_tst1
@@ -186,4 +177,12 @@ set_global_assignment -name VERILOG_FILE rtl/light_show.v
 set_global_assignment -name VERILOG_FILE rtl/clk_div.v
 set_global_assignment -name VERILOG_FILE rtl/CPU_Controller.v
 set_global_assignment -name VERILOG_FILE rtl/qtsj.v
+set_location_assignment PIN_E1 -to check_out[0]
+set_location_assignment PIN_B1 -to check_out[5]
+set_location_assignment PIN_B2 -to check_out[4]
+set_location_assignment PIN_D2 -to check_out[1]
+set_location_assignment PIN_C2 -to check_out[2]
+set_location_assignment PIN_C1 -to check_out[3]
+set_location_assignment PIN_A3 -to check_out[6]
+set_location_assignment PIN_B3 -to check_out[7]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

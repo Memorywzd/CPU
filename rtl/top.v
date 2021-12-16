@@ -36,7 +36,7 @@ wire [1:0] cpustate;
 
 
 /*----------分频程序---------------*/
-//综合用
+//综合用z/ n
 /* clk_div quick(.clk(clk),.reset(rst),.symbol(32'd16384000),.div_clk(clk_quick));
 clk_div slow(.clk(clk),.reset(rst),.symbol(32'd49152000),.div_clk(clk_slow));
 clk_div delay(.clk(clk),.reset(rst),.symbol(32'd2048000),.div_clk(clk_delay));

@@ -36,7 +36,8 @@ reg [3:0] alus;
 
 //控制器状态
 wire fetch1,fetch2,fetch3;
-wire NOP1,LDAC1,LDAC2,LDAC3,LDAC4,LDAC5;
+wire NOP1,LDAC1,LDAC2,LDAC3,LDAC4,LDAC5,LDAC6;
+wire ADD2,SUB2,AND2,OR2,XOR2,INAC2,CLAC2,NOT2;
 wire STAC1,STAC2,STAC3,STAC4,STAC5;
 wire MOVAC1,MOVR1,JUMP1,JUMP2,JUMP3;
 wire JMPZ1,JMPZ2,JMPZ3,JPNZ1,JPNZ2,JPNZ3;
@@ -49,7 +50,7 @@ reg i_ADD, i_SUB, i_INAC, i_CLAC;
 reg i_AND, i_OR, i_XOR, i_NOT;
 
 //时钟节拍，8个为一个指令周期
-reg t0, t1, t2, t3, t4, t5, t6, t7;
+reg t0, t1, t2, t3, t4, t5, t6, t7, t8;
 
 //parameter's define
 wire reset;
@@ -61,9 +62,9 @@ wire inc; //自增
 assign reset = rst & (CPUstate == 2'b11);
 
 //clr信号是每条指令执行完毕后必做的清零
-assign clr = NOP1||LDAC5||STAC5||MOVAC1||MOVR1
-			 ||JUMP3||JMPZ3||JPNZ3||ADD1||SUB1
-			 ||INAC1||CLAC1||AND1||OR1||XOR1||NOT1;
+assign clr = NOP1||LDAC6||STAC5||MOVAC1||MOVR1
+			 ||JUMP3||JMPZ3||JPNZ3||ADD2||SUB2
+			 ||INAC2||CLAC2||AND2||OR2||XOR2||NOT2;
 assign inc = ~clr;
 
 //生成指令信号
@@ -79,6 +80,7 @@ assign LDAC2 = i_LDAC && t4;
 assign LDAC3 = i_LDAC && t5;
 assign LDAC4 = i_LDAC && t6;
 assign LDAC5 = i_LDAC && t7;
+assign LDAC6 = i_LDAC && t8;
 
 assign STAC1 = i_STAC && t3;
 assign STAC2 = i_STAC && t4;
@@ -103,20 +105,28 @@ assign JPNZ2 = i_JPNZ && t4;
 assign JPNZ3 = i_JPNZ && t5;
 
 assign ADD1 = i_ADD && t3;
+assign ADD2 = i_ADD && t4;
 
 assign SUB1 = i_SUB && t3;
+assign SUB2 = i_SUB && t4;
 
 assign INAC1 = i_INAC && t3;
+assign INAC2 = i_INAC && t4;
 
 assign CLAC1 = i_CLAC && t3;
+assign CLAC2 = i_CLAC && t4;
 
 assign AND1 = i_AND && t3;
+assign AND2 = i_AND && t4;
 
 assign OR1 = i_OR && t3;
+assign OR2 = i_OR && t4;
 
 assign XOR1 = i_XOR && t3;
+assign XOR2 = i_XOR && t4;
 
 assign NOT1 = i_NOT && t3;
+assign NOT2 = i_NOT && t4;
 
 
 //生成控制信号
@@ -130,7 +140,7 @@ assign TRload = LDAC2||STAC2||JUMP2||(Z&&JMPZ2)||(!Z&&JPNZ2);
 
 assign Rload = MOVAC1;
 assign ACload = ADD1||SUB1||AND1||OR1||XOR1||INAC1||CLAC1||NOT1;
-assign Zload = ADD1||SUB1||AND1||OR1||XOR1||INAC1||CLAC1||NOT1;
+assign Zload = ADD2||SUB2||AND2||OR2||XOR2||INAC2||CLAC2||NOT2||LDAC6||MOVR1;
 
 assign ACloadR = MOVR1||LDAC5;
 
@@ -575,11 +585,13 @@ begin
 	t5<=0;
 	t6<=0;
 	t7<=0;
+	t8<=0;
 end
 else
 begin
 	if(inc) //运行
 	begin
+	t8<=t7;
 	t7<=t6;
 	t6<=t5;
 	t5<=t4;
@@ -599,6 +611,7 @@ begin
 	t5<=0;
 	t6<=0;
 	t7<=0;
+	t8<=0;
 	end
 end
 end

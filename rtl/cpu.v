@@ -56,7 +56,7 @@ ac mac(.Din(aludbus),.Rin(dbus),.clk(clk_choose),.rst(rst),.ACload(acload),.AClo
 //ALU
 alu malu(.alus(alus),.ac_n(acdbus),.bus_n(dbus),.Dout(aludbus));
 //Z状态字寄存器
-z mz(.Din(aludbus),.clk(clk_choose),.rst(rst),.Zload(zload),.Dout(zout));
+z mz(.Din(aludbus),.ACin(acdbus),.clk(clk_choose),.rst(rst),.Zload(zload),.Dout(zout));
 //controller控制器
 control mcontroller(
     .instr(instr),.clk(clk_run),.rst(rst),.CPUstate(CPUstate),.Z(zout),

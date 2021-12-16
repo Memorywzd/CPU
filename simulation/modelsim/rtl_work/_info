@@ -2,235 +2,235 @@ m255
 K3
 13
 cModel Technology
-Z0 dD:\Principles of Computer Organization\CPU\simulation\modelsim
+Z0 dD:\jizukeshe\CPU\simulation\modelsim
 vac
-Z1 I4X1XJMlbMz<[E:B^YRAf=0
+Z1 I[Sh_[Nl3LJ2A3m][`F7HO1
 Z2 V5kh6LBB<0AgX9MK@YXVQU3
-Z3 dD:\Principles of Computer Organization\CPU\simulation\modelsim
-Z4 w1639574621
-Z5 8D:/Principles of Computer Organization/CPU/rtl/ac.v
-Z6 FD:/Principles of Computer Organization/CPU/rtl/ac.v
+Z3 dD:\jizukeshe\CPU\simulation\modelsim
+Z4 w1639630473
+Z5 8D:/jizukeshe/CPU/rtl/ac.v
+Z6 FD:/jizukeshe/CPU/rtl/ac.v
 L0 3
 Z7 OV;L;10.1e;51
 r1
 31
 Z8 o-vlog01compat -work work -O0
-Z9 !s92 -vlog01compat -work work {+incdir+D:/Principles of Computer Organization/CPU/rtl} -O0
-Z10 !s100 [U@NL4W;]CH2L6jlJf=Kc3
-Z11 !s108 1639626796.372000
-Z12 !s107 D:/Principles of Computer Organization/CPU/rtl/ac.v|
-Z13 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/rtl|D:/Principles of Computer Organization/CPU/rtl/ac.v|
+Z9 !s92 -vlog01compat -work work +incdir+D:/jizukeshe/CPU/rtl -O0
+Z10 !s100 JEA]P7JJ<]VzLJQA@HfS?1
+Z11 !s108 1639648466.809000
+Z12 !s107 D:/jizukeshe/CPU/rtl/ac.v|
+Z13 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/jizukeshe/CPU/rtl|D:/jizukeshe/CPU/rtl/ac.v|
 !i10b 1
 !s85 0
 !s101 -O0
 valu
-Z14 IBNXZLmMYfmA;YlWQP]]KI0
+Z14 I7W3o?kB5:P4@K;N3TCFeR0
 Z15 VPRb6YB_][@ccX0@1YWn8D3
 R3
-Z16 w1639626376
-Z17 8D:/Principles of Computer Organization/CPU/rtl/alu.v
-Z18 FD:/Principles of Computer Organization/CPU/rtl/alu.v
+R4
+Z16 8D:/jizukeshe/CPU/rtl/alu.v
+Z17 FD:/jizukeshe/CPU/rtl/alu.v
 L0 3
 R7
 r1
 31
 R8
 R9
-Z19 !s100 hRZlYKz[Ik[g[z<lMl;FU3
-Z20 !s108 1639626796.341000
-Z21 !s107 D:/Principles of Computer Organization/CPU/rtl/alu.v|
-Z22 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/rtl|D:/Principles of Computer Organization/CPU/rtl/alu.v|
+Z18 !s100 N<^fi86iUkd_BEQS2oWoT0
+Z19 !s108 1639648466.743000
+Z20 !s107 D:/jizukeshe/CPU/rtl/alu.v|
+Z21 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/jizukeshe/CPU/rtl|D:/jizukeshe/CPU/rtl/alu.v|
 !i10b 1
 !s85 0
 !s101 -O0
 var
-Z23 Iz0:CM2jg>@C8K]LjE77z11
-Z24 VMdRO5oj_;H1O3Hf89MizI0
+Z22 I<VBRzD1AL0[PeMhZagXhP1
+Z23 VMdRO5oj_;H1O3Hf89MizI0
 R3
-Z25 w1639574642
-Z26 8D:/Principles of Computer Organization/CPU/rtl/ar.v
-Z27 FD:/Principles of Computer Organization/CPU/rtl/ar.v
+R4
+Z24 8D:/jizukeshe/CPU/rtl/ar.v
+Z25 FD:/jizukeshe/CPU/rtl/ar.v
 L0 3
 R7
 r1
 31
 R8
 R9
-Z28 !s100 FI_?;1SA`eD0`;NVIXd4@2
-Z29 !s108 1639626796.309000
-Z30 !s107 D:/Principles of Computer Organization/CPU/rtl/ar.v|
-Z31 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/rtl|D:/Principles of Computer Organization/CPU/rtl/ar.v|
+Z26 !s100 nVTH60Kal^0fNRX<AKPA[2
+Z27 !s108 1639648466.673000
+Z28 !s107 D:/jizukeshe/CPU/rtl/ar.v|
+Z29 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/jizukeshe/CPU/rtl|D:/jizukeshe/CPU/rtl/ar.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vclk_div
-Z32 IJe`L6<<KDTJ=@;CZF9KQP0
-Z33 VBL^JGUH?:P=jZGFZ1=d1L0
+Z30 I4FiNSRHa=]n6=9VcGecHi1
+Z31 VBL^JGUH?:P=jZGFZ1=d1L0
 R3
-Z34 w1638671278
-Z35 8D:/Principles of Computer Organization/CPU/rtl/clk_div.v
-Z36 FD:/Principles of Computer Organization/CPU/rtl/clk_div.v
+R4
+Z32 8D:/jizukeshe/CPU/rtl/clk_div.v
+Z33 FD:/jizukeshe/CPU/rtl/clk_div.v
 L0 3
 R7
 r1
 31
 R8
 R9
-Z37 !s100 YC:hJ6iOlgbzS?hgeFo=S1
-Z38 !s108 1639626796.439000
-Z39 !s107 D:/Principles of Computer Organization/CPU/rtl/clk_div.v|
-Z40 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/rtl|D:/Principles of Computer Organization/CPU/rtl/clk_div.v|
+Z34 !s100 ZhnU@CY_4WBh0_9hNPGQm1
+Z35 !s108 1639648466.953000
+Z36 !s107 D:/jizukeshe/CPU/rtl/clk_div.v|
+Z37 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/jizukeshe/CPU/rtl|D:/jizukeshe/CPU/rtl/clk_div.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vcontrol
-Z41 I:kcgDXlC[_]zmj3Xa8imA2
-Z42 Vc?2d0HN@MZSWD6Z1dUaG@0
+Z38 IFGXn6`KjkO;fSeGYng[`V3
+Z39 Vc?2d0HN@MZSWD6Z1dUaG@0
 R3
-Z43 w1639625791
-Z44 8D:/Principles of Computer Organization/CPU/rtl/control.v
-Z45 FD:/Principles of Computer Organization/CPU/rtl/control.v
+Z40 w1639646610
+Z41 8D:/jizukeshe/CPU/rtl/control.v
+Z42 FD:/jizukeshe/CPU/rtl/control.v
 L0 15
 R7
 r1
 31
 R8
 R9
-Z46 !s100 LGEK1F4lIMzV=n8U0L;PY3
-Z47 !s108 1639626796.272000
-Z48 !s107 D:/Principles of Computer Organization/CPU/rtl/control.v|
-Z49 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/rtl|D:/Principles of Computer Organization/CPU/rtl/control.v|
+Z43 !s100 gkbD1TLUHh]TbkD_@oJI^2
+Z44 !s108 1639648466.592000
+Z45 !s107 D:/jizukeshe/CPU/rtl/control.v|
+Z46 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/jizukeshe/CPU/rtl|D:/jizukeshe/CPU/rtl/control.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vcpu
-Z50 I;:B]PJh@zckeg01AUbT0E3
-Z51 V34h10S2BEhI@kn04T09`g2
+Z47 I`LX6@OeYYD`o1`>_dMgg?2
+Z48 V34h10S2BEhI@kn04T09`g2
 R3
-Z52 w1639626647
-Z53 8D:/Principles of Computer Organization/CPU/rtl/cpu.v
-Z54 FD:/Principles of Computer Organization/CPU/rtl/cpu.v
+Z49 w1639633189
+Z50 8D:/jizukeshe/CPU/rtl/cpu.v
+Z51 FD:/jizukeshe/CPU/rtl/cpu.v
 L0 3
 R7
 r1
 31
 R8
 R9
-Z55 !s100 NKJFU9McOYIfUnV?ZB50:3
-Z56 !s108 1639626796.233000
-Z57 !s107 D:/Principles of Computer Organization/CPU/rtl/cpu.v|
-Z58 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/rtl|D:/Principles of Computer Organization/CPU/rtl/cpu.v|
+Z52 !s100 W<5FVQe2ki5ch:[W@d48c3
+Z53 !s108 1639648466.507000
+Z54 !s107 D:/jizukeshe/CPU/rtl/cpu.v|
+Z55 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/jizukeshe/CPU/rtl|D:/jizukeshe/CPU/rtl/cpu.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vCPU_Controller
-Z59 IIdlIL5gIBC2`A1U9XMXVV1
-Z60 VgJP;oog[KFk?ZRZKj5F3P2
+Z56 Iha8:?AiIR`eDBfNFnQUe00
+Z57 VgJP;oog[KFk?ZRZKj5F3P2
 R3
-Z61 w1638672404
-Z62 8D:/Principles of Computer Organization/CPU/rtl/CPU_Controller.v
-Z63 FD:/Principles of Computer Organization/CPU/rtl/CPU_Controller.v
+R4
+Z58 8D:/jizukeshe/CPU/rtl/CPU_Controller.v
+Z59 FD:/jizukeshe/CPU/rtl/CPU_Controller.v
 L0 7
 R7
 r1
 31
 R8
 R9
-Z64 n@c@p@u_@controller
-Z65 !s100 @?S72mSncKW^<k^C<i==T0
-Z66 !s108 1639626796.472000
-Z67 !s107 D:/Principles of Computer Organization/CPU/rtl/CPU_Controller.v|
-Z68 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/rtl|D:/Principles of Computer Organization/CPU/rtl/CPU_Controller.v|
+Z60 n@c@p@u_@controller
+Z61 !s100 X6^<mPeFb;=@NIdli;cFI1
+Z62 !s108 1639648467.028000
+Z63 !s107 D:/jizukeshe/CPU/rtl/CPU_Controller.v|
+Z64 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/jizukeshe/CPU/rtl|D:/jizukeshe/CPU/rtl/CPU_Controller.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vdr
-Z69 I7:9?Q1MjF:?>Q3Zn2fmDE0
-Z70 VP[gcG9l17j<;>oozeBPIj1
+Z65 I3LE7bejlSlBbf:5A54PVN1
+Z66 VP[gcG9l17j<;>oozeBPIj1
 R3
-Z71 w1639626607
-Z72 8D:/Principles of Computer Organization/CPU/rtl/dr.v
-Z73 FD:/Principles of Computer Organization/CPU/rtl/dr.v
+R4
+Z67 8D:/jizukeshe/CPU/rtl/dr.v
+Z68 FD:/jizukeshe/CPU/rtl/dr.v
 L0 3
 R7
 r1
 31
 R8
 R9
-Z74 !s100 Tjl]]285INJQ29o_<gH5L2
-Z75 !s108 1639626796.022000
-Z76 !s107 D:/Principles of Computer Organization/CPU/rtl/dr.v|
-Z77 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/rtl|D:/Principles of Computer Organization/CPU/rtl/dr.v|
+Z69 !s100 eRG]:MN;`Y9Nb>bke9U6U3
+Z70 !s108 1639648466.454000
+Z71 !s107 D:/jizukeshe/CPU/rtl/dr.v|
+Z72 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/jizukeshe/CPU/rtl|D:/jizukeshe/CPU/rtl/dr.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vir
-Z78 I1Yd3bTjlgnkE5j[V@KU9B2
-Z79 VCn`]?GSk;?2n;bg2zDCUP1
+Z73 IBiHYoULKC2al4<VVz<3lT1
+Z74 VCn`]?GSk;?2n;bg2zDCUP1
 R3
-Z80 w1639574678
-Z81 8D:/Principles of Computer Organization/CPU/rtl/ir.v
-Z82 FD:/Principles of Computer Organization/CPU/rtl/ir.v
+R4
+Z75 8D:/jizukeshe/CPU/rtl/ir.v
+Z76 FD:/jizukeshe/CPU/rtl/ir.v
 L0 4
 R7
 r1
 31
 R8
 R9
-Z83 !s100 6im7c4ekCTTJH9:54V=H:2
-Z84 !s108 1639626795.984000
-Z85 !s107 D:/Principles of Computer Organization/CPU/rtl/ir.v|
-Z86 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/rtl|D:/Principles of Computer Organization/CPU/rtl/ir.v|
+Z77 !s100 VOBYJV]`QcFXX5HRee`>83
+Z78 !s108 1639648466.381000
+Z79 !s107 D:/jizukeshe/CPU/rtl/ir.v|
+Z80 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/jizukeshe/CPU/rtl|D:/jizukeshe/CPU/rtl/ir.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vlight_show
-Z87 IZYHIHdYGE0e<bC^cbkm:h0
-Z88 VEI=]jFhzRZznn5F[nJ?OT0
+Z81 IZEmiC4J6_<XNMUR1IVRSA0
+Z82 VEI=]jFhzRZznn5F[nJ?OT0
 R3
-Z89 w1639588060
-Z90 8D:/Principles of Computer Organization/CPU/rtl/light_show.v
-Z91 FD:/Principles of Computer Organization/CPU/rtl/light_show.v
+R4
+Z83 8D:/jizukeshe/CPU/rtl/light_show.v
+Z84 FD:/jizukeshe/CPU/rtl/light_show.v
 L0 13
 R7
 r1
 31
 R8
 R9
-Z92 !s100 g1PKTL5BDSRdzLdC7U@>L3
-Z93 !s108 1639626796.405000
-Z94 !s107 D:/Principles of Computer Organization/CPU/rtl/light_show.v|
-Z95 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/rtl|D:/Principles of Computer Organization/CPU/rtl/light_show.v|
+Z85 !s100 Q5lB:Am:]ASkB[N^gV]YF3
+Z86 !s108 1639648466.873000
+Z87 !s107 D:/jizukeshe/CPU/rtl/light_show.v|
+Z88 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/jizukeshe/CPU/rtl|D:/jizukeshe/CPU/rtl/light_show.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vpc
-Z96 IOCGTR7bhBdH?:HCEXO]V_2
-Z97 VB5LIHdIFg<6Cf60MYfg:i1
+Z89 Ia;]o<:B:^0E3g03b2VGQ:2
+Z90 VB5LIHdIFg<6Cf60MYfg:i1
 R3
-Z98 w1639574691
-Z99 8D:/Principles of Computer Organization/CPU/rtl/pc.v
-Z100 FD:/Principles of Computer Organization/CPU/rtl/pc.v
+R4
+Z91 8D:/jizukeshe/CPU/rtl/pc.v
+Z92 FD:/jizukeshe/CPU/rtl/pc.v
 L0 3
 R7
 r1
 31
 R8
 R9
-Z101 !s100 7iICCl9WA@5f82gB?MkU90
-Z102 !s108 1639626795.954000
-Z103 !s107 D:/Principles of Computer Organization/CPU/rtl/pc.v|
-Z104 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/rtl|D:/Principles of Computer Organization/CPU/rtl/pc.v|
+Z93 !s100 9gOiJn>=I8Y[7fo1:gGe30
+Z94 !s108 1639648466.325000
+Z95 !s107 D:/jizukeshe/CPU/rtl/pc.v|
+Z96 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/jizukeshe/CPU/rtl|D:/jizukeshe/CPU/rtl/pc.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vqtsj
-Z105 I5l=lbX`BTj<cbLEONf>6e1
-Z106 VL__P<B;7Mo?8K9;LcUd[61
+Z97 IUIj>MQ7V2^5OAKS?>hbOQ2
+Z98 VL__P<B;7Mo?8K9;LcUd[61
 R3
-Z107 w1638672642
-Z108 8D:/Principles of Computer Organization/CPU/rtl/qtsj.v
-Z109 FD:/Principles of Computer Organization/CPU/rtl/qtsj.v
+R4
+Z99 8D:/jizukeshe/CPU/rtl/qtsj.v
+Z100 FD:/jizukeshe/CPU/rtl/qtsj.v
 L0 13
 R7
 r1
@@ -238,129 +238,129 @@ r1
 R8
 R9
 !i10b 1
-Z110 !s100 F?[^1iLc`OkH`KAMRBWNA3
+Z101 !s100 iO6Kmd0m;2c<PGAnZaV9j3
 !s85 0
-Z111 !s108 1639626796.504000
-Z112 !s107 D:/Principles of Computer Organization/CPU/rtl/qtsj.v|
-Z113 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/rtl|D:/Principles of Computer Organization/CPU/rtl/qtsj.v|
+Z102 !s108 1639648467.099000
+Z103 !s107 D:/jizukeshe/CPU/rtl/qtsj.v|
+Z104 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/jizukeshe/CPU/rtl|D:/jizukeshe/CPU/rtl/qtsj.v|
 !s101 -O0
 vr
-Z114 If=IQ]M8:X?Q56>DCX72HG1
-Z115 V1Ke<fnGOfUVH6>L^ZbX>31
+Z105 IEcKaE>[ScE@c2<8<M@L^Q3
+Z106 V1Ke<fnGOfUVH6>L^ZbX>31
 R3
-Z116 w1639574724
-Z117 8D:/Principles of Computer Organization/CPU/rtl/r.v
-Z118 FD:/Principles of Computer Organization/CPU/rtl/r.v
+R4
+Z107 8D:/jizukeshe/CPU/rtl/r.v
+Z108 FD:/jizukeshe/CPU/rtl/r.v
 L0 3
 R7
 r1
 31
 R8
 R9
-Z119 !s100 O=:go<Dd`Z]F^XL^GEGJH1
-Z120 !s108 1639626795.923000
-Z121 !s107 D:/Principles of Computer Organization/CPU/rtl/r.v|
-Z122 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/rtl|D:/Principles of Computer Organization/CPU/rtl/r.v|
+Z109 !s100 MnEcmeD@FAP9W==XW0ZG@1
+Z110 !s108 1639648466.258000
+Z111 !s107 D:/jizukeshe/CPU/rtl/r.v|
+Z112 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/jizukeshe/CPU/rtl|D:/jizukeshe/CPU/rtl/r.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vram
-Z123 IG<Q6kNn3L3G?nM?iB8[gN1
-Z124 VJBb5h44ne>;`:Z8@MUeVS3
+Z113 In`d2_Si`MSM@?FZR?oZ481
+Z114 VJBb5h44ne>;`:Z8@MUeVS3
 R3
-Z125 w1639591404
-Z126 8D:/Principles of Computer Organization/CPU/rtl/ram.v
-Z127 FD:/Principles of Computer Organization/CPU/rtl/ram.v
+R4
+Z115 8D:/jizukeshe/CPU/rtl/ram.v
+Z116 FD:/jizukeshe/CPU/rtl/ram.v
 L0 14
 R7
 r1
 31
 R8
-Z128 !s100 2^4NPDMb7^MP6oLPiF>CS3
-Z129 !s108 1639626795.792000
-Z130 !s107 D:/Principles of Computer Organization/CPU/rtl/ram.v|
-Z131 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/rtl|D:/Principles of Computer Organization/CPU/rtl/ram.v|
+Z117 !s100 UMicVW=OUli9VPmOmm8bQ0
+Z118 !s108 1639648465.922000
+Z119 !s107 D:/jizukeshe/CPU/rtl/ram.v|
+Z120 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/jizukeshe/CPU/rtl|D:/jizukeshe/CPU/rtl/ram.v|
 R9
 !i10b 1
 !s85 0
 !s101 -O0
 vtop
-Z132 IU1z1M_AT;gCh28HfLl`8T3
-Z133 VHG`YbzZ5M7hO]BXnSR><V3
+Z121 IPdWPG7]EAREAI2Ojd6DJM1
+Z122 VHG`YbzZ5M7hO]BXnSR><V3
 R3
-Z134 w1639626435
-Z135 8D:/Principles of Computer Organization/CPU/rtl/top.v
-Z136 FD:/Principles of Computer Organization/CPU/rtl/top.v
+Z123 w1639647785
+Z124 8D:/jizukeshe/CPU/rtl/top.v
+Z125 FD:/jizukeshe/CPU/rtl/top.v
 L0 3
 R7
 r1
 31
 R8
 R9
-Z137 !s100 E@_:zUe9iV2c@e>:X3oo]0
-Z138 !s108 1639626795.889000
-Z139 !s107 D:/Principles of Computer Organization/CPU/rtl/top.v|
-Z140 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/rtl|D:/Principles of Computer Organization/CPU/rtl/top.v|
+Z126 !s100 b6?SY8YkOGWYLPMlDhZQY1
+Z127 !s108 1639648466.193000
+Z128 !s107 D:/jizukeshe/CPU/rtl/top.v|
+Z129 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/jizukeshe/CPU/rtl|D:/jizukeshe/CPU/rtl/top.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vtop_vlg_tst
 !i10b 1
-!s100 bK?5^jHRGT@e_HDe>cK8K3
-IG>Zi?RBUe[28m6Z9[SJLS1
+!s100 NV2:9mZ`3kHYzKVH1`8@_3
+IzBnmDi3al_OjDFZWQWmLU0
 VWH`X8iAJ@;Z6_Z>8HHbjI2
 R3
-w1639626782
-8D:/Principles of Computer Organization/CPU/top.vt
-FD:/Principles of Computer Organization/CPU/top.vt
+w1639630474
+8D:/jizukeshe/CPU/top.vt
+FD:/jizukeshe/CPU/top.vt
 L0 32
 R7
 r1
 !s85 0
 31
-!s108 1639626796.536000
-!s107 D:/Principles of Computer Organization/CPU/top.vt|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU|D:/Principles of Computer Organization/CPU/top.vt|
+!s108 1639648467.174000
+!s107 D:/jizukeshe/CPU/top.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/jizukeshe/CPU|D:/jizukeshe/CPU/top.vt|
 !s101 -O0
 R8
-!s92 -vlog01compat -work work {+incdir+D:/Principles of Computer Organization/CPU} -O0
+!s92 -vlog01compat -work work +incdir+D:/jizukeshe/CPU -O0
 vtr
-Z141 I]WAe?20ffN@RXn603gmAD2
-Z142 V5Fl:SQz=aI<OzShULLj6F2
+Z130 ImO8C1od78DAG_P28NiVhQ0
+Z131 V5Fl:SQz=aI<OzShULLj6F2
 R3
-Z143 w1639574952
-Z144 8D:/Principles of Computer Organization/CPU/rtl/tr.v
-Z145 FD:/Principles of Computer Organization/CPU/rtl/tr.v
+R4
+Z132 8D:/jizukeshe/CPU/rtl/tr.v
+Z133 FD:/jizukeshe/CPU/rtl/tr.v
 L0 3
 R7
 r1
 31
 R8
 R9
-Z146 !s100 XfeJ9l2Xc^O>4A8jWMGlK0
-Z147 !s108 1639626795.857000
-Z148 !s107 D:/Principles of Computer Organization/CPU/rtl/tr.v|
-Z149 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/rtl|D:/Principles of Computer Organization/CPU/rtl/tr.v|
+Z134 !s100 DzVT:FiU6gm=zCiEVbT:[1
+Z135 !s108 1639648466.123000
+Z136 !s107 D:/jizukeshe/CPU/rtl/tr.v|
+Z137 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/jizukeshe/CPU/rtl|D:/jizukeshe/CPU/rtl/tr.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vz
-Z150 I]f]EL74@<cWhPBD6PKX<A0
-Z151 VjP]U>lKAZD][]^Z3B6lNo0
+Z138 IHe06MlfFGgnZR@<S5:OFS2
+Z139 VQhNe_NJPEcmNSVM:B2ZT_0
 R3
-Z152 w1639574957
-Z153 8D:/Principles of Computer Organization/CPU/rtl/z.v
-Z154 FD:/Principles of Computer Organization/CPU/rtl/z.v
+Z140 w1639639957
+Z141 8D:/jizukeshe/CPU/rtl/z.v
+Z142 FD:/jizukeshe/CPU/rtl/z.v
 L0 3
 R7
 r1
 31
 R8
 R9
-Z155 !s100 0ZEJE`aihV0zInF1kCa2H2
-Z156 !s108 1639626795.826000
-Z157 !s107 D:/Principles of Computer Organization/CPU/rtl/z.v|
-Z158 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Principles of Computer Organization/CPU/rtl|D:/Principles of Computer Organization/CPU/rtl/z.v|
+Z143 !s100 z^0W0V^o^gh>J`NhBS8jQ3
+Z144 !s108 1639648466.059000
+Z145 !s107 D:/jizukeshe/CPU/rtl/z.v|
+Z146 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/jizukeshe/CPU/rtl|D:/jizukeshe/CPU/rtl/z.v|
 !i10b 1
 !s85 0
 !s101 -O0
