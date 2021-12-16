@@ -43,10 +43,10 @@ always @(ac_n or bus_n or alus) begin
         begin
             Dout = (~ac_n & bus_n) | (ac_n & ~bus_n);//xor
         end
-        4'b1000:
-        begin
-            Dout = bus_n;//ldac
-        end
+        //4'b1000:
+        //begin
+        //    Dout = bus_n;//ldac
+        //end
         default:
             Dout = 8'bzzzzzzzz;
     endcase

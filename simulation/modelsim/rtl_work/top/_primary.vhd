@@ -10,8 +10,8 @@ entity top is
         SW2             : in     vl_logic;
         D               : in     vl_logic_vector(7 downto 0);
         addr            : out    vl_logic_vector(15 downto 0);
-        rambus          : out    vl_logic_vector(7 downto 0);
-        data            : out    vl_logic_vector(7 downto 0);
+        memdataout      : out    vl_logic_vector(7 downto 0);
+        cpudataout      : out    vl_logic_vector(7 downto 0);
         HEX0            : out    vl_logic_vector(6 downto 0);
         HEX1            : out    vl_logic_vector(6 downto 0);
         HEX2            : out    vl_logic_vector(6 downto 0);

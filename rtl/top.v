@@ -2,7 +2,7 @@
 
 module top(
     clk,rst,A1,SW_choose,SW1,SW2,D,
-    addr,rambus,data,
+    addr,memdataout,cpudataout,
     HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,HEX6,HEX7,
     acdbus,rdbus,
     cpustate_led,check_out,quick_low_led,read_led,
@@ -19,8 +19,8 @@ input SW_choose,SW1,SW2;
 input [7:0] D;
 
 output [15:0] addr;
-output [7:0] rambus;
-output [7:0] data;
+output [7:0] memdataout;
+output [7:0] cpudataout;
 output [6:0] HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,HEX6,HEX7;
 output [7:0] acdbus;//AC通用寄存器的输出
 output [7:0] rdbus;//R通用寄存器的输出
@@ -55,22 +55,22 @@ CPU_Controller mccontroller(.SW1(SW1),.SW2(SW2),.CPU_state(cpustate));
 
 //补充cpu实例化的语句
 cpu mcpu(
-    .data_in(rambus),
+    .data_in(memdataout),
     .clk_quick(clk_quick),.clk_slow(clk_slow),.clk_delay(clk_delay),
     .rst(rst),.SW_choose(SW_choose),.A1(A1),.CPUstate(cpustate),.zout(Z),
-    .memaddr(addr),.data_out(data),.acdbus(acdbus),.rdbus(rdbus),.clr(clr_led),
+    .memaddr(addr),.data_out(cpudataout),.acdbus(acdbus),.rdbus(rdbus),.clr(clr_led),
     .arload(arload_led),.arinc(arinc_led),.pcload(pcload_led),.pcinc(pcinc_led),.drload(drload_led),
     .irload(irload_led),.acload(acload_led),.trload(trload_led),
     .rload(rload_led),.zload(zload_led),
-    .pcbus(pcbus_led),.acbus(acbus_led),.drhbus(drhbus_led),.drlbus(drlbus_led),.rbus(rbus_led),.trbus(trbus_led),
+    .pcbus(pcbus_led),.acbus(acbus_led),.drbusd(drhbus_led),.drbusa(drlbus_led),.rbus(rbus_led),.trbus(trbus_led),
     .read(read),.write(write),.membus(membus_led),.busmem(busmem_led)
 );
 
 //ram(clk,data_in,addr,A1,reset,read,write,cpustate,D,data_out,check_out);ram实例化
 ram mram(
-    .clk(clk_mem),.data_in(data),.addr(addr),
+    .clk(clk_mem),.data_in(cpudataout),.addr(addr),
     .A1(A1),.reset(rst),.read(read),.write(write),
-    .cpustate(cpustate),.D(D),.data_out(rambus),.check_out(check_out));
+    .cpustate(cpustate),.D(D),.data_out(memdataout),.check_out(check_out));
 
 //light_show(light_clk,SW_choose,check_in,read,write,arload,arinc,pcinc,pcload,drload,trload,irload,rload,acload,zload,pcbus,drhbus,drlbus,trbus,rbus,acbus,membus,busmem,clr,State,MAR,AC,R,Z,HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,HEX6,HEX7,State_LED,quick_low_led,read_led,write_led,arload_led,arinc_led,pcinc_led,pcload_led,drload_led,trload_led,irload_led,rload_led,acload_led,zload_led,pcbus_led,drhbus_led,drlbus_led,trbus_led,rbus_led,acbus_led,membus_led,busmem_led,clr_led);
 //light_show实例化

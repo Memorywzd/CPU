@@ -29,8 +29,8 @@ entity cpu is
         zload           : out    vl_logic;
         pcbus           : out    vl_logic;
         acbus           : out    vl_logic;
-        drhbus          : out    vl_logic;
-        drlbus          : out    vl_logic;
+        drbusd          : out    vl_logic;
+        drbusa          : out    vl_logic;
         rbus            : out    vl_logic;
         trbus           : out    vl_logic;
         read            : out    vl_logic;

@@ -13,13 +13,13 @@
 */
 
 module control(instr, clk, rst, CPUstate, Z, 
-                  ARload, ARinc, PCload, PCinc, DRload, IRload, TRload,
-      			  Rload, ACload, Zload, ACloadR,
-    			  PCbus, DRlbus, DRhbus, TRbus,
-       			  Rbus, ACbus,
-                  alus, clr,
-                  mem_read, mem_write,
-                  mem2bus, bus2mem);
+               ARload, ARinc, PCload, PCinc, DRload, IRload, TRload,
+      		   Rload, ACload, Zload, ACloadR,
+    		   PCbus, DRbusd, DRbusa, TRbus,
+       		   Rbus, ACbus,
+               alus, clr,
+               mem_read, mem_write,
+               mem2bus, bus2mem);
 
 input [7:0] instr;    //输入指令
 input clk, rst, Z;
@@ -27,7 +27,7 @@ input [1:0] CPUstate;
 
 output ARload, ARinc, PCload, PCinc, DRload, IRload, TRload,
        Rload, ACload, Zload, ACloadR,
-       PCbus, DRlbus, DRhbus, TRbus,
+       PCbus, DRbusd, DRbusa, TRbus,
        Rbus, ACbus,
        mem_read, mem_write, clr,
        mem2bus, bus2mem;
@@ -135,8 +135,8 @@ assign Zload = ADD1||SUB1||AND1||OR1||XOR1||INAC1||CLAC1||NOT1;
 assign ACloadR = MOVR1||LDAC5;
 
 assign PCbus = fetch1||fetch3;
-assign DRlbus = LDAC5||STAC5;
-assign DRhbus = LDAC3||STAC3||JUMP3||(Z&&JMPZ3)||(!Z&&JPNZ3);
+assign DRbusd = LDAC5||STAC5;
+assign DRbusa = LDAC3||STAC3||JUMP3||(Z&&JMPZ3)||(!Z&&JPNZ3);
 assign TRbus = LDAC3||STAC3||JUMP3||(Z&&JMPZ3)||(!Z&&JPNZ3);
 assign Rbus = ADD1||SUB1||AND1||OR1||XOR1||MOVR1;
 assign ACbus = MOVAC1||STAC4;

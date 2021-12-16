@@ -145,7 +145,7 @@
 #         Region: /top_vlg_tst/i1/mcpu
 # ** Warning: (vsim-3722) D:/Principles of Computer Organization/CPU/rtl/top.v(67): [TFMPC] - Missing connection for port 'acloadr'.
 # 
-# ** Warning: (vsim-3015) D:/Principles of Computer Organization/CPU/rtl/cpu.v(58): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'Dout'. The port definition is at: D:/Principles of Computer Organization/CPU/rtl/z.v(3).
+# ** Warning: (vsim-3015) D:/Principles of Computer Organization/CPU/rtl/cpu.v(59): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'Dout'. The port definition is at: D:/Principles of Computer Organization/CPU/rtl/z.v(3).
 # 
 #         Region: /top_vlg_tst/i1/mcpu/mz
 # 
@@ -154,10 +154,10 @@
 # 
 #           File in use by: Memory  Hostname: DESKTOP-AB8SOQE  ProcessID: 4216
 # 
-#           Attempting to use alternate WLF file "./wlftia8w8z".
+#           Attempting to use alternate WLF file "./wlftcdtrng".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftia8w8z
+#           Using alternate file: ./wlftcdtrng
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct

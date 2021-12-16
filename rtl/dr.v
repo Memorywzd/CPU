@@ -3,6 +3,7 @@
 module dr(Din, clk, rst, DRload, Dout);
 
 input [7:0] Din;
+
 input clk, rst, DRload;
 
 output [7:0] Dout;

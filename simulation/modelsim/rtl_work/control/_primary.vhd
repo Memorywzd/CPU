@@ -19,8 +19,8 @@ entity control is
         Zload           : out    vl_logic;
         ACloadR         : out    vl_logic;
         PCbus           : out    vl_logic;
-        DRlbus          : out    vl_logic;
-        DRhbus          : out    vl_logic;
+        DRbusd          : out    vl_logic;
+        DRbusa          : out    vl_logic;
         TRbus           : out    vl_logic;
         Rbus            : out    vl_logic;
         ACbus           : out    vl_logic;

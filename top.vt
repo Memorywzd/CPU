@@ -55,9 +55,9 @@ wire [1:0]  cpustate_led;
 wire [7:0]  acdbus;
 wire [7:0]  rdbus;
 wire [7:0]  check_out;
-wire [7:0]  data;
+wire [7:0]  cpudataout;
 wire [15:0]  addr;
-wire [7:0]  rambus;
+wire [7:0]  memdataout;
 
 wire read_led;
 wire write_led;
@@ -111,7 +111,7 @@ top i1 (
 	.clk(clk),
 	.clr_led(clr_led),
 	.cpustate_led(cpustate_led),
-	.data(data),
+	.cpudataout(cpudataout),
 	.drhbus_led(drhbus_led),
 	.drlbus_led(drlbus_led),
 	.drload_led(drload_led),
@@ -121,7 +121,7 @@ top i1 (
 	.pcinc_led(pcinc_led),
 	.pcload_led(pcload_led),
 	.quick_low_led(quick_low_led),
-	.rambus(rambus),
+	.memdataout(memdataout),
 	.rbus_led(rbus_led),
 	.rdbus(rdbus),
 	.read_led(read_led),
